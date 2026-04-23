@@ -1,11 +1,9 @@
-import React from 'react'
-
 const Navbar = () => {
   return (
     <nav>
-      <div className='header-main flex justify-between items-center w-full'>
+      <div className='header-main flex justify-between items-center w-full bg-white/50 backdrop-blur-md !px-50 h-[80px] '>
         <div className='brand-logo flex items-center gap-10'>
-          <img src="./public/Logo Container.png" alt="daf-logo" />
+          <img src="/Logo Container.png" alt="daf-logo" />
            <h3 className="nav-item"><a href="#">Start Here</a></h3>
         </div>
         <div className='menus '>
@@ -21,7 +19,10 @@ const Navbar = () => {
           <h3 className="nav-item"><a href="#">Explore</a></h3>
           <img src="/more.svg" alt="icon" />
          </div> 
-          <button className='bg-[#265F58] rounded-[2px] text-white !px-6 !py-2 shadow-[-1px_-1px_0px_0px_rgba(255,255,255,0.25),1px_1px_0px_0px_rgba(255,255,255,0.25)]'>Contact Us</button>
+          <button className='bg-[#265F58] rounded-[2px] text-white !px-6 !py-2 transition duration-300 ease-in-out hover:bg-[#021B79] flex gap-2 items-center'>
+            Contact Us
+            <img src="/arrow-right.svg" alt="arrow-icon" />
+          </button>
         </div>
       </div>
     </nav>
