@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(cmd.exe /c \"dir /s /b C:\\\\Users\\\\admin\\\\AppData\\\\Roaming\\\\claude_desktop_config.json 2>nul\")",
+      "Skill(update-config)",
+      "Bash(cmd.exe /c \"dir /s /b C:\\\\Users\\\\admin\\\\.puku\\\\*.json 2>nul\")",
+      "Bash(cmd.exe /c \"dir /s /b %USERPROFILE%\\\\.puku\\\\*.json 2>nul\")",
+      "Bash(npx -y @modelcontextprotocol/server-figma --help)",
+      "Bash(npm search:*)",
+      "Bash(npx:*)",
+      "WebFetch(domain:www.figma.com)",
+      "Bash(dir:*)",
+      "Bash(cmd /c \"dir C:\\\\Users\\\\admin\\\\AppData\\\\Roaming\\\\Claude\")",
+      "Bash(cmd /c \"type C:\\\\Users\\\\admin\\\\AppData\\\\Roaming\\\\Claude\\\\settings.json\")",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\admin\\\\AppData\\\\Roaming\\\\Claude\\\\settings.json' -ErrorAction SilentlyContinue\")",
+      "Bash(powershell -Command \"if \\(Test-Path 'C:\\\\Users\\\\admin\\\\AppData\\\\Roaming\\\\Claude\\\\settings.json'\\) { Get-Content 'C:\\\\Users\\\\admin\\\\AppData\\\\Roaming\\\\Claude\\\\settings.json' } else { 'FILE_NOT_FOUND' }\")",
+      "Bash(powershell -Command \"Get-ChildItem 'C:\\\\Users\\\\admin\\\\AppData\\\\Roaming\\\\Claude' | Format-Table Name\")",
+      "Bash(powershell -Command \"Get-ChildItem -Path 'C:\\\\Users\\\\admin\\\\AppData\\\\Roaming' -Directory | Where-Object { $_.Name -like '*l*aude*' -or $_.Name -like '*uku*' }\")",
+      "Bash(powershell -Command \"Get-ChildItem -Path 'C:\\\\Users\\\\admin\\\\AppData\\\\Roaming\\\\Claude' -File | Select-Object Name\")",
+      "Bash(powershell -Command \"Get-ChildItem -Path 'C:\\\\Users\\\\admin' -Recurse -File -ErrorAction SilentlyContinue -Filter 'settings.json' | Where-Object { $_.FullName -match 'claude' -or $_.FullName -match 'puku' } | Select-Object FullName\")",
+      "Bash(cmd /c \"dir C:\\\\Users\\\\admin\\\\Downloads\\\\daf-ecom\")",
+      "Bash(env)",
+      "Bash(curl:*)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(''''=== PAGE STRUCTURE ===''''\\); [print\\(c[''''name''''], c[''''type'''']\\) for c in d[''''nodes''''][''''66:975''''][''''document''''][''''children''''][:20]]\")",
+      "Bash(node:*)",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\admin\\\\.puku\\\\projects\\\\C--Users-admin-Downloads-daf-ecom\\\\ecacb903-0eb7-4329-83af-1294061558d0\\\\tool-results\\\\bbxdfe61v.txt' | Select-Object -First 300\")",
+      "Bash(where python:*)",
+      "Bash(python:*)"
+    ]
+  }
+}
