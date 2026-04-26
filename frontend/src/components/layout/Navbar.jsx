@@ -19,7 +19,7 @@ const Navbar = () => {
           <h3 className="nav-item"><a href="#">Explore</a></h3>
           <img src="/more.svg" alt="icon" />
          </div> 
-          <button className='bg-[#265F58] rounded-[2px] text-white !px-6 !py-2 transition duration-300 ease-in-out hover:bg-[#021B79] flex gap-2 items-center'>
+          <button className='bg-teal-900 rounded-[2px] text-white-50 !px-6 !py-2 transition duration-300 ease-in-out hover:bg-blue-600 flex gap-2 items-center'>
             Contact Us
             <img src="/arrow-right.svg" alt="arrow-icon" />
           </button>

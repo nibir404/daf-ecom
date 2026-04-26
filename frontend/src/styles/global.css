@@ -1,1 +1,145 @@
 @import "tailwindcss";
+
+@theme {
+  --color-purple-10: #EFE6FD;
+  --color-purple-50: #EFE6FD;
+  --color-purple-100: #CEB0FA;
+  --color-purple-200: #B78AF7;
+  --color-purple-300: #9654F4;
+  --color-purple-400: #8133F1;
+  --color-purple-500: #6200EE;
+  --color-purple-600: #5900D9;
+  --color-purple-700: #4600A9;
+  --color-purple-800: #360083;
+  --color-purple-900: #290064;
+
+  --color-blue-10: #E6E9F2;
+  --color-blue-50: #E6E9F2;
+  --color-blue-100: #B1B9D8;
+  --color-blue-200: #8B98C5;
+  --color-blue-300: #5568AB;
+  --color-blue-400: #354B9A;
+  --color-blue-500: #021E81;
+  --color-blue-600: #021B75;
+  --color-blue-700: #01155C;
+  --color-blue-800: #011147;
+  --color-blue-900: #010D36;
+
+  --color-orange-10: #FEF1E9;
+  --color-orange-50: #FEF1E9;
+  --color-orange-100: #FCD5BC;
+  --color-orange-200: #FAC09C;
+  --color-orange-300: #F8A46E;
+  --color-orange-400: #F79252;
+  --color-orange-500: #F57727;
+  --color-orange-600: #DF6C23;
+  --color-orange-700: #AE541C;
+  --color-orange-800: #874115;
+  --color-orange-900: #673210;
+
+  --color-gold-10: #FCFAF7;
+  --color-gold-50: #FAF7F0;
+  --color-gold-100: #F0E6CF;
+  --color-gold-200: #E8DAB8;
+  --color-gold-300: #DEC998;
+  --color-gold-400: #D8BE84;
+  --color-gold-500: #CEAE65;
+  --color-gold-600: #BB9E5C;
+  --color-gold-700: #927C48;
+  --color-gold-800: #716038;
+  --color-gold-900: #57492A;
+
+  --color-teal-10: #EFFCFA;
+  --color-teal-50: #EFFCFA;
+  --color-teal-100: #CCF6F1;
+  --color-teal-200: #B4F1EA;
+  --color-teal-300: #91EBE0;
+  --color-teal-400: #7CE7DA;
+  --color-teal-500: #5BE1D1;
+  --color-teal-600: #53CDBE;
+  --color-teal-700: #41A094;
+  --color-teal-800: #327C73;
+  --color-teal-900: #265F58;
+
+  --color-coral-10: #FEF3F2;
+  --color-coral-50: #FEF3F2;
+  --color-coral-100: #FDD9D5;
+  --color-coral-200: #FCC6C1;
+  --color-coral-300: #FAACA5;
+  --color-coral-400: #F99C94;
+  --color-coral-500: #F88379;
+  --color-coral-600: #E2776E;
+  --color-coral-700: #B05D56;
+  --color-coral-800: #884843;
+  --color-coral-900: #683733;
+
+  --color-white-50: #FEFEFE;
+  --color-white-100: #FBFBFB;
+  --color-white-200: #F9F9F9;
+  --color-white-300: #F6F6F6;
+  --color-white-400: #F5F5F5;
+  --color-white-500: #F2F2F2;
+  --color-white-600: #DCDCDC;
+  --color-white-700: #ACACAC;
+  --color-white-800: #858585;
+  --color-white-900: #666666;
+
+  --color-black-50: #E8E8E8;
+  --color-black-100: #B9B9B9;
+  --color-black-200: #979797;
+  --color-black-300: #676767;
+  --color-black-400: #494949;
+  --color-black-500: #1C1C1C;
+  --color-black-600: #191919;
+  --color-black-700: #141414;
+  --color-black-800: #0F0F0F;
+  --color-black-900: #0C0C0C;
+
+  --color-warning-10: #FEE6E6;
+  --color-warning-50: #FEE6E6;
+  --color-warning-100: #FAB0B0;
+  --color-warning-200: #F88A8A;
+  --color-warning-300: #F55454;
+  --color-warning-400: #F33333;
+  --color-warning-500: #F00000;
+  --color-warning-600: #DA0000;
+  --color-warning-700: #AA0000;
+  --color-warning-800: #840000;
+  --color-warning-900: #650000;
+
+  --color-alert-10: #FEF8E6;
+  --color-alert-50: #FEF8E6;
+  --color-alert-100: #FCE8B0;
+  --color-alert-200: #FADD8A;
+  --color-alert-300: #F8CD54;
+  --color-alert-400: #F7C333;
+  --color-alert-500: #F5B400;
+  --color-alert-600: #DFA400;
+  --color-alert-700: #AE8000;
+  --color-alert-800: #876300;
+  --color-alert-900: #674C00;
+
+  --color-success-10: #E6F2E6;
+  --color-success-50: #E6F2E6;
+  --color-success-100: #B0D8B0;
+  --color-success-200: #8AC58A;
+  --color-success-300: #54AA54;
+  --color-success-400: #339933;
+  --color-success-500: #008000;
+  --color-success-600: #007400;
+  --color-success-700: #005B00;
+  --color-success-800: #004600;
+  --color-success-900: #003600;
+
+  --color-info-10: #EAEFFC;
+  --color-info-50: #EAEFFC;
+  --color-info-100: #BFCCF5;
+  --color-info-200: #A0B4F0;
+  --color-info-300: #7492E9;
+  --color-info-400: #597DE5;
+  --color-info-500: #305CDE;
+  --color-info-600: #2C54CA;
+  --color-info-700: #22419E;
+  --color-info-800: #1A337A;
+  --color-info-900: #14275D;
+}
