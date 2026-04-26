@@ -144,3 +144,26 @@
   --color-info-800: #1A337A;
   --color-info-900: #14275D;
 }
+
+.main-layout {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+body {
+  background-color: var(--color-white-300);
+  font-family: var(--font-sans);
+}

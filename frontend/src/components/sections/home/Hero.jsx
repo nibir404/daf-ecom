@@ -14,12 +14,12 @@ const Hero = () => {
                     From first website to enterprise systems we help you <br />build once and scale without rebuilding.
                 </p>
                 <div className='flex items-center gap-4'>
-                    <button className="bg-teal-900 rounded-[2px] text-white-50 px-8 py-3 transition duration-300 ease-in-out hover:bg-teal-800 flex gap-2 items-center justify-center w-[260px]">
+                    <button className="bg-teal-900 rounded-[2px] text-white-50 px-8 py-3 transition duration-300 ease-in-out hover:bg-blue-600 flex gap-2 items-center justify-center w-[260px]">
                         Get Your System Plan
                         <img src="/arrow-right.svg" alt="arrow-icon" />
                     </button>
                     <span className="text-black-300 font-medium">or</span>
-                    <button className="bg-transparent font-semibold underline underline-offset-2 text-black-900 py-3 transition duration-300 ease-in-out hover:text-teal-900 flex gap-2 items-center justify-center w-auto">
+                    <button className="bg-transparent font-semibold underline underline-offset-2 text-black-900 py-3 transition duration-300 ease-in-out hover:text-blue-600 flex gap-2 items-center justify-center w-auto">
                         Book Strategy Call
                         <img src="/homepage/call-02.svg" alt="call-icon" />
                     </button>
