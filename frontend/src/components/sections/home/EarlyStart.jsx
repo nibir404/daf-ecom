@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../../ui/Button';
 
 const EarlyStart = () => {
     const cards = [
@@ -115,12 +116,7 @@ const EarlyStart = () => {
 
                                     {/* Footer Section: Link */}
                                     <div className="mt-auto">
-                                        <button className="flex items-center gap-2 text-black-500 text-base font-bold group/btn">
-                                            <span className="border-b-2 border-transparent group-hover/btn:border-orange-500 transition-all">
-                                                {card.linkText}
-                                            </span>
-                                            <span className="text-orange-500 transform group-hover/btn:translate-x-1 transition-transform">→</span>
-                                        </button>
+                                        <Button variant="tertiary">{card.linkText}</Button>
                                     </div>
                             </div>
                         </div>
@@ -143,10 +139,13 @@ const EarlyStart = () => {
                         </div>
                     </div>
                     
-                    <button className="flex items-center gap-3 bg-white border-2 border-blue-500 px-8 py-4 rounded-[4px] text-blue-500 font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-sm active:scale-95 group">
-                        <span>Book Strategy Call</span>
-                        <img src="/homepage/call-02.svg" alt="Call" className="w-5 h-5 group-hover:brightness-0 group-hover:invert transition-all" />
-                    </button>
+                    <Button 
+                        variant="secondary" 
+                        icon="/homepage/call-02.svg"
+                        className="px-8 py-4"
+                    >
+                        Book Strategy Call
+                    </Button>
                 </div>
             </div>
         </section>

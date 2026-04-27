@@ -167,3 +167,12 @@ body {
   background-color: var(--color-white-300);
   font-family: var(--font-sans);
 }
+
+@layer utilities {
+  .filter-blue-500 {
+    filter: brightness(0) invert(10%) sepia(89%) saturate(4522%) hue-rotate(227deg) brightness(94%) contrast(108%);
+  }
+  .group\/btn:hover .filter-blue-500 {
+    filter: brightness(0) invert(100%);
+  }
+}
