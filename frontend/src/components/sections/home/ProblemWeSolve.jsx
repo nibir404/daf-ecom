@@ -30,22 +30,24 @@ const ProblemWeSolve = () => {
     const activeProblem = problems.find(p => p.id === activeId);
 
     return (
-        <section className="w-full py-24 md:py-32">
-            <div className="max-w-[1520px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-start gap-[60px]">
-                {/* Left: Illustration */}
-                <div className="flex-1 w-full max-w-[830px] self-stretch min-h-[500px]">
-                    <div className="relative rounded-[2px] overflow-hidden shadow-2xl h-full">
+        <section className="w-full pt-[120px]">
+            <div className="max-w-[1520px] mx-auto px-6 md:px-0 flex flex-col md:flex-row items-start gap-[60px]">
+                {/* Left: Illustration - Fixed size for consistency */}
+                <div className="flex-1 w-full max-w-[935px] self-stretch h-[400px] md:h-[600px]">
+                    <div className="relative rounded-[4px] overflow-hidden shadow-2xl h-full bg-white-50">
                         <img 
                             key={activeProblem.image}
                             src={activeProblem.image} 
                             alt={`Problem ${activeId} illustration`} 
-                            className="w-full h-full object-cover transform hover:scale-105 transition-all duration-700 animate-in fade-in zoom-in-95"
+                            className="w-full h-full object-cover transform hover:scale-105 transition-all duration-1000 ease-in-out"
                         />
+                        {/* Subtle overlay for depth */}
+                        <div className="absolute inset-0 bg-black-900/5 pointer-events-none" />
                     </div>
                 </div>
 
                 {/* Right: Content */}
-                <div className="w-full md:w-[500px] flex flex-col relative">
+                <div className="w-full md:w-[525px] flex flex-col relative">
                     {/* Full-height gray track line */}
                     <div className="absolute -right-4 top-0 bottom-0 w-[1px] bg-white-600" />
 

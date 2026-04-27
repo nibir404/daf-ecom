@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 w-full">
-      <div className='header-main flex justify-between items-center w-full bg-white/50 backdrop-blur-md px-6 md:px-20 lg:px-40 h-[80px]'>
+    <nav className="sticky top-0 z-50 w-full bg-white/50 backdrop-blur-md border-b border-black-50/5">
+      <div className="max-w-[1520px] mx-auto flex justify-between items-center h-[80px] px-6 md:px-0">
         <div className='brand-logo flex items-center gap-10'>
           <img src="/Logo Container.png" alt="daf-logo" />
            <h3 className="nav-item"><a href="#">Start Here</a></h3>
