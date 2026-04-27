@@ -8,11 +8,11 @@ const Button = ({
     iconPosition = 'right',
     ...props 
 }) => {
-    const baseStyles = "flex items-center justify-center gap-2 transition-all duration-300 rounded-[2px]";
+    const baseStyles = "flex items-center justify-center gap-2 transition-all duration-500 rounded-[2px]";
     
     const variants = {
         primary: "bg-black-900 text-white-50 px-[24px] py-[14px] font-semibold hover:bg-blue-600 shadow-sm active:scale-95 relative overflow-hidden shadow-inner-glow",
-        secondary: "bg-white border-2 border-blue-500 px-8 py-4 text-blue-500 font-semibold hover:bg-blue-500 hover:text-white shadow-sm active:scale-95",
+        secondary: "bg-white border border-blue-500 px-[24px] py-[14px] text-blue-500 font-semibold hover:bg-blue-600 hover:text-white shadow-sm active:scale-95 relative overflow-hidden",
         white: "bg-white text-black-900 px-[24px] py-[14px] font-semibold hover:bg-blue-600 hover:text-white shadow-sm active:scale-95 relative overflow-hidden",
         tertiary: "flex items-center text-black-500 text-base font-bold group/btn gap-[10px]",
         outline: "border border-blue-500 px-[24px] py-[14px] text-blue-500 font-normal hover:bg-blue-500 hover:text-white transition-all group/btn"
@@ -63,10 +63,10 @@ const Button = ({
     );
     return (
         <button className={`${baseStyles} ${variants[variant]} ${className} group/btn`} {...props}>
-            {(variant === 'primary' || variant === 'white') && (
+            {(variant === 'primary' || variant === 'white' || variant === 'secondary' || variant === 'outline') && (
                 <div 
-                    className={`absolute h-[48px] top-0 w-[400px] transition-all duration-500 pointer-events-none
-                        bg-[#0066FF] ${variant === 'primary' ? 'right-[270px] group-hover/btn:right-[-120px] opacity-20 group-hover/btn:opacity-100' : 'left-[-437px] group-hover/btn:left-[-120px] opacity-10 group-hover/btn:opacity-30'}`}
+                    className={`absolute h-[100px] -top-6 w-[400px] blur-3xl transition-all duration-700 pointer-events-none
+                        bg-[#0066FF] ${(variant === 'primary' || variant === 'secondary') ? 'right-[270px] group-hover/btn:right-[-120px] opacity-20 group-hover/btn:opacity-60' : 'left-[-437px] group-hover/btn:left-[-120px] opacity-10 group-hover/btn:opacity-40'}`}
                 />
             )}
             <div className="relative z-10 flex items-center gap-2">

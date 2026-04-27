@@ -3,9 +3,9 @@ import Button from '../../ui/Button';
 
 const PricingCard = ({ title, subtitle, price, description, ctaText, bgIcon }) => {
     return (
-        <div className="bg-white-100 border border-white-600 p-[40px] rounded-[2px] flex-1 flex flex-col justify-between relative overflow-hidden group/card hover:border-blue-500 transition-all duration-300 h-[395px]">
+        <div className="bg-white-100 border border-white-600 p-[40px] rounded-[2px] flex-1 flex flex-col justify-between relative overflow-hidden h-[395px]">
             {/* Background Graphic */}
-            <div className="absolute top-0 right-0 w-full h-full pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity">
+            <div className="absolute top-0 right-0 w-full h-full pointer-events-none opacity-80">
                 <img src={`/homepage/${bgIcon}`} alt="" className="w-full h-full object-cover" />
             </div>
 
