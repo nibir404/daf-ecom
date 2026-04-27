@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TechCard = ({ name, icon }) => (
-    <div className="bg-white border border-[#f5f5f7] flex items-center gap-[10px] h-[80px] px-[24px] py-[20px] rounded-[10px] shrink-0 transition-all hover:border-blue-500/30 hover:shadow-sm">
+    <div className="bg-white flex items-center gap-[10px] h-[80px] px-[24px] py-[20px] rounded-[10px] shrink-0 transition-all hover:border-blue-500/30 hover:shadow-sm">
         <div className="w-[40px] h-[40px] flex items-center justify-center overflow-hidden">
             <img src={`/homepage/${icon}`} alt={name} className="w-full h-full object-contain" />
         </div>

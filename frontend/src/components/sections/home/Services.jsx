@@ -129,7 +129,7 @@ const Services = () => {
                                 zIndex: index + 1 
                             }}
                         >
-                            <div className={`backdrop-blur-[30px] ${service.bgColor} border ${service.borderColor} rounded-[2px] p-[40px] flex flex-col md:flex-row gap-[60px] items-end shadow-sm h-[380px]`}>
+                            <div className={`backdrop-blur-[30px] ${service.bgColor} border border-white-600 rounded-[2px] p-[40px] flex flex-col md:flex-row gap-[60px] items-end shadow-sm h-[380px]`}>
                                 
                                 {/* Left Content */}
                                 <div className="w-[620px] flex flex-col justify-between self-stretch h-full">

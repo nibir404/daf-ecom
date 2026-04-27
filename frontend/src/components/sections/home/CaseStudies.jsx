@@ -73,7 +73,7 @@ const CaseStudies = () => {
                                 className="snap-center shrink-0 w-full flex flex-col md:flex-row gap-[20px] items-stretch md:h-[550px]"
                             >
                                 {/* Left Details Card */}
-                                <div className="w-full md:w-[450px] bg-white p-[40px] rounded-[2px] border border-white-500 flex flex-col justify-between">
+                                <div className="w-full md:w-[450px] bg-white p-[40px] rounded-[2px] border border-white-600 flex flex-col justify-between">
                                     <div className="flex flex-col gap-[16px]">
                                         {/* Title & Tag */}
                                         <div className="border-b border-white-500 pb-[16px] flex justify-between items-start gap-[24px]">

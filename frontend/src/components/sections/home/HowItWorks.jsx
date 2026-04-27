@@ -208,7 +208,7 @@ const HowItWorks = () => {
                     </div>
 
                     {/* Right: Featured Card */}
-                    <div className="flex-1 bg-white border border-white-500 rounded-[2px] relative overflow-hidden group/card">
+                    <div className="flex-1 bg-white border border-white-600 rounded-[2px] relative overflow-hidden group/card">
                         {/* Background Flare */}
                         <div className="absolute inset-0 pointer-events-none opacity-40 group-hover/card:opacity-60 transition-opacity">
                             <img src={currentData.card.flare} alt="" className="w-full h-full object-cover scale-150 rotate-[145deg]" />

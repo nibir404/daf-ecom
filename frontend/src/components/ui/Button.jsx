@@ -13,6 +13,7 @@ const Button = ({
     const variants = {
         primary: "bg-black-900 text-white-50 px-[24px] py-[14px] font-semibold hover:bg-blue-600 shadow-sm active:scale-95 relative overflow-hidden shadow-inner-glow",
         secondary: "bg-white border-2 border-blue-500 px-8 py-4 text-blue-500 font-semibold hover:bg-blue-500 hover:text-white shadow-sm active:scale-95",
+        white: "bg-white text-black-900 px-[24px] py-[14px] font-semibold hover:bg-blue-600 hover:text-white shadow-sm active:scale-95 relative overflow-hidden",
         tertiary: "flex items-center text-black-500 text-base font-bold group/btn gap-[10px]",
         outline: "border border-blue-500 px-[24px] py-[14px] text-blue-500 font-normal hover:bg-blue-500 hover:text-white transition-all group/btn"
     };
@@ -47,14 +48,14 @@ const Button = ({
                     ) : icon}
                 </div>
             )}
-             {!icon && (variant === 'outline' || variant === 'primary') && (
+             {!icon && (variant === 'outline' || variant === 'primary' || variant === 'white') && (
                  <div className={`w-[20px] h-[20px] transition-transform group-hover:translate-x-1`}>
                     <img 
                         src="/arrow-right.svg" 
                         alt="arrow" 
                         className={`w-full h-full object-contain 
                             ${variant === 'primary' ? 'filter-teal-500' : ''} 
-                            ${variant === 'outline' ? 'filter-blue-500' : ''}`}
+                            ${(variant === 'outline' || variant === 'white') ? 'filter-blue-500' : ''}`}
                     />
                 </div>
             )}
@@ -62,10 +63,10 @@ const Button = ({
     );
     return (
         <button className={`${baseStyles} ${variants[variant]} ${className} group/btn`} {...props}>
-            {variant === 'primary' && (
+            {(variant === 'primary' || variant === 'white') && (
                 <div 
-                    className="absolute h-[48px] top-0 w-[400px] transition-all duration-500 pointer-events-none
-                        bg-[#0066FF] right-[270px] group-hover/btn:bg-blue-600 group-hover/btn:right-[-120px] opacity-20 group-hover/btn:opacity-100" 
+                    className={`absolute h-[48px] top-0 w-[400px] transition-all duration-500 pointer-events-none
+                        bg-[#0066FF] ${variant === 'primary' ? 'right-[270px] group-hover/btn:right-[-120px] opacity-20 group-hover/btn:opacity-100' : 'left-[-437px] group-hover/btn:left-[-120px] opacity-10 group-hover/btn:opacity-30'}`}
                 />
             )}
             <div className="relative z-10 flex items-center gap-2">

@@ -34,7 +34,7 @@ const ProblemWeSolve = () => {
             <div className="max-w-[1520px] mx-auto px-6 md:px-0 flex flex-col md:flex-row items-start gap-[60px]">
                 {/* Left: Illustration - Fixed size for consistency */}
                 <div className="flex-1 w-full max-w-[935px] self-stretch h-[400px] md:h-[600px]">
-                    <div className="relative rounded-[4px] overflow-hidden shadow-2xl h-full bg-white-50">
+                    <div className="relative rounded-[4px] overflow-hidden shadow-2xl h-full bg-white">
                         <img 
                             key={activeProblem.image}
                             src={activeProblem.image} 

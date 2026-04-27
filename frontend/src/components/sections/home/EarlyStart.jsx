@@ -71,7 +71,7 @@ const EarlyStart = () => {
                     {cards.map((card, index) => (
                         <div 
                             key={index} 
-                            className="relative p-6 bg-white group cursor-pointer transition-all duration-500 hover:shadow-xl rounded-[4px] border border-white-500 overflow-hidden w-full md:w-[750px] md:h-[340px] flex flex-col"
+                            className="relative p-6 bg-white group cursor-pointer transition-all duration-500 hover:shadow-xl rounded-[2px] border border-white-600 overflow-hidden w-full md:w-[750px] md:h-[340px] flex flex-col"
                         >
                             {/* Banner Decoration */}
                             <img 
@@ -124,7 +124,7 @@ const EarlyStart = () => {
                 </div>
 
                 {/* Bottom Banner */}
-                <div className="mt-5 mx-6 md:mx-0 flex flex-col md:flex-row items-center justify-between p-8 md:px-12 md:py-8 bg-white-50 rounded-[4px]">
+                <div className="mt-5 mx-6 md:mx-0 flex flex-col md:flex-row items-center justify-between p-8 md:px-12 md:py-8 bg-white-50 rounded-[2px] border border-white-600">
                     <div className="flex items-center gap-6 mb-6 md:mb-0">
                         <div className="w-16 h-16 flex items-center justify-center">
                             <img src="/homepage/15 min CTA .png" alt="Paper plane" className="w-full h-full object-contain" />
