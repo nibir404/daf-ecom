@@ -64,9 +64,12 @@ The codebase follows a structured, feature-driven organization to ensure separat
 ## 🗺️ Roadmap & Features
 
 ### Current Features
-- ✅ **Premium Landing Page:** Multiple sections including Hero, Testimonials, FAQ, and CTA.
+- ✅ **Premium Landing Page:** Multiple sections including Hero, Credibility, Problem Solver, and CTA.
+- ✅ **Interactive Domain Search:** High-fidelity search bar with active states, rich placeholders, and glow effects in the Credibility section.
+- ✅ **Dynamic Problem Solver:** Interactive section with state-driven content, accordion-style layouts, and synchronized illustrations.
+- ✅ **Modern Typography:** Consistent use of SF Pro with precise line-heights and weights for a premium editorial feel.
 - ✅ **Modular Architecture:** Feature-based directory structure for scalability.
-- ✅ **Responsive Design:** Mobile-first approach using Tailwind CSS.
+- ✅ **Responsive Design:** Mobile-first approach with refined desktop layouts.
 - ✅ **Glassmorphism UI:** Modern Navbar with backdrop blur and sleek components.
 - ✅ **Comprehensive Pages:** About, Blog, Services, Pricing, and Case Studies.
 
