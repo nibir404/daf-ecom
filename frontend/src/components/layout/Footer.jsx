@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 
 const Footer = () => {
@@ -21,7 +22,12 @@ const Footer = () => {
         },
         {
             title: "Company",
-            links: ["About Us", "Clients & Portfolio", "Careers", "Contact"]
+            links: [
+                { name: "About Us", path: "/about" },
+                { name: "Clients & Portfolio", path: "#" },
+                { name: "Careers", path: "#" },
+                { name: "Contact", path: "#" }
+            ]
         },
         {
             title: "Legal",
@@ -65,7 +71,9 @@ const Footer = () => {
 
                     {/* Logo Container */}
                     <div className="flex flex-col h-auto lg:h-[80px] items-start w-full lg:w-[282px] shrink-0">
-                        <img src="/Footer/DaffodilWhiteLogo.png" alt="Daffodil" className="w-[200px] lg:w-[240px] h-auto object-contain" />
+                        <Link to="/">
+                            <img src="/Footer/DaffodilWhiteLogo.png" alt="Daffodil" className="w-[200px] lg:w-[240px] h-auto object-contain" />
+                        </Link>
                     </div>
 
                     {/* Right Columns (Support, Company, Legal) */}
@@ -74,11 +82,20 @@ const Footer = () => {
                             <div key={idx} className="flex flex-col gap-[20px] min-w-0">
                                 <h4 className="text-[24px] text-white font-normal leading-normal whitespace-nowrap">{group.title}</h4>
                                 <div className="flex flex-col text-[14px] text-white/80 leading-relaxed">
-                                    {group.links.map((link, lIdx) => (
-                                        <a key={lIdx} href="#" className="hover:text-white transition-colors py-[2px] block whitespace-nowrap">
-                                            {link}
-                                        </a>
-                                    ))}
+                                    {group.links.map((link, lIdx) => {
+                                        if (typeof link === 'object') {
+                                            return (
+                                                <Link key={lIdx} to={link.path} className="hover:text-white transition-colors py-[2px] block whitespace-nowrap">
+                                                    {link.name}
+                                                </Link>
+                                            )
+                                        }
+                                        return (
+                                            <a key={lIdx} href="#" className="hover:text-white transition-colors py-[2px] block whitespace-nowrap">
+                                                {link}
+                                            </a>
+                                        )
+                                    })}
                                 </div>
                             </div>
                         ))}
