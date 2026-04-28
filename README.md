@@ -65,14 +65,11 @@ The codebase follows a structured, feature-driven organization to ensure separat
 ## 🗺️ Roadmap & Features
 
 ### Current Features
-- ✅ **Premium Smooth Scrolling:** Integrated [Lenis](https://github.com/darkroomengineering/lenis) for a buttery-smooth, inertia-based scrolling experience.
-- ✅ **Global Reveal Animations:** GSAP-powered section reveal animations (fade-in & slide-up) as you scroll down the page.
-- ✅ **High-Fidelity Footer:** Fully realized footer design from Figma node `609:4010` with partnership integrations and responsive link grids.
-- ✅ **Animated Interactivity:** GSAP-enhanced button hover effects with elastic scaling, icon shifts, and dynamic background fills.
-- ✅ **Interactive Domain Search:** High-fidelity search bar with active states, rich placeholders, and glow effects (now synced with Footer).
-- ✅ **Dynamic Problem Solver:** Interactive section with state-driven content and synchronized illustrations.
-- ✅ **How It Works Progress:** Interactive workflow section with tabbed views and scroll-driven progress tracking.
-- ✅ **Service Showcase:** Comprehensive service cards with hover effects and detailed information.
+- ✅ **High-Fidelity About Us Page:** Complete alignment with Figma specifications (node `171:1212`, `184:2076`).
+- ✅ **Precision Spatial System:** Standardized 1520px content containers with 120px vertical padding and 200px side gutters across all sections.
+- ✅ **Sticky Side-Header Layout:** Implemented persistent side-headers in the "Our Team" section to maintain structural context during scroll.
+- ✅ **Interactive Portfolio List:** "Clients & Works" section with hover-reveal thumbnails and distributed header alignment.
+- ✅ **Mission & Vision Visualization:** Balanced dual-column layout with custom-themed, accessible status badges.
 - ✅ **Responsive & Accessible:** Mobile-first approach with refined desktop layouts and semantic HTML.
 
 ### Planned Features

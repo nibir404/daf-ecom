@@ -24,6 +24,7 @@ npm install
 - **Tailwind CSS 4**: Modern CSS framework with native container queries and improved performance.
 - **GSAP 3**: High-performance animations for scroll-triggered reveal effects and micro-interactions.
 - **Lenis**: Integrated smooth scrolling for a premium, momentum-based user experience.
+- **High-Fidelity About Us Page**: Rebuilt all sections (Hero, Mission, Work, Team) with strict adherence to 1520px container constraints and 120px/200px spacing rules.
 - **Architecture**: Feature-based modularity designed for scalability and separation of concerns.
 
 ## 📁 Key Directories
