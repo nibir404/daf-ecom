@@ -48,7 +48,7 @@ const CaseStudies = () => {
     };
 
     return (
-        <section className="w-full py-24 md:py-[120px] overflow-hidden">
+        <section className="w-full py-[120px] overflow-hidden">
             <div className="max-w-[1520px] mx-auto px-6 md:px-0">
                 {/* Header Section */}
                 <div className="text-center mb-[60px] flex flex-col items-center gap-[10px]">
