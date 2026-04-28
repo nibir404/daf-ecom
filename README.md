@@ -1,6 +1,6 @@
 # 🛍️ DAF E-com Frontend
 
-A high-performance, modular e-commerce frontend built with **React 19**, **Vite 8**, and **Tailwind CSS 4**. Designed for scalability, maintainability, and a premium user experience with a focus on modern aesthetics and performance.
+A high-performance, modular e-commerce frontend built with **React 19**, **Vite 6**, and **Tailwind CSS 4**. Designed for scalability, maintainability, and a premium user experience with a focus on modern aesthetics, high-fidelity animations, and performance.
 
 ---
 
@@ -53,32 +53,33 @@ The codebase follows a structured, feature-driven organization to ensure separat
 
 ## 🛠️ Technology Stack
 
-- **Framework:** [React 19](https://react.dev/) - Functional components with modern hooks.
-- **Bundler:** [Vite 8](https://vitejs.dev/) - Lightning-fast HMR and build process.
-- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/) - Utility-first CSS with modern engine.
+- **Framework:** [React 19](https://react.dev/) - Functional components with modern hooks and concurrent features.
+- **Bundler:** [Vite 6](https://vitejs.dev/) - Lightning-fast HMR and optimized build pipeline.
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/) - Utility-first CSS with the next-gen engine.
+- **Animations:** [GSAP 3](https://greensock.com/gsap/) - Industry-leading animation library for high-fidelity interactions.
 - **Linting:** [ESLint](https://eslint.org/) - Industry standard code quality enforcement.
-- **State:** React State (Context API / Custom Hooks).
+- **State:** React State & Context API (Scalable to Zustand/Redux).
 
 ---
 
 ## 🗺️ Roadmap & Features
 
 ### Current Features
-- ✅ **Premium Landing Page:** Multiple sections including Hero, Credibility, Problem Solver, and CTA.
-- ✅ **Interactive Domain Search:** High-fidelity search bar with active states, rich placeholders, and glow effects in the Credibility section.
-- ✅ **Dynamic Problem Solver:** Interactive section with state-driven content, accordion-style layouts, and synchronized illustrations.
-- ✅ **Modern Typography:** Consistent use of SF Pro with precise line-heights and weights for a premium editorial feel.
-- ✅ **Modular Architecture:** Feature-based directory structure for scalability.
-- ✅ **Responsive Design:** Mobile-first approach with refined desktop layouts.
-- ✅ **Glassmorphism UI:** Modern Navbar with backdrop blur and sleek components.
+- ✅ **High-Fidelity UI/UX:** Premium landing page with glassmorphism, fluid layouts, and SF Pro typography.
+- ✅ **GSAP Animations:** Smooth scroll-triggered transitions and interactive micro-animations.
+- ✅ **Interactive Workflow:** "How It Works" section with tabbed views and scroll-driven progress tracking.
+- ✅ **Interactive Domain Search:** High-fidelity search bar with active states, rich placeholders, and glow effects.
+- ✅ **Dynamic Problem Solver:** Interactive section with state-driven content and synchronized illustrations.
+- ✅ **Service Showcase:** Comprehensive service cards with hover effects and detailed information.
+- ✅ **Responsive & Accessible:** Mobile-first approach with refined desktop layouts and semantic HTML.
 - ✅ **Comprehensive Pages:** About, Blog, Services, Pricing, and Case Studies.
 
 ### Planned Features
 - [ ] **E-commerce Dashboard:** Full-featured user and admin dashboards.
-- [ ] **CMS Integration:** Headless CMS support for Blog and Case Studies.
-- [ ] **Advanced State Management:** Integration of Zustand or Redux for complex state.
-- [ ] **Dark Mode Support:** Dynamic theme switching.
-- [ ] **SEO Optimization:** Meta tags and structured data for better search visibility.
+- [ ] **CMS Integration:** Headless CMS support for dynamic Blog and Case Studies content.
+- [ ] **Advanced State Management:** Integration of Zustand or Redux for complex global state.
+- [ ] **Dark Mode Support:** Dynamic theme switching with system preference detection.
+- [ ] **SEO Optimization:** Enhanced meta tags, JSON-LD, and structured data.
 
 ---
 
@@ -95,3 +96,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ---
 
 © 2026 DAF E-com. All rights reserved.
+

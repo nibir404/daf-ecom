@@ -65,13 +65,14 @@ const HowItWorks = () => {
                 title: "Get Online in Minutes, No Setup Complexity",
                 description: "Search your domain, choose hosting, and launch instantly with a reliable foundation.",
                 cta: "Get Online",
-                image: "http://localhost:3845/assets/8f1146611ff4a4ecb05c2a36765ae6cbeb699db8.png",
-                flare: "http://localhost:3845/assets/7ee905ccb6090f1f39eee6d03621f46e454e7938.svg"
+                image: "/homepage/step 1.png",
+                flare: "/homepage/Instant Setup Banner.svg"
             },
             theme: {
                 primary: 'bg-blue-500',
                 light: 'bg-blue-50',
-                fill: 'bg-blue-500'
+                fill: 'bg-blue-500',
+                glow: 'bg-blue-100/60'
             }
         },
         custom: {
@@ -109,13 +110,14 @@ const HowItWorks = () => {
                 title: "Build Something Scalable, With the Right Foundation",
                 description: "Start with a structured approach to design, development, and long-term growth.",
                 cta: "Get System Plan",
-                image: "http://localhost:3845/assets/9888f4b32822a85739506bafd0d97405847de829.png",
-                flare: "http://localhost:3845/assets/ff1ab9570f9d87a02b440850ddfb3d20ea6bfa2e.svg"
+                image: "/homepage/step 2.png",
+                flare: "/homepage/Growth Banner.svg"
             },
             theme: {
                 primary: 'bg-orange-500',
                 light: 'bg-orange-50',
-                fill: 'bg-orange-500'
+                fill: 'bg-orange-500',
+                glow: 'bg-orange-100/60'
             }
         }
     };
@@ -208,18 +210,16 @@ const HowItWorks = () => {
                     </div>
 
                     {/* Right: Featured Card */}
-                    <div className="flex-1 bg-white border border-white-600 rounded-[2px] relative overflow-hidden group/card">
-                        {/* Background Flare */}
-                        <div className="absolute inset-0 pointer-events-none opacity-40 group-hover/card:opacity-60 transition-opacity">
-                            <img src={currentData.card.flare} alt="" className="w-full h-full object-cover scale-150 rotate-[145deg]" />
-                        </div>
+                    <div className="flex-1 bg-white-50 border border-white-600 rounded-[2px] relative overflow-hidden group/card min-h-[460px]">
+                        {/* Background Flare / Glow */}
+                        <div className={`absolute -left-[100px] -bottom-[100px] w-[400px] h-[400px] rounded-full ${currentData.theme.glow} blur-[120px] pointer-events-none opacity-40 group-hover/card:opacity-60 transition-opacity duration-700 z-0`} />
 
                         {/* Text Content */}
                         <div className="absolute left-[40px] top-[40px] max-w-[450px] z-10">
-                            <h3 className="text-[36px] font-semibold italic leading-[1.2] text-black mb-[10px]">
+                            <h3 className="text-[36px] font-semibold italic leading-[1.2] text-black mb-[10px] tracking-tight">
                                 {currentData.card.title}
                             </h3>
-                            <p className="text-[16px] leading-[26px] text-black-400">
+                            <p className="text-[16px] leading-[26px] text-black-400 font-normal">
                                 {currentData.card.description}
                             </p>
                         </div>
@@ -232,7 +232,7 @@ const HowItWorks = () => {
                         </div>
 
                         {/* Featured Image */}
-                        <div className="absolute right-0 bottom-0 w-[310px] h-full pointer-events-none">
+                        <div className="absolute right-0 top-0 bottom-0 w-[310px] pointer-events-none z-0">
                             <img 
                                 src={currentData.card.image} 
                                 alt="preview" 
