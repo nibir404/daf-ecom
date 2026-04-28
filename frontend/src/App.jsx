@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
+import Services from './pages/Services'
+import Pricing from './pages/Pricing'
+import StartHere from './pages/StartHere'
 import SmoothScroll from './components/layout/SmoothScroll'
 
 function App() {
@@ -10,6 +13,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/resources" element={<Home />} /> {/* Temporary redirect to Home */}
+          <Route path="/explore" element={<StartHere />} />
         </Routes>
       </SmoothScroll>
     </Router>

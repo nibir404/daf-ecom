@@ -4,23 +4,23 @@ const Differentiate = () => {
   const features = [
     {
       title: "Established Industry Experience",
-      description: "Our long-standing presence reflects reliability, consistency, & deep domain understanding built over the years",
-      icon: "/about-diff-office.svg"
+      description: "Our long-standing presence reflects reliability, consistency, & deep domain understanding built over years.",
+      icon: "/aboutpage/about-diff-office.svg"
     },
     {
-      title: "Relationship-Driven Approach",
-      description: "We focus on building long-term partnerships, ensuring ongoing support and continuous improvement.",
-      icon: "/about-diff-chart.svg"
+      title: "Data-Driven Strategies",
+      description: "We focus on data and market insights to ensure our solutions are practical and yield results.",
+      icon: "/aboutpage/about-diff-chart.svg"
     },
     {
-      title: "Unified Capability Structure",
-      description: "By combining web, commerce, and digital expertise, we deliver solutions that work together seamlessly.",
-      icon: "/about-diff-structure.svg"
+      title: "Scalable Technical Solutions",
+      description: "We build systems that grow with your business, focusing on security and performance.",
+      icon: "/aboutpage/about-diff-code.svg"
     },
     {
-      title: "Adaptation to Evolving Technology",
-      description: "We continuously update our approach to align with changing technologies and market demands.",
-      icon: "/about-diff-code.svg"
+      title: "Integrated Workflows",
+      description: "Our approach simplifies complex tasks through well-structured and connected workflows.",
+      icon: "/aboutpage/about-diff-structure.svg"
     }
   ]
 

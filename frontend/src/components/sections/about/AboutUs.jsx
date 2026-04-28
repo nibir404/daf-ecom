@@ -2,11 +2,11 @@ import React from 'react'
 
 const AboutUs = () => {
   return (
-    <section className="py-24 bg-white-50 overflow-hidden">
-      <div className="max-w-[1520px] mx-auto px-6 md:px-0">
-        <div className="flex flex-col md:flex-row gap-16 items-center">
-          {/* Text Content */}
-          <div className="w-full md:w-1/2 flex flex-col justify-between min-h-[600px]">
+    <section className="py-[120px] overflow-hidden">
+      <div className="max-w-[1920px] mx-auto px-[200px]">
+        <div className="flex flex-col md:flex-row gap-[60px] items-center w-[1520px]">
+          {/* Text Content (640px width) */}
+          <div className="w-[640px] flex flex-col justify-between h-[600px] shrink-0">
             <div className="space-y-8">
               <h2 className="text-[48px] font-normal text-black-400">
                 Who We <span className="font-bold text-black-800">Are?</span>
@@ -21,7 +21,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="mt-12">
+            <div className="">
               <p className="text-[34px] italic font-medium text-black-400 leading-[1.3]">
                 Our focus remains on delivering <br />
                 <span className="font-semibold text-black-800">practical, scalable</span>, and <br />
@@ -30,13 +30,15 @@ const AboutUs = () => {
             </div>
           </div>
 
-          {/* Image Content */}
-          <div className="w-full md:w-1/2 h-[600px] rounded-[2px] overflow-hidden">
-            <img 
-              src="/about-us-who.png" 
-              alt="Who We Are" 
-              className="w-full h-full object-cover"
-            />
+          {/* Image Content (820px width) */}
+          <div className="w-[820px] h-[600px] relative shrink-0">
+            <div className="relative z-10 rounded-[2px] overflow-hidden h-full">
+              <img 
+                src="/aboutpage/WhoWeAreImg.png" 
+                alt="Daffodil team working" 
+                className="w-full h-full object-cover grayscale-0 hover:grayscale transition-all duration-700"
+              />
+            </div>
           </div>
         </div>
       </div>

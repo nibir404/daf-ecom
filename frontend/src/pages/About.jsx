@@ -8,8 +8,8 @@ import HeroAbout from '../components/sections/about/HeroAbout'
 import MissionVission from '../components/sections/about/MissionVission'
 import Differentiate from '../components/sections/about/Differentiate'
 import HowWeWork from '../components/sections/about/HowWeWork'
-import OurTeam from '../components/sections/about/OurTeam'
 import ClientsAndWorks from '../components/sections/about/ClientsAndWorks'
+import OurTeam from '../components/sections/about/OurTeam'
 import Careers from '../components/sections/about/Careers'
 
 function About() {
@@ -19,10 +19,10 @@ function About() {
       <HeroAbout/>
       <AboutUs/>
       <Differentiate/>
-      <HowWeWork/>
       <MissionVission/>
-      <OurTeam/>
+      <HowWeWork/>
       <ClientsAndWorks/>
+      <OurTeam/>
       <Careers/>
       <CTA/>
       <Footer/>

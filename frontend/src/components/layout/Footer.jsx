@@ -60,9 +60,13 @@ const Footer = () => {
                                 <h4 className="text-[24px] text-white font-normal leading-normal whitespace-nowrap">{group.title}</h4>
                                 <div className="flex flex-col text-[14px] text-white/80 leading-relaxed">
                                     {group.links.map((link, lIdx) => (
-                                        <a key={lIdx} href="#" className="hover:text-white transition-colors py-[2px] block">
+                                        <Link 
+                                            key={lIdx} 
+                                            to={group.title === "Services" ? "/services" : group.title === "Resources" ? "/resources" : "#"} 
+                                            className="hover:text-white transition-colors py-[2px] block"
+                                        >
                                             {link}
-                                        </a>
+                                        </Link>
                                     ))}
                                 </div>
                             </div>
@@ -91,9 +95,13 @@ const Footer = () => {
                                             )
                                         }
                                         return (
-                                            <a key={lIdx} href="#" className="hover:text-white transition-colors py-[2px] block whitespace-nowrap">
+                                            <Link 
+                                                key={lIdx} 
+                                                to={group.title === "Pricing" ? "/pricing" : "#"} 
+                                                className="hover:text-white transition-colors py-[2px] block whitespace-nowrap"
+                                            >
                                                 {link}
-                                            </a>
+                                            </Link>
                                         )
                                     })}
                                 </div>
