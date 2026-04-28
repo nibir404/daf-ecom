@@ -25,15 +25,15 @@ const OurTeam = () => {
   ]
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-[1520px] mx-auto px-6 md:px-0">
-        <div className="flex flex-col lg:flex-row gap-20">
-          {/* Left Side: Sticky Title */}
-          <div className="w-full lg:w-1/3">
-            <div className="lg:sticky lg:top-32 space-y-6">
-              <h2 className="text-[40px] md:text-[48px] font-normal leading-tight text-black-400">
-                The People Behind <br />
-                <span className="text-black-800">Daffodil <span className="font-bold">Web</span></span> and <span className="font-bold text-orange-600">Ecommerce</span>
+    <section className="py-[120px]">
+      <div className="max-w-[1920px] mx-auto px-[200px]">
+        <div className="flex flex-col lg:flex-row gap-[60px] w-[1520px] items-start">
+          {/* Left Side: Sticky Title (624px width) */}
+          <div className="w-full lg:w-[624px] shrink-0 lg:sticky lg:top-[120px]">
+            <div className="space-y-6">
+              <h2 className="text-[48px] font-normal leading-tight text-[#494949]">
+                The People Behind
+                Daffodil <span className="font-bold text-[#1c1c1c]">Web</span> and <span className="font-bold text-[#E38444]">Ecommerce</span>
               </h2>
               <p className="text-[16px] text-black-400 max-w-[400px]">
                 Our values shape how we design, build, and grow Daffodil, from product decisions to how we treat users.
@@ -41,19 +41,27 @@ const OurTeam = () => {
             </div>
           </div>
 
-          {/* Right Side: Team Grid */}
-          <div className="w-full lg:w-2/3">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Right Side: Team Grid (836px width to maintain 20px gap strictly) */}
+          <div className="w-[836px]">
+            <div className="grid grid-cols-2 gap-[20px]">
               {team.map((member, index) => (
-                <div key={index} className="relative group overflow-hidden rounded-[2px] h-[514px]">
-                  <img 
-                    src={member.photo} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105"
-                  />
-                  <div className="absolute bottom-[10px] left-[10px] right-[10px] bg-white-50 p-6 rounded-[2px] transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                    <h3 className="text-[24px] font-bold text-black-800">{member.name}</h3>
-                    <p className="text-[16px] text-black-400">{member.role}</p>
+                <div key={index} className="relative group overflow-hidden w-[408px] h-[514px] shrink-0">
+                  <div className="absolute inset-0 w-full h-full overflow-hidden">
+                    <img 
+                      src={member.photo} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover transition-all duration-700 scale-100 group-hover:scale-105"
+                    />
+                  </div>
+                  
+                  {/* Name Card - Specific Positioning from Figma */}
+                  <div className="absolute bg-[#fefefe] flex flex-col gap-[4px] items-start justify-center left-[10px] p-[20px] rounded-[2px] top-[408px] w-[388px] border border-black-100/5 shadow-sm group-hover:top-[398px] transition-all duration-500">
+                    <h3 className="font-bold text-[24px] text-[#1c1c1c] whitespace-nowrap leading-tight">
+                      {member.name}
+                    </h3>
+                    <p className="text-[16px] text-[#494949] w-full">
+                      {member.role}
+                    </p>
                   </div>
                 </div>
               ))}
