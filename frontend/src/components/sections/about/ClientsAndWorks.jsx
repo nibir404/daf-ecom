@@ -21,14 +21,14 @@ const ClientsAndWorks = () => {
   ]
 
   return (
-    <section className="py-[120px] bg-[#FEFEFE] overflow-hidden">
+    <section className="py-[120px] bg-white-50 overflow-hidden">
       <div className="max-w-[1920px] mx-auto px-[200px]">
         <div className="flex flex-col gap-[60px] w-[1520px]">
           {/* Header Block */}
           <div className="flex flex-col md:flex-row justify-between items-end">
             <div className="space-y-4">
               <h2 className="text-[48px] font-normal text-black-400 leading-tight">
-                Clients and <span className="font-bold text-black-800">Work</span>
+                Clients and <span className="font-bold text-black-900">Work</span>
               </h2>
               <p className="text-[16px] text-black-400 max-w-[358px]">
                 Delivering solutions that improve operations and strengthen digital presence.

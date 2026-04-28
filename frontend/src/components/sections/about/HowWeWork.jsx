@@ -31,7 +31,7 @@ const HowWeWork = () => {
           {/* Title Section */}
           <div className="text-center space-y-4">
             <h2 className="text-[40px] md:text-[48px] font-normal text-black-400">
-              How We <span className="font-bold text-black-800">Work</span>
+              How We <span className="font-bold text-black-900">Work</span>
             </h2>
             <p className="text-[16px] text-black-400 max-w-[648px] mx-auto">
               Experience, consistency, and an integrated approach to digital solutions.
@@ -56,7 +56,7 @@ const HowWeWork = () => {
                   key={index}
                   className="bg-white-50 p-10 flex flex-col items-start space-y-6 h-[242px] border border-black-50/5 transition-all duration-300 hover:shadow-xl group"
                 >
-                  <h3 className="text-[20px] font-medium text-black-800 leading-tight group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-[20px] font-medium text-black-900 leading-tight group-hover:text-blue-600 transition-colors">
                     {step.title}
                   </h3>
                   <p className="text-[14px] text-black-400 leading-relaxed">

@@ -9,7 +9,7 @@ const AboutUs = () => {
           <div className="w-[640px] flex flex-col justify-between h-[600px] shrink-0">
             <div className="space-y-8">
               <h2 className="text-[48px] font-normal text-black-400">
-                Who We <span className="font-bold text-black-800">Are?</span>
+                Who We <span className="font-bold text-black-900">Are?</span>
               </h2>
               <div className="space-y-6 text-[16px] text-black-400 leading-[1.6]">
                 <p>
@@ -24,8 +24,8 @@ const AboutUs = () => {
             <div className="">
               <p className="text-[34px] italic font-medium text-black-400 leading-[1.3]">
                 Our focus remains on delivering <br />
-                <span className="font-semibold text-black-800">practical, scalable</span>, and <br />
-                <span className="font-bold text-black-800">reliable</span> systems that align with real business needs.
+                <span className="font-semibold text-black-900">practical, scalable</span>, and <br />
+                <span className="font-bold text-black-900">reliable</span> systems that align with real business needs.
               </p>
             </div>
           </div>

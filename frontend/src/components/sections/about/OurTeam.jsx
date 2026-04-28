@@ -31,9 +31,9 @@ const OurTeam = () => {
           {/* Left Side: Sticky Title (624px width) */}
           <div className="w-full lg:w-[624px] shrink-0 lg:sticky lg:top-[120px]">
             <div className="space-y-6">
-              <h2 className="text-[48px] font-normal leading-tight text-[#494949]">
+              <h2 className="text-[48px] font-normal leading-tight text-black-400">
                 The People Behind
-                Daffodil <span className="font-bold text-[#1c1c1c]">Web</span> and <span className="font-bold text-[#E38444]">Ecommerce</span>
+                Daffodil <span className="font-bold text-black-500">Web</span> and <span className="font-bold text-orange-600">Ecommerce</span>
               </h2>
               <p className="text-[16px] text-black-400 max-w-[400px]">
                 Our values shape how we design, build, and grow Daffodil, from product decisions to how we treat users.
@@ -55,11 +55,11 @@ const OurTeam = () => {
                   </div>
                   
                   {/* Name Card - Specific Positioning from Figma */}
-                  <div className="absolute bg-[#fefefe] flex flex-col gap-[4px] items-start justify-center left-[10px] p-[20px] rounded-[2px] top-[408px] w-[388px] border border-black-100/5 shadow-sm group-hover:top-[398px] transition-all duration-500">
-                    <h3 className="font-bold text-[24px] text-[#1c1c1c] whitespace-nowrap leading-tight">
+                  <div className="absolute bg-white-50 flex flex-col gap-[4px] items-start justify-center left-[10px] p-[20px] rounded-[2px] top-[408px] w-[388px] border border-black-100/5 shadow-sm group-hover:top-[398px] transition-all duration-500">
+                    <h3 className="font-bold text-[24px] text-black-500 whitespace-nowrap leading-tight">
                       {member.name}
                     </h3>
-                    <p className="text-[16px] text-[#494949] w-full">
+                    <p className="text-[16px] text-black-400 w-full">
                       {member.role}
                     </p>
                   </div>
