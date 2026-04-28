@@ -2,7 +2,7 @@ import Button from '../../ui/Button';
 
 const Hero = () => {
     return (
-        <section className="w-full h-[850px] bg-center bg-[url('/homepage/home-hero.png')] bg-cover bg-no-repeat flex justify-center items-center overflow-x-hidden">
+        <section className="hero-section w-full h-[850px] bg-center bg-[url('/homepage/home-hero.png')] bg-cover bg-no-repeat flex justify-center items-center overflow-x-hidden">
             <div className="hero-content flex flex-col items-center justify-center w-[1220px] text-center mt-[-300px]">
                 <div className="flex items-center gap-2.5 bg-gold-50 px-4 py-2.5 rounded-full mb-10">
                     <img src="/homepage/growth.svg" alt="growth" className="w-4 h-4" />

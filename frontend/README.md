@@ -22,7 +22,8 @@ npm install
 - **React 19**: Utilizing the latest React features and concurrent rendering.
 - **Vite 6**: Ultra-fast development server and optimized build pipeline.
 - **Tailwind CSS 4**: Modern CSS framework with native container queries and improved performance.
-- **GSAP 3**: High-performance animations for scroll-triggered effects and micro-interactions.
+- **GSAP 3**: High-performance animations for scroll-triggered reveal effects and micro-interactions.
+- **Lenis**: Integrated smooth scrolling for a premium, momentum-based user experience.
 - **Architecture**: Feature-based modularity designed for scalability and separation of concerns.
 
 ## 📁 Key Directories

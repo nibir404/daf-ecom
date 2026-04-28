@@ -65,14 +65,15 @@ The codebase follows a structured, feature-driven organization to ensure separat
 ## 🗺️ Roadmap & Features
 
 ### Current Features
-- ✅ **High-Fidelity UI/UX:** Premium landing page with glassmorphism, fluid layouts, and SF Pro typography.
-- ✅ **GSAP Animations:** Smooth scroll-triggered transitions and interactive micro-animations.
-- ✅ **Interactive Workflow:** "How It Works" section with tabbed views and scroll-driven progress tracking.
-- ✅ **Interactive Domain Search:** High-fidelity search bar with active states, rich placeholders, and glow effects.
+- ✅ **Premium Smooth Scrolling:** Integrated [Lenis](https://github.com/darkroomengineering/lenis) for a buttery-smooth, inertia-based scrolling experience.
+- ✅ **Global Reveal Animations:** GSAP-powered section reveal animations (fade-in & slide-up) as you scroll down the page.
+- ✅ **High-Fidelity Footer:** Fully realized footer design from Figma node `609:4010` with partnership integrations and responsive link grids.
+- ✅ **Animated Interactivity:** GSAP-enhanced button hover effects with elastic scaling, icon shifts, and dynamic background fills.
+- ✅ **Interactive Domain Search:** High-fidelity search bar with active states, rich placeholders, and glow effects (now synced with Footer).
 - ✅ **Dynamic Problem Solver:** Interactive section with state-driven content and synchronized illustrations.
+- ✅ **How It Works Progress:** Interactive workflow section with tabbed views and scroll-driven progress tracking.
 - ✅ **Service Showcase:** Comprehensive service cards with hover effects and detailed information.
 - ✅ **Responsive & Accessible:** Mobile-first approach with refined desktop layouts and semantic HTML.
-- ✅ **Comprehensive Pages:** About, Blog, Services, Pricing, and Case Studies.
 
 ### Planned Features
 - [ ] **E-commerce Dashboard:** Full-featured user and admin dashboards.
