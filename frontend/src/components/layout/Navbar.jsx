@@ -120,7 +120,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className='primary-links flex h-[48px] items-center'>
+        <div className='primary-links flex h-full items-center'>
           <Link to="/about" className="px-[20px] py-[10px] text-[16px] font-normal text-black-400 hover:text-black-900 transition-colors">
             About us
           </Link>
@@ -229,7 +229,7 @@ const Navbar = () => {
           <Link to="/pricing" className="px-[20px] py-[10px] text-[16px] font-normal text-black-400 hover:text-black-900 transition-colors">
             Pricing
           </Link>
-          <div className="relative group">
+          <div className="relative group h-full flex items-center">
             <button className="flex items-center gap-[10px] px-[20px] py-[10px] text-[16px] font-normal text-black-400 hover:text-black-900 transition-colors group-hover:text-black-900">
               Resources
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-black-400 group-hover:text-black-900 transition-colors">
@@ -267,7 +267,7 @@ const Navbar = () => {
         </div>
 
 
-        <div className='secondary-links flex items-center gap-[10px]'>
+        <div className='secondary-links flex h-full items-center gap-[10px]'>
           <div className="group/explore">
             <Link to="/services" className="flex items-center gap-[10px] px-[20px] py-[10px] h-[48px] text-[16px] font-bold text-black-400 hover:text-black-900 transition-colors group-hover/explore:text-black-900">
               Explore
