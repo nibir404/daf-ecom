@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Credibility = ({ 
     variant = "dark", 
@@ -14,8 +15,17 @@ const Credibility = ({
         "/homepage/company6.png",
     ]
 }) => {
-
+    const [searchQuery, setSearchQuery] = useState('');
+    const navigate = useNavigate();
     const isDark = variant === "dark";
+
+    const handleSearch = (e) => {
+        if (e.key === 'Enter' || e.type === 'click') {
+            if (searchQuery.trim()) {
+                navigate(`/search-domain?q=${encodeURIComponent(searchQuery.trim())}`);
+            }
+        }
+    };
 
     return (
         <section className={`w-full flex flex-col items-center ${isDark ? 'bg-black-800' : 'bg-white'} ${className}`}>
@@ -53,12 +63,18 @@ const Credibility = ({
                                     type="text"
                                     className="w-full bg-transparent border-none outline-none text-[16px] font-bold text-black-400 peer"
                                     placeholder=" "
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    onKeyDown={handleSearch}
                                 />
                                 <p className="absolute left-0 pointer-events-none text-[14px] text-black-400 font-normal peer-focus:opacity-0 peer-[:not(:placeholder-shown)]:opacity-0 transition-opacity duration-200">
                                     Search the <span className="font-bold italic">“Domain”</span> you want
                                 </p>
                             </div>
-                            <button className="bg-black-900 text-white-50 px-6 py-3.5 rounded-[2px] flex items-center gap-2.5 hover:bg-blue-600 transition-all duration-300 cursor-pointer shadow-[inset_0px_0px_4px_0px_rgba(255,255,255,0.65)] shrink-0">
+                            <button 
+                                onClick={handleSearch}
+                                className="bg-black-900 text-white-50 px-6 py-3.5 rounded-[2px] flex items-center gap-2.5 hover:bg-blue-600 transition-all duration-300 cursor-pointer shadow-[inset_0px_0px_4px_0px_rgba(255,255,255,0.65)] shrink-0"
+                            >
                                 <span className="text-[16px] font-medium">Find your domain</span>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <circle cx="11" cy="11" r="8"></circle>
