@@ -1,31 +1,53 @@
 import React from 'react';
 
-const Credibility = ({ showSearchBar = true }) => {
+const Credibility = ({ 
+    variant = "dark", 
+    text = "Trusted by startups, enterprises, and global teams to build scalable systems",
+    showSearchBar = true,
+    className = "",
+    logos = [
+        "/homepage/company1.png",
+        "/homepage/company2.png",
+        "/homepage/company3.png",
+        "/homepage/company4.png",
+        "/homepage/company5.png",
+        "/homepage/company6.png",
+    ]
+}) => {
+
+    const isDark = variant === "dark";
+
     return (
-        <section className="w-full flex flex-col items-center">
-            {/* Top Logos Section */}
-            <div className="w-full bg-black-800 py-24 flex flex-col items-center justify-center relative overflow-hidden border-b border-black-700">
-                <div className="relative z-10 w-full max-w-[1200px] flex flex-col items-center gap-12">
-                    {/* Trust Text */}
-                    <p className="text-white-700 text-[20px] font-normal text-center leading-[28px]">
-                        Trusted by <span className="text-white-50 font-semibold">startups</span>, <span className="text-white-50 font-semibold">enterprises</span>, and <span className="text-white-50 font-semibold">global teams</span> to build scalable systems
+        <section className={`w-full flex flex-col items-center ${isDark ? 'bg-black-800' : 'bg-white'} ${className}`}>
+            <div className={`w-full py-24 flex flex-col items-center justify-center relative overflow-hidden ${isDark ? 'border-b border-black-700' : ''}`}>
+                <div className="relative z-10 w-full max-w-[1520px] px-6 md:px-0 flex flex-col items-center gap-12">
+                    
+                    {/* Statement Text */}
+                    <p className={`text-[20px] font-normal text-center leading-[28px] max-w-[1200px] ${isDark ? 'text-white-700' : 'text-black-500'}`}>
+                        {isDark ? (
+                            <>Trusted by <span className="text-white-50 font-semibold">startups</span>, <span className="text-white-50 font-semibold">enterprises</span>, and <span className="text-white-50 font-semibold">global teams</span> to build scalable systems</>
+                        ) : (
+                            text
+                        )}
                     </p>
                     
                     {/* Logos Container */}
-                    <div className="w-full border-y border-white-900/10 py-10">
-                        <div className="flex flex-wrap justify-between items-center gap-x-12 gap-y-8 opacity-80 hover:opacity-100 transition-opacity duration-300">
-                            <img src="/homepage/company1.png" alt="Stripe" className="h-8 object-contain" />
-                            <img src="/homepage/company2.png" alt="Shopify" className="h-8 object-contain" />
-                            <img src="/homepage/company3.png" alt="Vercel" className="h-8 object-contain" />
-                            <img src="/homepage/company4.png" alt="Notion" className="h-8 object-contain" />
-                            <img src="/homepage/company5.png" alt="Linear" className="h-8 object-contain" />
-                            <img src="/homepage/company6.png" alt="WordPress" className="h-8 object-contain" />
+                    <div className={`w-full max-w-[1200px] border-y ${isDark ? 'border-white-900/10' : 'border-white-500'} py-10`}>
+                        <div className="flex flex-wrap justify-between items-center gap-x-12 gap-y-8 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                            {logos.map((logo, index) => (
+                                <img 
+                                    key={index} 
+                                    src={logo} 
+                                    alt="Partner Logo" 
+                                    className={`h-8 md:h-10 object-contain grayscale transition-all duration-300 hover:grayscale-0`} 
+                                />
+                            ))}
                         </div>
                     </div>
 
-                    {/* Domain Search Bar - Conditional */}
+                    {/* Domain Search Bar - Conditional (Only for dark variant by default or if forced) */}
                     {showSearchBar && (
-                        <div className="w-full bg-gold-50 border border-orange-600 rounded-[2px] flex items-center justify-between pl-5 pr-2 py-2 shadow-[0px_0px_2px_0px_rgba(0,0,0,0.2)] mt-4 hover:shadow-[0px_0px_15px_0px_#73abff,0px_0px_0px_2px_#df6c23] focus-within:shadow-[0px_0px_15px_0px_#73abff,0px_0px_0px_2px_#df6c23] transition-all duration-300 group cursor-text box-border">
+                        <div className="w-full max-w-[1200px] bg-gold-50 border border-orange-600 rounded-[2px] flex items-center justify-between pl-5 pr-2 py-2 shadow-[0px_0px_2px_0px_rgba(0,0,0,0.2)] mt-4 hover:shadow-[0px_0px_15px_0px_#73abff,0px_0px_0px_2px_#df6c23] focus-within:shadow-[0px_0px_15px_0px_#73abff,0px_0px_0px_2px_#df6c23] transition-all duration-300 group cursor-text box-border">
                             <div className="flex-1 relative flex items-center">
                                 <input 
                                     type="text"

@@ -7,6 +7,7 @@ const Button = ({
     className = '', 
     icon, 
     iconPosition = 'right',
+    whiteIcon = false,
     ...props 
 }) => {
     const buttonRef = useRef(null);
@@ -99,7 +100,7 @@ const Button = ({
                                 src={icon} 
                                 alt="" 
                                 className={`w-full h-full object-contain transition-all duration-300 
-                                    ${variant === 'primary' ? 'brightness-0 invert' : 'group-hover/btn:brightness-0 group-hover/btn:invert'}`} 
+                                    ${(variant === 'primary' || whiteIcon) ? 'brightness-0 invert' : 'group-hover/btn:brightness-0 group-hover/btn:invert'}`} 
                             />
                         ) : icon}
                     </div>
@@ -110,8 +111,8 @@ const Button = ({
                             src="/arrow-right.svg" 
                             alt="arrow" 
                             className={`w-full h-full object-contain transition-all duration-300
-                                ${variant === 'primary' ? 'filter-teal-500' : ''} 
-                                ${(variant === 'outline' || variant === 'white' || variant === 'secondary') ? 'filter-blue-500 group-hover/btn:brightness-0 group-hover/btn:invert' : ''}`}
+                                ${ (variant === 'primary' || whiteIcon) ? 'brightness-0 invert' : ''} 
+                                ${(variant === 'outline' || variant === 'white' || variant === 'secondary') && !whiteIcon ? 'filter-blue-500 group-hover/btn:brightness-0 group-hover/btn:invert' : ''}`}
                         />
                     </div>
                 )}

@@ -18,12 +18,12 @@ const Navbar = () => {
           <Link to="/about" className="px-[20px] py-[10px] text-[16px] font-normal text-black-400 hover:text-black-900 transition-colors">
             About us
           </Link>
-          <button className="flex items-center gap-[10px] px-[20px] py-[10px] text-[16px] font-bold text-black-900">
+          <Link to="/services" className="flex items-center gap-[10px] px-[20px] py-[10px] text-[16px] font-bold text-black-900 hover:text-black-400 transition-colors">
             Services
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-black-900">
               <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-          </button>
+          </Link>
           <Link to="/pricing" className="px-[20px] py-[10px] text-[16px] font-normal text-black-400 hover:text-black-900 transition-colors">
             Pricing
           </Link>
