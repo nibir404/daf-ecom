@@ -16,7 +16,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/resources" element={<Home />} /> {/* Temporary redirect to Home */}
-          <Route path="/explore" element={<StartHere />} />
+          <Route path="/start-here" element={<StartHere />} />
         </Routes>
       </SmoothScroll>
     </Router>

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Button from '../../ui/Button';
 
-const FAQ = () => {
-    const [openIndex, setOpenIndex] = useState(null);
-
-    const faqs = [
+const FAQ = ({ 
+    title = (
+        <>Frequently Asked <span className="text-black font-bold">Questions</span></>
+    ),
+    subtitle = "Clear answers to help you move forward with confidence whether you're launching fast or building something complex.",
+    faqs = [
         {
             question: "How do I get started?",
             answer: "Simply click the 'Call Us Today' button or send us an email. We'll schedule a discovery call to understand your needs and provide a tailored roadmap."
@@ -37,14 +39,17 @@ const FAQ = () => {
             question: "Can you integrate with other tools or systems?",
             answer: "Yes, we have extensive experience with API integrations and connecting third-party tools to create seamless workflows."
         }
-    ];
+    ],
+    className = "pt-[120px]"
+}) => {
+    const [openIndex, setOpenIndex] = useState(null);
 
     const toggleFAQ = (index) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
     return (
-        <section className="pt-[120px]">
+        <section className={className}>
             <div className="max-w-[1520px] mx-auto px-6 md:px-0">
                 <div className="flex flex-col lg:flex-row gap-[60px] items-start">
                     
@@ -53,10 +58,10 @@ const FAQ = () => {
                         <div className="flex flex-col gap-[24px]">
                             <div className="flex flex-col gap-[16px]">
                                 <h2 className="text-[48px] leading-[1.1] text-black-400 font-normal">
-                                    Frequently Asked <span className="text-black font-bold">Questions</span>
+                                    {title}
                                 </h2>
                                 <p className="text-[16px] leading-[26px] text-black-400 font-normal max-w-[500px]">
-                                    Clear answers to help you move forward with confidence whether you're launching fast or building something complex.
+                                    {subtitle}
                                 </p>
                             </div>
                             

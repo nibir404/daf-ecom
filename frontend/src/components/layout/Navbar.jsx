@@ -8,7 +8,7 @@ const Navbar = () => {
           <Link to="/" className="w-[169px] shrink-0">
             <img src="/Logo Container.png" alt="daf-logo" className="w-full" />
           </Link>
-          <Link to="/" className="flex items-center gap-[10px] px-[20px] py-[10px] h-[48px] text-[16px] font-bold text-black-400 hover:text-black-900 transition-colors">
+          <Link to="/start-here" className="flex items-center gap-[10px] px-[20px] py-[10px] h-[48px] text-[16px] font-bold text-black-400 hover:text-black-900 transition-colors">
             Start here
             <img src="/arrow-right.svg" alt="icon" className="w-4 h-4" />
           </Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
         </div>
 
         <div className='secondary-links flex items-center gap-[10px]'>
-          <Link to="/explore" className="flex items-center gap-[10px] px-[20px] py-[10px] h-[48px] text-[16px] font-bold text-black-400 hover:text-black-900 transition-colors">
+          <Link to="/start-here" className="flex items-center gap-[10px] px-[20px] py-[10px] h-[48px] text-[16px] font-bold text-black-400 hover:text-black-900 transition-colors">
             Explore
             <img src="/more.svg" alt="icon" className="w-4 h-4" />
           </Link>
