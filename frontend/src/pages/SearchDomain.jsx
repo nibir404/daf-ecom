@@ -42,7 +42,6 @@ const SearchDomain = () => {
                 faqs={domainFaqs}
                 className="py-[120px] bg-white-500"
             />
-            <PricingCTA />
             <Footer />
         </MainLayout>
     );
