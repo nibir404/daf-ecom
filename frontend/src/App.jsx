@@ -6,6 +6,7 @@ import Pricing from './pages/Pricing'
 import StartHere from './pages/StartHere'
 import SearchDomain from './pages/SearchDomain'
 import SingleService from './pages/SingleService'
+import FAQPage from './pages/FAQ List'
 import SmoothScroll from './components/layout/SmoothScroll'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/start-here" element={<StartHere />} />
           <Route path="/search-domain" element={<SearchDomain />} />
           <Route path="/services/:serviceId" element={<SingleService />} />
+          <Route path="/faq" element={<FAQPage />} />
         </Routes>
       </SmoothScroll>
     </Router>
