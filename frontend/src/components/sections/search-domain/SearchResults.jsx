@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Button from '../../ui/Button';
 
 const SearchResults = () => {
@@ -17,42 +17,33 @@ const SearchResults = () => {
     ];
 
     // Check if the search query is "valid"
-    // Valid = no period OR ends with one of our 50 extensions
-    const isValidSearch = useMemo(() => {
-        if (!query) return true; // Initial state is handled by isNoSearch
-        if (!query.includes('.')) return true; // Pure name search is always valid
-        return approvedTlds.some(tld => query.toLowerCase().endsWith(tld));
-    }, [query]);
+    const isValidSearch = !query || !query.includes('.') || approvedTlds.some(tld => query.toLowerCase().endsWith(tld));
 
-    // Generate a list of 50 mock domain results
-    const allMockDomains = useMemo(() => {
-        if (!isValidSearch) return [];
+    // Generate a list of mock domain results deterministically
+    const allMockDomains = isValidSearch ? approvedTlds.map((tld, index) => {
+        // Use deterministic pricing based on index
+        const basePrice = (index % 30) + 5;
+        const price = `${basePrice}.9`;
+        const retail = `${Math.floor(basePrice * 1.4)}.0`;
         
-        return approvedTlds.map((tld, index) => {
-            const basePrice = Math.floor(Math.random() * 30) + 5;
-            const price = `${basePrice}.9`;
-            const retail = `${Math.floor(basePrice * 1.4)}.0`;
-            
-            let tag = null;
-            let tagColor = '';
-            
-            if (index === 0) { tag = 'New'; tagColor = 'bg-success-10 text-success-800 border-success-800'; }
-            else if (index === 3) { tag = 'Premium'; tagColor = 'bg-purple-10 text-purple-800 border-purple-800'; }
-            else if (index === 4) { tag = '70% off'; tagColor = 'bg-orange-10 text-orange-800 border-orange-800'; }
-            else if (index === 7) { tag = 'Popular'; tagColor = 'bg-info-10 text-info-700 border-info-700'; }
-            
-            // If user searched with a TLD, use the name part for generation
-            const namePart = query.includes('.') ? query.split('.')[0] : query;
-            
-            return {
-                name: `${namePart || 'domain'}${tld}`,
-                price: `$${price}/year`,
-                retail: `Retail $${retail}/year`,
-                tag,
-                tagColor
-            };
-        });
-    }, [query, isValidSearch]);
+        let tag = null;
+        let tagColor = '';
+        
+        if (index === 0) { tag = 'New'; tagColor = 'bg-success-10 text-success-800 border-success-800'; }
+        else if (index === 3) { tag = 'Premium'; tagColor = 'bg-purple-10 text-purple-800 border-purple-800'; }
+        else if (index === 4) { tag = '70% off'; tagColor = 'bg-orange-10 text-orange-800 border-orange-800'; }
+        else if (index === 7) { tag = 'Popular'; tagColor = 'bg-info-10 text-info-700 border-info-700'; }
+        
+        const namePart = query.includes('.') ? query.split('.')[0] : query;
+        
+        return {
+            name: `${namePart || 'domain'}${tld}`,
+            price: `$${price}/year`,
+            retail: `Retail $${retail}/year`,
+            tag,
+            tagColor
+        };
+    }) : [];
 
     const [visibleCount, setVisibleCount] = useState(6);
     const [isLoading, setIsLoading] = useState(false);

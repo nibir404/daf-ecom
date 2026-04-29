@@ -6,7 +6,7 @@ import Pricing from './pages/Pricing'
 import StartHere from './pages/StartHere'
 import SearchDomain from './pages/SearchDomain'
 import SingleService from './pages/SingleService'
-import FAQPage from './pages/FAQ List'
+import FAQPage from './pages/FAQList'
 import SmoothScroll from './components/layout/SmoothScroll'
 
 function App() {

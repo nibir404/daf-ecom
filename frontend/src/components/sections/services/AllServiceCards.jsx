@@ -121,14 +121,17 @@ const AllServiceCards = () => {
             });
         }, options);
 
-        Object.values(sectionRefs.current).forEach((ref) => {
+        // Copy current refs to a variable for the cleanup function
+        const currentRefs = sectionRefs.current;
+        Object.values(currentRefs).forEach((ref) => {
             if (ref) observer.observe(ref);
         });
 
         return () => {
-            Object.values(sectionRefs.current).forEach((ref) => {
+            Object.values(currentRefs).forEach((ref) => {
                 if (ref) observer.unobserve(ref);
             });
+            observer.disconnect();
         };
     }, []);
 

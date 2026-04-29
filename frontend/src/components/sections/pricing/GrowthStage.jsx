@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Button from '../../ui/Button';
 
 // Static Data moved outside component for performance and cleaner structure
@@ -183,12 +183,12 @@ const GrowthStage = () => {
     const [activeTab, setActiveTab] = useState('Services');
     const [activeSubTab, setActiveSubTab] = useState('');
 
-    // Synchronize activeSubTab when main tab changes
-    useEffect(() => {
-        if (activeTab !== 'Services' && DYNAMIC_TAB_DATA[activeTab]) {
-            setActiveSubTab(DYNAMIC_TAB_DATA[activeTab].subTabs[0]);
+    const handleTabChange = (tab) => {
+        setActiveTab(tab);
+        if (tab !== 'Services' && DYNAMIC_TAB_DATA[tab]) {
+            setActiveSubTab(DYNAMIC_TAB_DATA[tab].subTabs[0]);
         }
-    }, [activeTab]);
+    };
 
     const renderServiceCell = (value, colIndex) => {
         if (value === true) {
@@ -232,7 +232,7 @@ const GrowthStage = () => {
                         {TABS.map((tab) => (
                             <button
                                 key={tab}
-                                onClick={() => setActiveTab(tab)}
+                                onClick={() => handleTabChange(tab)}
                                 className={`px-[20px] py-[10px] text-[16px] font-semibold rounded-[2px] transition-all duration-300 ${
                                     activeTab === tab ? "bg-orange-600 text-white" : "text-black-300 hover:text-white"
                                 }`}
@@ -379,7 +379,3 @@ const GrowthStage = () => {
 };
 
 export default GrowthStage;
-
-
-
-

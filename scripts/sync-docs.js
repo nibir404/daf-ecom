@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-const README_PATH = './README.md';
-const SRC_PATH = './src';
+const README_PATHS = ['./README.md', './frontend/README.md'];
+const SRC_PATH = './frontend/src';
 
 function getDirectoryStructure(dir, depth = 0) {
     if (depth > 2) return ''; // Limit depth for README clarity
@@ -48,14 +48,14 @@ function getPurpose(relativePath) {
     return purposes[relativePath] || 'Project directory.';
 }
 
-function updateReadme() {
-    if (!fs.existsSync(README_PATH)) {
-        console.error('README.md not found');
+function updateReadme(readmePath) {
+    if (!fs.existsSync(readmePath)) {
+        console.error(`${readmePath} not found`);
         return;
     }
 
     const structure = getDirectoryStructure(SRC_PATH);
-    let readme = fs.readFileSync(README_PATH, 'utf8');
+    let readme = fs.readFileSync(readmePath, 'utf8');
 
     const tableHeader = '| Directory | Purpose |\n| :--- | :--- |\n';
     const startMarker = '<!-- ARCHITECTURE_START -->';
@@ -63,13 +63,13 @@ function updateReadme() {
 
     const startIndex = readme.indexOf(startMarker);
     if (startIndex === -1) {
-        console.error('Start marker not found in README');
+        console.error(`Start marker not found in ${readmePath}`);
         return;
     }
 
     const endIndex = readme.indexOf(endMarker, startIndex);
     if (endIndex === -1) {
-        console.error('End marker not found in README');
+        console.error(`End marker not found in ${readmePath}`);
         return;
     }
 
@@ -77,8 +77,8 @@ function updateReadme() {
     readme = readme.slice(0, startIndex) + newSection + readme.slice(endIndex + endMarker.length);
 
 
-    fs.writeFileSync(README_PATH, readme);
-    console.log('README.md updated successfully!');
+    fs.writeFileSync(readmePath, readme);
+    console.log(`${readmePath} updated successfully!`);
 }
 
-updateReadme();
+README_PATHS.forEach(updateReadme);
