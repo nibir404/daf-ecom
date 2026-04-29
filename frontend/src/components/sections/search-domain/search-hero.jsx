@@ -28,7 +28,7 @@ const SearchHero = () => {
                     src="/search/flare.png" 
                     alt="" 
                     className="w-full h-full object-cover opacity-80"
-                    style={{ transform: 'rotate(180deg)' }}
+                    style={{ transform: 'rotate(360deg)', opacity: '1' }}   
                 />
             </div>
 
@@ -43,7 +43,7 @@ const SearchHero = () => {
                 </div>
 
                 {/* Search Bar */}
-                <div className={`w-full max-w-[1200px] bg-gold-50 border-[3px] rounded-[2px] flex items-center justify-between pl-6 pr-2 py-2 transition-all duration-300 ${error ? 'border-red-500 shadow-[0px_0px_15px_0px_rgba(239,68,68,0.5)]' : 'border-orange-600 shadow-[0px_0px_15px_0px_rgba(115,171,255,1)]'}`}>
+                <div className={`w-full max-w-[1200px] bg-gold-50 border-[3px] rounded-[2px] flex items-center justify-between pl-6 pr-2 py-2 transition-all duration-300 ${error ? 'border-warning-500 shadow-[0px_0px_15px_0px_rgba(239,68,68,0.5)]' : 'border-orange-600 shadow-[0px_0px_15px_0px_rgba(115,171,255,1)]'}`}>
                     <div className="flex-1 relative flex items-center">
                         <input 
                             type="text"

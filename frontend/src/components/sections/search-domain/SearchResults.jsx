@@ -36,10 +36,10 @@ const SearchResults = () => {
             let tag = null;
             let tagColor = '';
             
-            if (index === 0) { tag = 'New'; tagColor = 'bg-[#e6f2e6] text-[#004600] border-[#004600]'; }
-            else if (index === 3) { tag = 'Premium'; tagColor = 'bg-[#efe6fd] text-[#360083] border-[#360083]'; }
-            else if (index === 4) { tag = '70% off'; tagColor = 'bg-[#fef1e9] text-[#874115] border-[#874115]'; }
-            else if (index === 7) { tag = 'Popular'; tagColor = 'bg-[#e6f7ff] text-[#0050b3] border-[#0050b3]'; }
+            if (index === 0) { tag = 'New'; tagColor = 'bg-success-10 text-success-800 border-success-800'; }
+            else if (index === 3) { tag = 'Premium'; tagColor = 'bg-purple-10 text-purple-800 border-purple-800'; }
+            else if (index === 4) { tag = '70% off'; tagColor = 'bg-orange-10 text-orange-800 border-orange-800'; }
+            else if (index === 7) { tag = 'Popular'; tagColor = 'bg-info-10 text-info-700 border-info-700'; }
             
             // If user searched with a TLD, use the name part for generation
             const namePart = query.includes('.') ? query.split('.')[0] : query;
@@ -154,7 +154,7 @@ const SearchResults = () => {
                                                     <Button 
                                                         variant="primary"
                                                         onClick={() => {/* Buy logic */}}
-                                                        className="bg-[#265f58] !px-6 !py-[14px] !shadow-[inset_0px_0px_4px_0px_rgba(255,255,255,0.65)] hover:bg-[#1a433e]"
+                                                        className="bg-teal-900 !px-6 !py-[14px] !shadow-[inset_0px_0px_4px_0px_rgba(255,255,255,0.65)] hover:bg-teal-800"
                                                         icon={
                                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                                                                 <circle cx="9" cy="21" r="1"></circle>
