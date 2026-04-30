@@ -233,34 +233,35 @@ const AIFloatingBar = () => {
         <div className="saas-blur-layer" />
       </div>
 
-      <div className="fixed bottom-0 left-0 w-full z-[100] pointer-events-none flex flex-col items-center justify-end pb-6">
-        <div className={`relative w-full flex flex-col items-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${isOpen ? 'max-w-[94vw] md:max-w-[940px]' : 'max-w-[480px]'}`}>
+      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 w-[92%] sm:w-full sm:max-w-[480px] z-[999] pointer-events-auto transition-all duration-700" 
+           style={{ bottom: 'calc(2rem + env(safe-area-inset-bottom))' }}>
+        
+        <div className={`relative w-full flex flex-col items-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${isOpen ? 'max-w-[96vw] md:max-w-[940px] !w-[96vw] md:!w-[940px]' : ''}`}>
           
-
           {/* AI Canvas Modal */}
           <div 
             ref={modalRef}
             onWheel={handleScroll}
-            className={`pointer-events-auto absolute bottom-full mb-4 left-1/2 -translate-x-1/2 w-[94vw] md:w-[940px] bg-white/90 backdrop-blur-[40px] border border-white/60 rounded-[4px] overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.1)] origin-bottom ${isOpen ? 'block' : 'hidden'}`}
+            className={`pointer-events-auto absolute bottom-full mb-4 left-1/2 -translate-x-1/2 w-[94vw] md:w-[940px] bg-white/95 backdrop-blur-[40px] border border-white/60 rounded-[4px] overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.3)] origin-bottom ${isOpen ? 'block' : 'hidden'}`}
           >
-            <div className="relative w-full h-[50vh] max-h-[450px] flex flex-col">
+            <div className="relative w-full h-[65vh] md:h-[50vh] max-h-[600px] md:max-h-[450px] flex flex-col">
               
               {/* Animated Accent Flare */}
               <div ref={flareRef} className="flare-container backdrop-blur-[12px]">
-                 <div className="absolute top-[-150px] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-orange-600/5 blur-[120px] rounded-full" />
+                 <div className="absolute top-[-150px] left-1/2 -translate-x-1/2 w-[600px] md:w-[800px] h-[300px] md:h-[400px] bg-orange-600/5 blur-[120px] rounded-full" />
               </div>
 
               {/* Minimal Header */}
-              <div className="relative z-20 flex items-center justify-between px-6 py-4 border-b border-black/5 bg-white/40">
+              <div className="relative z-20 flex items-center justify-between px-4 md:px-6 py-3 md:py-4 border-b border-black/5 bg-white/40">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-orange-600 animate-pulse shadow-[0_0_8px_rgba(234,88,12,0.3)]" />
-                  <span className="text-[11px] font-bold text-black/40 uppercase tracking-[0.2em]">AI Support System</span>
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-orange-600 animate-pulse shadow-[0_0_8px_rgba(234,88,12,0.3)]" />
+                  <span className="text-[10px] md:text-[11px] font-bold text-black/40 uppercase tracking-[0.15em] md:tracking-[0.2em]">AI Support System</span>
                 </div>
                 <button 
                   onClick={closeChat} 
-                  className="p-2 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors group"
+                  className="p-1.5 md:p-2 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors group"
                 >
-                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-black/20 group-hover:text-black transition-colors">
+                   <svg width="16" height="16" md:width="18" md:height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-black/20 group-hover:text-black transition-colors">
                       <line x1="18" y1="6" x2="6" y2="18"></line>
                       <line x1="6" y1="6" x2="18" y2="18"></line>
                    </svg>
@@ -269,12 +270,12 @@ const AIFloatingBar = () => {
 
               {/* Scrollable Canvas Container */}
               <div 
-                className="relative z-10 flex-1 overflow-y-auto w-full px-6 pt-6 pb-8 custom-scrollbar" 
+                className="relative z-10 flex-1 overflow-y-auto w-full px-4 md:px-6 pt-4 md:pt-6 pb-6 md:pb-8 custom-scrollbar" 
                 ref={scrollRef}
               >
                 {messages.length === 0 ? (
-                  <div className="h-full flex flex-col items-center justify-center text-center">
-                    <h3 className="text-2xl md:text-3xl font-bold text-black/90 tracking-tight leading-tight mb-8">
+                  <div className="h-full flex flex-col items-center justify-center text-center px-4">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black/90 tracking-tight leading-tight mb-6 md:mb-8">
                       How can I <span className="text-orange-600 italic">elevate</span> your business today?
                     </h3>
                     
@@ -283,7 +284,7 @@ const AIFloatingBar = () => {
                         <button 
                           key={s} 
                           onClick={() => handleOptionClick(s)}
-                          className="px-4 py-2.5 rounded-[2px] text-[13px] font-bold border border-black/5 bg-white/50 hover:bg-white hover:border-orange-600/40 transition-all text-black/60"
+                          className="px-3 md:px-4 py-2 md:py-2.5 rounded-[2px] text-[12px] md:text-[13px] font-bold border border-black/5 bg-white/50 hover:bg-white hover:border-orange-600/40 transition-all text-black/60"
                         >
                           {s}
                         </button>
@@ -291,10 +292,10 @@ const AIFloatingBar = () => {
                     </div>
                   </div>
                 ) : (
-                  <div className="flex flex-col gap-6 w-full max-w-[850px] mx-auto">
+                  <div className="flex flex-col gap-4 md:gap-6 w-full max-w-[850px] mx-auto">
                     {messages.map((msg, idx) => (
                       <div key={idx} className={`w-full flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                        <div className={`max-w-[88%] md:max-w-[78%] p-4 md:p-5 rounded-[4px] text-[15px] leading-relaxed transition-all shadow-sm ${
+                        <div className={`max-w-[90%] md:max-w-[78%] p-3 md:p-5 rounded-[4px] text-[14px] md:text-[15px] leading-relaxed transition-all shadow-sm ${
                           msg.role === 'user' 
                           ? 'user-message rounded-tr-none bg-[#0c0c0c] text-white' 
                           : 'message-glass rounded-tl-none font-medium text-black/80 bg-white/40'
@@ -365,7 +366,8 @@ const AIFloatingBar = () => {
               w-full flex items-center gap-3 px-4 py-2
               bg-[#faf7f0] border border-[#df6c23] rounded-[2px]
               transition-all duration-300 pointer-events-auto
-              shadow-[0_10px_40px_rgba(0,0,0,0.05)]
+              shadow-[0_15px_50px_rgba(223,108,35,0.15)]
+              ${!isOpen && 'animate-border-pulse'}
             `}>
               <form onSubmit={handleSearch} className="flex-1 flex items-center justify-between w-full">
                 <div className="flex-1 flex items-center gap-1">
