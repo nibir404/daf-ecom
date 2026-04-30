@@ -1,66 +1,50 @@
-# 🎨 DAF E-com Frontend Development
+# 🎨 Daffodil E-commerce & Digital Systems - Frontend
 
-This directory contains the React-based frontend for the DAF E-com project.
+A high-fidelity, premium digital platform built for scale. This repository contains the React-based frontend implementation of the Daffodil Web ecosystem, featuring pixel-perfect design alignment, advanced animations, and an AI-driven support interface.
 
-## 🚀 Development
+## 🚀 Key Features
+
+- **AI Support System**: A premium, frosted-glass "AI Floating Bar" with real-time interaction, structured links, and prominent CTAs. Fully responsive and mobile-optimized.
+- **Advanced Glassmorphism**: High-intensity backdrop filters and complex mask-images used for atmospheric "Saas-platform" visual effects.
+- **Smooth Scrolling**: Integrated **Lenis** momentum-based scrolling paired with **GSAP** for fluid, high-performance transitions and reveal effects.
+- **Mega Menu Navigation**: Sophisticated multi-column navigation systems for Services and Resources, optimized for discovery.
+- **Domain Search Ecosystem**: Dedicated flows for finding and selecting digital foundations (Domain, Hosting, SSL).
+- **Responsive Excellence**: Pixel-perfect layouts across mobile, tablet, and desktop using fluid grid systems and modern CSS.
+
+## 🛠️ Tech Stack
+
+- **Core**: React 19 (Concurrent Mode), Vite 6 (Ultra-fast HMR)
+- **Styling**: Tailwind CSS 4, Modern Glassmorphism (Backdrop Filters, Masking)
+- **Animation**: GSAP 3 (ScrollTrigger, Ticker), CSS Keyframe Animations
+- **Scrolling**: Lenis (Smooth Scroll)
+- **Architecture**: Modular, Feature-Based Structure (FDS)
+
+## 📂 Project Architecture
+
+The codebase is organized by features to ensure maximum maintainability and separation of concerns.
+
+| Directory | Purpose |
+| :--- | :--- |
+| `src/app` | Global configuration, routing, and application entry points. |
+| `src/components/layout` | Shared persistent components (Navbar, Footer, SmoothScroll). |
+| `src/components/sections` | Feature-specific UI blocks (Home, Services, AI Floating Bar). |
+| `src/components/ui` | Atomic design components (Buttons, Cards, Badges). |
+| `src/features` | Complex business logic (Blog, Case Studies, Domain Search). |
+| `src/pages` | Route-level components. |
+| `src/data` | Static datasets and AI response logic. |
+| `src/styles` | Global CSS and custom design tokens. |
+
+## ⚡ Development
 
 ### Installation
-
 ```bash
 npm install
 ```
 
 ### Scripts
-
 - `npm run dev`: Starts the Vite development server.
 - `npm run build`: Compiles the application for production.
-- `npm run lint`: Runs ESLint to check for code quality issues.
 - `npm run preview`: Previews the production build locally.
 
-## 🛠️ Tech Stack Specifics
-
-- **React 19**: Utilizing the latest React features and concurrent rendering.
-- **Vite 6**: Ultra-fast development server and optimized build pipeline.
-- **Tailwind CSS 4**: Modern CSS framework with native container queries and improved performance.
-- **GSAP 3**: High-performance animations for scroll-triggered reveal effects and micro-interactions.
-- **Lenis**: Integrated smooth scrolling for a premium, momentum-based user experience.
-- **High-Fidelity About Us Page**: Rebuilt all sections (Hero, Mission, Work, Team) with strict adherence to 1520px container constraints and 120px/200px spacing rules.
-- **Architecture**: Feature-based modularity designed for scalability and separation of concerns.
-
-## 📂 Project Architecture
-
-The codebase follows a structured, feature-driven organization to ensure separation of concerns and ease of development.
-
-<!-- ARCHITECTURE_START -->
-| Directory | Purpose |
-| :--- | :--- |
-| `src/app` | Global configuration, routing, and application entry points. |
-| `src/components` | Shared reusable components. |
-| `src/components/layout` | Shared persistent components like Navbars and Footers. |
-| `src/components/sections` | Reusable blocks of UI specific to certain pages. |
-| `src/components/sections/about` | Sections for the About Us page. |
-| `src/components/sections/faq-list` | FAQ section components. |
-| `src/components/sections/home` | Page sections specifically for the Home page. |
-| `src/components/sections/pricing` | Pricing page components. |
-| `src/components/sections/search-domain` | Components for the domain search feature. |
-| `src/components/sections/services` | Service listing page components. |
-| `src/components/sections/single-service` | Detailed service page components. |
-| `src/components/sections/start-here` | Onboarding and Start Here page components. |
-| `src/components/ui` | Atomic UI components (Buttons, Inputs, etc.). |
-| `src/features` | Domain-specific logic (API, components, hooks). |
-| `src/features/blog` | Blog-related functionality. |
-| `src/features/blog/components` | Project directory. |
-| `src/features/blog/hooks` | Project directory. |
-| `src/features/caseStudies` | Case study domain logic. |
-| `src/features/caseStudies/components` | Project directory. |
-| `src/features/caseStudies/hooks` | Project directory. |
-| `src/features/services` | Service-related functionality. |
-| `src/features/services/components` | Project directory. |
-| `src/features/services/hooks` | Project directory. |
-| `src/lib` | Utility libraries and API configurations. |
-| `src/pages` | Page-level components mapped to routes. |
-| `src/store` | State management logic. |
-| `src/styles` | Global CSS and theme configurations. |
-<!-- ARCHITECTURE_END -->
-
-For general project information and the overall roadmap, please refer to the [Root README](../README.md).
+---
+© 2026 Daffodil Web & E-commerce. Built with precision.
