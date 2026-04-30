@@ -233,10 +233,10 @@ const AIFloatingBar = () => {
         <div className="saas-blur-layer" />
       </div>
 
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 w-[92%] sm:w-full sm:max-w-[480px] z-[999] pointer-events-auto transition-all duration-700" 
+      <div className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-[999] pointer-events-auto transition-all duration-700 ${isOpen ? 'w-[96vw] md:w-[940px]' : 'w-[92%] sm:w-[480px]'}`} 
            style={{ bottom: 'calc(2rem + env(safe-area-inset-bottom))' }}>
         
-        <div className={`relative w-full flex flex-col items-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${isOpen ? 'max-w-[96vw] md:max-w-[940px] !w-[96vw] md:!w-[940px]' : ''}`}>
+        <div className="relative w-full flex flex-col items-center">
           
           {/* AI Canvas Modal */}
           <div 
