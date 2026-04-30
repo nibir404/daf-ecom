@@ -16,6 +16,7 @@ import FAQ from '../components/sections/home/FAQ'
 import CTA from '../components/sections/home/CTA'
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
+import AIFloatingBar from '../components/sections/home/AIFloatingBar'
 
 function Home() {
   return (
@@ -36,6 +37,7 @@ function Home() {
       <FAQ/>
       <CTA/>
       <Footer/>
+      <AIFloatingBar />
     </MainLayout>
   )
 }
