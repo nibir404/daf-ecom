@@ -54,24 +54,24 @@ const EarlyStart = () => {
     ];
 
     return (
-        <section className="w-full py-24 md:py-[120px] overflow-hidden">
-            <div className="max-w-[1520px] mx-auto px-6 md:px-0">
+        <section className="w-full py-[60px] lg:py-[120px] overflow-hidden">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0">
                 {/* Header Section */}
                 <div className="mb-[60px]">
-                    <h2 className="text-[48px] font-normal text-black-400 tracking-tight leading-tight">
+                    <h2 className="text-[32px] md:text-[48px] font-normal text-black-400 tracking-tight leading-tight">
                         What Are You Trying to <span className="font-bold text-black-900">Achieve?</span>
                     </h2>
-                    <p className="text-[18px] text-black-400 mt-4 font-normal">
+                    <p className="text-[16px] md:text-[18px] text-black-400 mt-2 md:mt-4 font-normal">
                         Different goals need different solutions. Choose your path.
                     </p>
                 </div>
 
                 {/* Grid Section */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
                     {cards.map((card, index) => (
                         <div 
                             key={index} 
-                            className="relative p-6 bg-white group cursor-pointer transition-all duration-500 hover:shadow-xl rounded-[2px] border border-white-600 overflow-hidden w-full md:w-[750px] md:h-[340px] flex flex-col"
+                            className="relative p-6 bg-white group cursor-pointer transition-all duration-500 hover:shadow-xl rounded-[2px] border border-white-600 overflow-hidden w-full lg:h-[340px] flex flex-col"
                         >
                             {/* Banner Decoration */}
                             <img 
@@ -124,9 +124,9 @@ const EarlyStart = () => {
                 </div>
 
                 {/* Bottom Banner */}
-                <div className="mt-5 mx-6 md:mx-0 flex flex-col md:flex-row items-center justify-between p-8 md:px-12 md:py-8 bg-white-50 rounded-[2px] border border-white-600">
-                    <div className="flex items-center gap-6 mb-6 md:mb-0">
-                        <div className="w-16 h-16 flex items-center justify-center">
+                <div className="mt-5 w-full flex flex-col md:flex-row items-center justify-between p-8 md:px-12 md:py-8 bg-white-50 rounded-[2px] border border-white-600 gap-6 md:gap-0">
+                    <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-4 md:gap-6 w-full md:w-auto">
+                        <div className="w-16 h-16 flex items-center justify-center shrink-0">
                             <img src="/homepage/15 min CTA .png" alt="Paper plane" className="w-full h-full object-contain" />
                         </div>
                         <div>
@@ -142,7 +142,7 @@ const EarlyStart = () => {
                     <Button 
                         variant="secondary" 
                         icon="/homepage/call-02.svg"
-                        className="px-8 py-4"
+                        className="px-8 py-4 w-full md:w-auto"
                     >
                         Book Strategy Call
                     </Button>

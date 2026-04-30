@@ -153,7 +153,7 @@ const AllServiceCards = () => {
 
     return (
         <section className="w-full pt-[120px]">
-            <div className="max-w-[1520px] mx-auto px-6 md:px-0 flex flex-col md:flex-row gap-[100px] items-start">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0 flex flex-col md:flex-row gap-[60px] lg:gap-[100px] items-start">
                 
                 {/* Left Sidebar Filter */}
                 <div className="hidden md:block w-[220px] sticky top-[120px]">

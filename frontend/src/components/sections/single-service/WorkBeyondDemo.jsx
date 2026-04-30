@@ -25,12 +25,12 @@ const WorkBeyondDemo = () => {
   ]
 
   return (
-    <section className="w-full bg-white-50 py-[120px]">
-      <div className="mx-auto w-full max-w-[1920px] px-[200px]">
+    <section className="w-full bg-white-50 py-10 lg:py-[120px]">
+      <div className="mx-auto w-full max-w-[1520px] px-6 xl:px-0">
         {/* Header Row */}
-        <div className="mb-[60px] flex items-end justify-between w-full">
-          <h2 className="text-[48px] leading-[1.1] tracking-tight text-black-400">
-            When Your <span className="font-bold text-black-900">Product</span> Needs to <br />
+        <div className="mb-[60px] flex flex-col lg:flex-row items-start lg:items-end justify-between w-full gap-6">
+          <h2 className="text-[32px] md:text-[48px] leading-[1.1] tracking-tight text-black-400">
+            When Your <span className="font-bold text-black-900">Product</span> Needs to <br className="hidden md:block" />
             Work Beyond the <span className="font-bold text-black-900">Demo</span>
           </h2>
           <p className="max-w-[413px] text-[16px] leading-[26px] text-black-400">
@@ -39,9 +39,9 @@ const WorkBeyondDemo = () => {
         </div>
 
         {/* Content Row */}
-        <div className="flex gap-[60px] items-stretch w-full">
+        <div className="flex flex-col lg:flex-row gap-[60px] items-stretch w-full">
           {/* Left: List */}
-          <div className="flex flex-col w-[500px]">
+          <div className="flex flex-col w-full lg:w-[500px]">
             {points.map((point, index) => (
               <div 
                 key={index} 
@@ -58,7 +58,7 @@ const WorkBeyondDemo = () => {
           </div>
 
           {/* Right: Image */}
-          <div className="flex-1 relative rounded-[2px] overflow-hidden border border-white-500 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.08)]">
+          <div className="flex-1 min-h-[300px] relative rounded-[2px] overflow-hidden border border-white-500 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.08)]">
             <img 
               src="/singleservice/webdev/workbeyonddemo.png" 
               alt="Architecture Visualization" 

@@ -26,7 +26,7 @@ const CaseStudyList = () => {
 
                             {/* Title and Category */}
                             <div className="border-b border-white-600 pb-5">
-                                <h3 className="text-[36px] leading-[45px] font-medium text-black group-hover:text-orange-600 transition-colors">
+                                <h3 className="text-[28px] md:text-[36px] leading-[1.2] font-medium text-black group-hover:text-orange-600 transition-colors">
                                     {study.title}
                                 </h3>
                             </div>

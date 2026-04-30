@@ -1,11 +1,11 @@
 import React from 'react';
 
 const TechCard = ({ name, icon }) => (
-    <div className="bg-white flex items-center gap-[10px] h-[80px] px-[24px] py-[20px] rounded-[10px] shrink-0 transition-all hover:border-blue-500/30 hover:shadow-sm">
-        <div className="w-[40px] h-[40px] flex items-center justify-center overflow-hidden">
+    <div className="bg-white flex items-center gap-[10px] h-[60px] md:h-[80px] px-[16px] md:px-[24px] py-[16px] md:py-[20px] rounded-[10px] shrink-0 transition-all hover:border-blue-500/30 hover:shadow-sm">
+        <div className="w-[30px] md:w-[40px] h-[30px] md:h-[40px] flex items-center justify-center overflow-hidden">
             <img src={`/homepage/${icon}`} alt={name} className="w-full h-full object-contain" />
         </div>
-        <span className="text-[#111] text-[24px] font-medium whitespace-nowrap">{name}</span>
+        <span className="text-[#111] text-[18px] md:text-[24px] font-medium whitespace-nowrap">{name}</span>
     </div>
 );
 
@@ -38,19 +38,19 @@ const TechStack = () => {
     ];
 
     return (
-        <section className="relative w-full py-[120px] overflow-hidden">
+        <section className="relative w-full py-[60px] lg:py-[120px] overflow-hidden">
             {/* Background Flare */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-[440px] pointer-events-none opacity-40">
                 <img src="/homepage/flare.png" alt="" className="w-full h-full object-cover" />
             </div>
 
-            <div className="container relative z-10">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0 relative z-10">
                 {/* Header */}
                 <div className="flex flex-col items-center text-center gap-[10px] mb-[60px]">
-                    <h2 className="text-[48px] leading-[60px] text-black-400">
+                    <h2 className="text-[32px] md:text-[48px] leading-[1.2] md:leading-[60px] text-black-400">
                         Built With <span className="text-[#df6c23] font-bold">Modern</span>, Scalable <span className="text-black-900 font-bold">Technology</span>
                     </h2>
-                    <p className="text-[16px] leading-[26px] text-black-400 max-w-[700px]">
+                    <p className="text-[16px] md:text-[18px] leading-[26px] text-black-400 max-w-[700px] px-4 md:px-0">
                         We use secure, scalable, modern technologies across web, mobile, and cloud ecosystems.
                     </p>
                 </div>

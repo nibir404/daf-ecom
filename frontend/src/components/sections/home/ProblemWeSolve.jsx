@@ -30,10 +30,10 @@ const ProblemWeSolve = () => {
     const activeProblem = problems.find(p => p.id === activeId);
 
     return (
-        <section className="w-full pt-[120px]">
-            <div className="max-w-[1520px] mx-auto px-6 md:px-0 flex flex-col md:flex-row items-start gap-[60px]">
+        <section className="w-full pt-[60px] lg:pt-[120px]">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0 flex flex-col lg:flex-row items-start gap-[40px] lg:gap-[60px]">
                 {/* Left: Illustration - Fixed size for consistency */}
-                <div className="flex-1 w-full max-w-[935px] self-stretch h-[400px] md:h-[600px]">
+                <div className="flex-1 w-full lg:max-w-[935px] self-stretch h-[300px] sm:h-[400px] lg:h-[600px] order-last lg:order-first">
                     <div className="relative rounded-[4px] overflow-hidden shadow-2xl h-full bg-white">
                         <img 
                             key={activeProblem.image}
@@ -47,9 +47,9 @@ const ProblemWeSolve = () => {
                 </div>
 
                 {/* Right: Content */}
-                <div className="w-full md:w-[525px] flex flex-col relative">
+                <div className="w-full lg:w-[525px] flex flex-col relative pl-6 lg:pl-0">
                     {/* Full-height gray track line */}
-                    <div className="absolute -right-4 top-0 bottom-0 w-[1px] bg-white-600" />
+                    <div className="absolute left-0 lg:-right-4 lg:left-auto top-0 bottom-0 w-[1px] bg-white-600" />
 
                     {problems.map((problem, index) => {
                         const isActive = activeId === problem.id;
@@ -73,7 +73,7 @@ const ProblemWeSolve = () => {
                                 </div>
 
                                 {/* Title */}
-                                <h3 className={`text-[34px] leading-[43px] transition-all duration-300 ${
+                                <h3 className={`text-[24px] sm:text-[28px] lg:text-[34px] leading-[1.3] lg:leading-[43px] transition-all duration-300 ${
                                     isActive 
                                         ? 'text-black-900 font-medium italic mb-4' 
                                         : 'text-black-200 font-normal hover:text-black-400 mb-0'
@@ -91,7 +91,7 @@ const ProblemWeSolve = () => {
                                 </div>
 
                                 {/* Active Indicator */}
-                                <div className={`absolute -right-[17.5px] w-[4px] bg-orange-500 rounded-full z-10 transition-all duration-500 ${
+                                <div className={`absolute -left-[25.5px] lg:-right-[17.5px] lg:left-auto w-[4px] bg-orange-500 rounded-full z-10 transition-all duration-500 ${
                                     isActive ? 'top-8 bottom-8 opacity-100 scale-y-100' : 'top-1/2 bottom-1/2 opacity-0 scale-y-0'
                                 }`} />
                             </div>

@@ -3,7 +3,7 @@ import Button from '../../ui/Button';
 
 const BlogHero = () => {
     return (
-        <section className="relative w-full h-[600px] bg-white-50 overflow-hidden flex items-center justify-center">
+        <section className="relative w-full h-[600px] bg-white-50 overflow-hidden flex flex-col items-center justify-start pt-[50px]">
             {/* Background Flare */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-[409px] pointer-events-none">
                 <img 
@@ -13,9 +13,9 @@ const BlogHero = () => {
                 />
             </div>
 
-            <div className="relative z-10 max-w-[1520px] mx-auto flex flex-col items-center text-center gap-10">
+            <div className="relative z-10 max-w-[1520px] mx-auto px-6 xl:px-0 flex flex-col items-center text-center gap-10">
                 <div className="flex flex-col gap-4 max-w-[1100px]">
-                    <h1 className="text-[64px] leading-[75px] text-black-400 font-normal">
+                    <h1 className="text-[40px] md:text-[64px] leading-[1.2] text-black-400 font-normal">
                         Insights on <span className="font-bold text-black-900">Software</span>, <span className="font-bold text-black-900">AI</span> & <span className="font-bold text-black-900">Digital</span> Transformation
                     </h1>
                     <p className="text-[20px] leading-[30px] text-black-400 max-w-[1018px] mx-auto">

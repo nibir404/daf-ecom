@@ -214,13 +214,13 @@ const GrowthStage = () => {
     };
 
     return (
-        <section className="w-full bg-black-900 py-[120px] px-[200px]">
-            <div className="max-w-[1520px] mx-auto flex flex-col items-center gap-[100px]">
+        <section className="w-full bg-black-900 py-[120px]">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0 flex flex-col items-center gap-[60px] md:gap-[100px]">
                 
                 {/* Header & Main Tabs */}
-                <div className="w-full flex flex-col items-center gap-[60px]">
+                <div className="w-full flex flex-col items-center gap-[40px] md:gap-[60px]">
                     <div className="flex flex-col items-center text-center gap-[16px] max-w-[730px]">
-                        <h2 className="text-[48px] leading-[60px] text-white">
+                        <h2 className="text-[32px] md:text-[48px] leading-tight md:leading-[60px] text-white">
                             <span className="text-[#acacac]">Complete</span> Digital Packages <span className="text-[#acacac]">for Every</span> Growth <span className="text-[#acacac]">Stage</span>
                         </h2>
                         <p className="text-[16px] text-white-700">
@@ -228,34 +228,36 @@ const GrowthStage = () => {
                         </p>
                     </div>
 
-                    <div className="bg-black-500 border border-black-400 p-[4px] rounded-[2px] flex gap-[4px]">
-                        {TABS.map((tab) => (
-                            <button
-                                key={tab}
-                                onClick={() => handleTabChange(tab)}
-                                className={`px-[20px] py-[10px] text-[16px] font-semibold rounded-[2px] transition-all duration-300 ${
-                                    activeTab === tab ? "bg-orange-600 text-white" : "text-black-300 hover:text-white"
-                                }`}
-                            >
-                                {tab}
-                            </button>
-                        ))}
+                    <div className="w-full overflow-x-auto pb-4 md:pb-0">
+                        <div className="bg-black-500 border border-black-400 p-[4px] rounded-[2px] flex gap-[4px] w-fit mx-auto min-w-max">
+                            {TABS.map((tab) => (
+                                <button
+                                    key={tab}
+                                    onClick={() => handleTabChange(tab)}
+                                    className={`px-[15px] md:px-[20px] py-[8px] md:py-[10px] text-[14px] md:text-[16px] font-semibold rounded-[2px] transition-all duration-300 whitespace-nowrap ${
+                                        activeTab === tab ? "bg-orange-600 text-white" : "text-black-300 hover:text-white"
+                                    }`}
+                                >
+                                    {tab}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
                 {activeTab === 'Services' ? (
-                    <div className="w-full flex flex-col gap-[100px]">
+                    <div className="w-full flex flex-col gap-[60px] md:gap-[100px]">
                         {/* Service Plans Cards */}
-                        <div className="w-full flex gap-[20px] items-stretch">
+                        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] items-stretch">
                             {SERVICES_PLANS.map((plan, index) => (
-                                <div key={index} className={`flex-1 relative bg-black-700 border border-black-400 p-[40px] rounded-[2px] flex flex-col justify-between gap-[80px] overflow-hidden group/card transition-all duration-500 ${plan.highlighted ? "border-success-200" : ""} ${plan.glowColor}`}>
+                                <div key={index} className={`flex-1 relative bg-black-700 border border-black-400 p-[30px] md:p-[40px] rounded-[2px] flex flex-col justify-between gap-[40px] md:gap-[80px] overflow-hidden group/card transition-all duration-500 ${plan.highlighted ? "border-success-200" : ""} ${plan.glowColor}`}>
                                     <div className={`absolute top-[20%] right-[-10%] w-[300px] h-[300px] rounded-full blur-[100px] pointer-events-none opacity-10 transition-opacity duration-500 group-hover/card:opacity-20 ${plan.flareColor}`} />
                                     <div className={`absolute bottom-[-10%] left-[-10%] w-[200px] h-[200px] rounded-full blur-[80px] pointer-events-none opacity-5 transition-opacity duration-500 group-hover/card:opacity-10 ${plan.flareColor}`} />
                                     <div className="relative z-10 flex flex-col gap-[24px]">
                                         <div className="flex flex-col gap-[20px]">
-                                            <div className="flex justify-between items-center h-[34px]">
-                                                <h3 className="text-[30px] italic font-semibold text-white">{plan.name}</h3>
-                                                {plan.tag && <div className={`px-[16px] py-[6px] rounded-[30px] border text-[14px] font-medium ${plan.tagColor}`}>{plan.tag}</div>}
+                                            <div className="flex justify-between items-center gap-4">
+                                                <h3 className="text-[24px] md:text-[30px] italic font-semibold text-white">{plan.name}</h3>
+                                                {plan.tag && <div className={`px-[12px] md:px-[16px] py-[4px] md:py-[6px] rounded-[30px] border text-[12px] md:text-[14px] font-medium whitespace-nowrap ${plan.tagColor}`}>{plan.tag}</div>}
                                             </div>
                                             <div className="w-full h-[1px] bg-black-400" />
                                             <div className="text-[14px] leading-[25px]">
@@ -265,12 +267,12 @@ const GrowthStage = () => {
                                             <div className="w-full h-[1px] bg-black-400" />
                                         </div>
                                         <div className="flex flex-col gap-[16px]">
-                                            <p className="text-[20px] font-medium text-white">Includes</p>
+                                            <p className="text-[18px] md:text-[20px] font-medium text-white">Includes</p>
                                             <div className="flex flex-col gap-[10px]">
                                                 {plan.includes.map((item, i) => (
-                                                    <div key={i} className="flex gap-[10px] items-center">
-                                                        <img src={plan.checkIcon} alt="" className="size-[24px]" />
-                                                        <p className="text-[16px] text-white-600 leading-[26px]">{item}</p>
+                                                    <div key={i} className="flex gap-[10px] items-start">
+                                                        <img src={plan.checkIcon} alt="" className="size-[20px] md:size-[24px] shrink-0 mt-1" />
+                                                        <p className="text-[14px] md:text-[16px] text-white-600 leading-normal md:leading-[26px]">{item}</p>
                                                     </div>
                                                 ))}
                                             </div>
@@ -286,10 +288,10 @@ const GrowthStage = () => {
                         </div>
 
                         {/* Services Comparison Table */}
-                        <div className="w-full flex flex-col items-center gap-[60px]">
-                            <h2 className="text-[48px] leading-[60px] text-white text-center">Compare <span className="font-bold">Plans</span> at a Glance</h2>
-                            <div className="w-full border border-black-400 rounded-[2px] overflow-hidden bg-black-700/30">
-                                <table className="w-full border-collapse">
+                        <div className="w-full flex flex-col items-center gap-[40px] md:gap-[60px]">
+                            <h2 className="text-[32px] md:text-[48px] leading-tight md:leading-[60px] text-white text-center">Compare <span className="font-bold">Plans</span> at a Glance</h2>
+                            <div className="w-full border border-black-400 rounded-[2px] overflow-hidden bg-black-700/30 overflow-x-auto">
+                                <table className="w-full border-collapse min-w-[800px]">
                                     <thead>
                                         <tr className="border-b border-black-400 bg-black-500/50">
                                             <th className="py-[30px] px-[40px] text-left text-[20px] font-bold text-white w-[30%]">Feature</th>
@@ -315,17 +317,17 @@ const GrowthStage = () => {
                         </div>
                     </div>
                 ) : (
-                    <div className="w-full flex gap-[40px] items-start">
-                        {/* Sticky Sidebar */}
-                        <div className="w-[192px] sticky top-[100px] border-l border-black-400 flex flex-col">
+                    <div className="w-full flex flex-col md:flex-row gap-[40px] items-start">
+                        {/* Sidebar/Horizontal Tabs on Mobile */}
+                        <div className="w-full md:w-[192px] md:sticky md:top-[100px] md:border-l border-black-400 flex flex-row md:flex-col overflow-x-auto md:overflow-x-visible pb-4 md:pb-0">
                             {DYNAMIC_TAB_DATA[activeTab]?.subTabs.map((subTab) => (
                                 <button
                                     key={subTab}
                                     onClick={() => setActiveSubTab(subTab)}
-                                    className={`px-[10px] py-[8px] text-left transition-all duration-300 border-l-[3px] -ml-[1px] ${
+                                    className={`px-[15px] md:px-[10px] py-[8px] text-left transition-all duration-300 border-b-2 md:border-b-0 md:border-l-[3px] md:-ml-[1px] whitespace-nowrap ${
                                         activeSubTab === subTab
-                                        ? "border-orange-600 text-white font-bold text-[20px]"
-                                        : "border-transparent text-black-300 text-[16px] font-normal hover:text-white"
+                                        ? "border-orange-600 text-white font-bold text-[18px] md:text-[20px]"
+                                        : "border-transparent text-black-300 text-[14px] md:text-[16px] font-normal hover:text-white"
                                     }`}
                                 >
                                     {subTab}
@@ -334,14 +336,14 @@ const GrowthStage = () => {
                         </div>
 
                         {/* Dynamic Data Table */}
-                        <div className="flex-1 bg-black-700 border-2 border-black-400 rounded-[2px] overflow-hidden h-fit">
-                            <table className="w-full border-collapse">
+                        <div className="w-full flex-1 bg-black-700 border-2 border-black-400 rounded-[2px] overflow-hidden h-fit overflow-x-auto">
+                            <table className="w-full border-collapse min-w-[700px]">
                                 <thead>
                                     <tr className="border-b border-black-400 bg-black-500/50">
                                         {DYNAMIC_TAB_DATA[activeTab]?.headers.map((header, i) => (
-                                            <th key={i} className={`py-[40px] px-[40px] text-left text-[20px] font-bold text-white ${i === 0 ? "border-r border-black-400" : ""}`}>
+                                            <th key={i} className={`py-[30px] md:py-[40px] px-[20px] md:px-[40px] text-left text-[18px] md:text-[20px] font-bold text-white ${i === 0 ? "border-r border-black-400" : ""}`}>
                                                 <div>{header.main}</div>
-                                                {header.sub && <div className="font-normal text-[14px] text-white-700">{header.sub}</div>}
+                                                {header.sub && <div className="font-normal text-[12px] md:text-[14px] text-white-700">{header.sub}</div>}
                                             </th>
                                         ))}
                                     </tr>
@@ -350,11 +352,11 @@ const GrowthStage = () => {
                                     {(DYNAMIC_TAB_DATA[activeTab]?.content[activeSubTab] || []).map((row, rowIndex) => (
                                         <tr key={rowIndex} className="border-b border-black-400 hover:bg-black-800 transition-colors duration-200">
                                             {row.map((cell, cellIndex) => (
-                                                <td key={cellIndex} className={`py-[30px] px-[40px] text-[16px] text-white-700 font-normal ${cellIndex === 0 ? "border-r border-black-400 bg-black-700/50" : "font-bold"}`}>
+                                                <td key={cellIndex} className={`py-[20px] md:py-[30px] px-[20px] md:px-[40px] text-[14px] md:text-[16px] text-white-700 font-normal ${cellIndex === 0 ? "border-r border-black-400 bg-black-700/50" : "font-bold"}`}>
                                                     {typeof cell === 'object' ? (
                                                         <div className="flex flex-col">
                                                             <span className="text-white">{cell.main}</span>
-                                                            {cell.sub && <span className="text-[14px] text-white-700 font-normal">{cell.sub}</span>}
+                                                            {cell.sub && <span className="text-[12px] md:text-[14px] text-white-700 font-normal">{cell.sub}</span>}
                                                         </div>
                                                     ) : cell}
                                                 </td>
@@ -363,7 +365,7 @@ const GrowthStage = () => {
                                     ))}
                                     {(!DYNAMIC_TAB_DATA[activeTab]?.content[activeSubTab]) && (
                                         <tr>
-                                            <td colSpan={DYNAMIC_TAB_DATA[activeTab]?.headers.length} className="py-[100px] text-center text-black-300 italic">
+                                            <td colSpan={DYNAMIC_TAB_DATA[activeTab]?.headers.length} className="py-[60px] md:py-[100px] text-center text-black-300 italic">
                                                 Content for "{activeSubTab}" is coming soon.
                                             </td>
                                         </tr>

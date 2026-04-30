@@ -3,7 +3,7 @@ import Button from '../../ui/Button'
 
 const ServiceHero = ({ data }) => {
   return (
-    <section className="relative w-full overflow-hidden pt-[80px] pb-[40px] h-[900px] bg-no-repeat">
+    <section className="relative w-full overflow-hidden pt-[50px] pb-[40px] h-[900px] bg-no-repeat">
       {/* Background Flare - Bottom Positioned as per Figma */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] pointer-events-none z-0">
         <img 
@@ -13,10 +13,10 @@ const ServiceHero = ({ data }) => {
         />
       </div>
 
-      <div className="container relative mx-auto px-6 text-center z-10">
+      <div className="max-w-[1520px] mx-auto px-6 xl:px-0 relative text-center z-10">
         {/* Content Wrapper */}
         <div className="mx-auto max-w-[1100px] mb-20">
-          <h1 className="mb-6 text-[64px] leading-[1.17] tracking-tight text-black-400">
+          <h1 className="mb-6 text-[32px] md:text-[48px] lg:text-[64px] leading-[1.2] tracking-tight text-black-400">
             <span className="font-bold text-black-900">Web</span> & <span className="font-bold text-black-900">Mobile</span> Applications Built to Withstand Real Usage
           </h1>
           <p className="mx-auto mb-10 max-w-[850px] text-[20px] leading-[1.5] text-black-400/80">

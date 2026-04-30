@@ -26,11 +26,11 @@ const HowWeWork = () => {
 
   return (
     <section className="py-[120px] overflow-hidden">
-      <div className="max-w-[1920px] mx-auto px-[200px]">
-        <div className="flex flex-col gap-[60px] items-center w-[1520px]">
+      <div className="max-w-[1520px] mx-auto px-6 xl:px-0">
+        <div className="flex flex-col gap-[40px] lg:gap-[60px] items-center">
           {/* Title Section */}
           <div className="text-center space-y-4">
-            <h2 className="text-[40px] md:text-[48px] font-normal text-black-400">
+            <h2 className="text-[32px] md:text-[48px] font-normal text-black-400">
               How We <span className="font-bold text-black-900">Work</span>
             </h2>
             <p className="text-[16px] text-black-400 max-w-[648px] mx-auto">
@@ -40,8 +40,8 @@ const HowWeWork = () => {
 
           {/* Process Visualization Container */}
           <div className="flex flex-col items-center w-full">
-            {/* Connecting Structure (SVG) */}
-            <div className="w-full max-w-[1269px] mb-[0px]">
+            {/* Connecting Structure (SVG) - Hidden on mobile, shown on large screens */}
+            <div className="hidden lg:block w-full max-w-[1269px] mb-[0px]">
                <img 
                  src="/aboutpage/HowWeWrokImg.svg" 
                  alt="process connection" 
@@ -50,11 +50,11 @@ const HowWeWork = () => {
             </div>
 
             {/* Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-[10px] w-full relative z-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-[10px] w-full relative z-10">
               {steps.map((step, index) => (
                 <div 
                   key={index}
-                  className="bg-white-50 p-10 flex flex-col items-start space-y-6 h-[242px] border border-black-50/5 transition-all duration-300 hover:shadow-xl group"
+                  className="bg-white-50 p-6 lg:p-10 flex flex-col items-start space-y-6 lg:h-[242px] border border-black-50/5 transition-all duration-300 hover:shadow-xl group"
                 >
                   <h3 className="text-[20px] font-medium text-black-900 leading-tight group-hover:text-blue-600 transition-colors">
                     {step.title}

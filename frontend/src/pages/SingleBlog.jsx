@@ -100,10 +100,10 @@ const SingleBlog = () => {
 
             <main className="flex flex-col bg-white-300">
                 {/* Main Content Area with Sidebars */}
-                <div className="max-w-[1520px] mx-auto py-[100px] flex gap-[115px] relative">
+                <div className="max-w-[1520px] mx-auto pt-[50px] pb-10 md:pb-[100px] flex flex-col lg:flex-row px-6 xl:px-0 gap-10 lg:gap-[115px] relative">
                     
                     {/* Left Sticky Sidebar: Share */}
-                    <aside className="w-[146px]">
+                    <aside className="hidden lg:block lg:w-[146px]">
                         <div className="sticky top-[120px] bg-white border border-white-600 rounded-[2px] p-5 flex flex-col gap-5 shadow-sm">
                             <span className="text-[20px] font-bold text-black whitespace-nowrap">Share Now</span>
                             <div className="flex gap-2">
@@ -115,12 +115,12 @@ const SingleBlog = () => {
                     </aside>
 
                     {/* Central Content */}
-                    <div className="flex-1">
+                    <div className="flex-1 w-full overflow-hidden">
                         <BlogContent />
                     </div>
 
                     {/* Right Sticky Sidebar: TOC */}
-                    <aside className="w-[144px]">
+                    <aside className="hidden lg:block lg:w-[144px]">
                         <div className="sticky top-[120px] flex flex-col border-r border-black-100">
                             {TOC_ITEMS.map((item, index) => {
                                 const isActive = activeSection === item.id;

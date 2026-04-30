@@ -59,13 +59,13 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-black-800 border border-teal-900 border-solid px-6 lg:px-[200px] py-[120px] w-full">
-            <div className="max-w-[1520px] mx-auto flex flex-col gap-[20px] w-full">
+        <footer className="bg-black-800 border border-teal-900 border-solid py-[60px] lg:py-[120px] w-full">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0 flex flex-col gap-[20px] w-full">
                 
                 {/* Header Container */}
                 <div className="flex flex-col lg:flex-row gap-[60px] lg:gap-[100px] items-start pb-[60px] border-b border-white/10 w-full">
                     {/* Left Columns (Services, Solutions, Resources) */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 flex-1 gap-[40px] lg:gap-[60px] items-start w-full lg:w-auto">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 flex-1 gap-[40px] lg:gap-[60px] items-start w-full lg:w-auto">
                         {footerLinks.slice(0, 3).map((group, idx) => (
                             <div key={idx} className="flex flex-col gap-[20px] min-w-0">
                                 <h4 className="text-[24px] text-white font-normal leading-normal whitespace-nowrap">{group.title}</h4>
@@ -91,14 +91,14 @@ const Footer = () => {
                     </div>
 
                     {/* Logo Container */}
-                    <div className="flex flex-col h-auto lg:h-[80px] items-start w-full lg:w-[282px] shrink-0">
+                    <div className="flex flex-col h-auto lg:h-[80px] items-start w-full lg:w-[282px] shrink-0 order-first lg:order-none mb-[20px] lg:mb-0">
                         <Link to="/">
                             <img src="/Footer/DaffodilWhiteLogo.png" alt="Daffodil" className="w-[200px] lg:w-[240px] h-auto object-contain" />
                         </Link>
                     </div>
 
                     {/* Right Columns (Support, Company, Legal) */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 flex-1 gap-[40px] lg:gap-[60px] items-start w-full lg:w-auto">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 flex-1 gap-[40px] lg:gap-[60px] items-start w-full lg:w-auto">
                         {footerLinks.slice(3).map((group, idx) => (
                             <div key={idx} className="flex flex-col gap-[20px] min-w-0">
                                 <h4 className="text-[24px] text-white font-normal leading-normal whitespace-nowrap">{group.title}</h4>

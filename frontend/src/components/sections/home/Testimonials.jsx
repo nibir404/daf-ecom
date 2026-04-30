@@ -64,31 +64,31 @@ const Testimonials = () => {
     };
 
     return (
-        <section className="bg-black-900 py-[120px] overflow-hidden">
-            <div className="container mx-auto px-4">
+        <section className="bg-black-900 py-[60px] lg:py-[120px] overflow-hidden">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0">
                 {/* Header Container */}
-                <div className="max-w-[733px] mx-auto mb-[60px] text-center">
-                    <h2 className="text-[48px] leading-tight mb-4 tracking-tight">
+                <div className="max-w-[733px] mx-auto mb-[40px] lg:mb-[60px] text-center">
+                    <h2 className="text-[32px] md:text-[48px] leading-tight mb-4 tracking-tight">
                         <span className="text-white-700 font-normal">What Ou</span>
                         <span className="text-white-700 font-normal">r</span>
                         <span className="text-white font-bold italic"> Clients</span>
                         <span className="text-white-700 font-normal"> Say</span>
                     </h2>
-                    <p className="text-[16px] leading-[26px] text-white-700 font-normal">
+                    <p className="text-[16px] md:text-[18px] leading-[26px] text-white-700 font-normal">
                         Real feedback from businesses we’ve worked with—from fast launches to complex system builds.
                     </p>
                 </div>
 
                 <div 
                     ref={cardRef}
-                    className="max-w-[1520px] mx-auto bg-black-600 rounded-[2px] p-[40px] flex flex-col md:flex-row gap-[40px] items-start relative group overflow-hidden"
+                    className="max-w-[1520px] mx-auto bg-black-600 rounded-[2px] p-6 lg:p-[40px] flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start relative group overflow-hidden"
                 >
                     {/* Hover Glows */}
                     <div className="absolute -top-[100px] -left-[100px] w-[400px] h-[400px] bg-blue-500/15 blur-[120px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0" />
                     <div className="absolute -bottom-[100px] -right-[100px] w-[400px] h-[400px] bg-orange-500/15 blur-[120px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0" />
 
                     {/* Image Container */}
-                    <div className="w-full md:w-[350px] aspect-square relative shrink-0 overflow-hidden rounded-[2px]">
+                    <div className="w-full lg:w-[350px] aspect-square relative shrink-0 overflow-hidden rounded-[2px]">
                         <img 
                             src={current.image} 
                             alt={current.author}
@@ -100,18 +100,18 @@ const Testimonials = () => {
                     <div className="flex-1 flex flex-col justify-between self-stretch">
                         <div className="content-stretch flex flex-col gap-[15px] items-start">
                             {/* Quote Icon */}
-                            <div className="h-[30px] w-[38px] relative shrink-0">
-                                <svg width="38" height="30" viewBox="0 0 38 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div className="h-[24px] md:h-[30px] w-[30px] md:w-[38px] relative shrink-0">
+                                <svg className="w-full h-full" viewBox="0 0 38 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 16.5C0 7.3873 7.3873 0 16.5 0V7.5C11.5294 7.5 7.5 11.5294 7.5 16.5H16.5V30H0V16.5ZM21.5 16.5C21.5 7.3873 28.8873 0 38 0V7.5C33.0294 7.5 29 11.5294 29 16.5H38V30H21.5V16.5Z" fill="#F2F2F2"/>
                                 </svg>
                             </div>
-                            <p className="text-[24px] md:text-[36px] leading-[1.4] text-white-500 font-normal tracking-tight">
+                            <p className="text-[20px] md:text-[36px] leading-[1.4] text-white-500 font-normal tracking-tight">
                                 {current.quote}
                             </p>
                         </div>
 
                         {/* Footer Info & Nav */}
-                        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mt-8">
+                        <div className="flex flex-col sm:flex-row sm:items-end justify-between w-full gap-6 mt-8">
                             <div className="flex flex-col gap-[3px]">
                                 <h4 className="text-[24px] font-medium text-white-50 leading-tight">
                                     {current.author}

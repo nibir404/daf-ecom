@@ -18,11 +18,11 @@ const HeroFAQ = () => {
   }
 
   return (
-    <section className="pt-[80px] pb-[60px]">
-      <div className="max-w-[1520px] mx-auto px-6 md:px-0">
+    <section className="pt-[50px] pb-[60px]">
+      <div className="max-w-[1520px] mx-auto px-6 xl:px-0">
         <div className="flex flex-col md:flex-row items-end justify-between gap-[40px] mb-[40px]">
           <div className="flex flex-col gap-[16px] max-w-[800px]">
-            <h1 className="text-[64px] leading-[1.1] text-black-400 font-normal">
+            <h1 className="text-[40px] md:text-[64px] leading-[1.1] text-black-400 font-normal">
               Frequently Asked <span className="font-bold text-black-900">Questions</span>
             </h1>
             <p className="text-[20px] leading-[30px] text-black-400">

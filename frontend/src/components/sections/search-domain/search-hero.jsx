@@ -21,7 +21,7 @@ const SearchHero = () => {
     const extensions = ['.com', '.net', '.org', '.io'];
 
     return (
-        <section className="relative w-full h-[600px] bg-[#0c0c0c] flex flex-col items-center justify-center overflow-hidden">
+        <section className="relative w-full h-[600px] bg-[#0c0c0c] flex flex-col items-center justify-start pt-[50px] overflow-hidden">
             {/* Background Flare */}
             <div className="absolute inset-0 pointer-events-none">
                 <img 
@@ -32,12 +32,12 @@ const SearchHero = () => {
                 />
             </div>
 
-            <div className="relative z-10 w-full max-w-[1200px] flex flex-col items-center gap-[40px] px-6">
+            <div className="relative z-10 w-full max-w-[1520px] mx-auto flex flex-col items-center gap-[32px] md:gap-[40px] px-6 xl:px-0">
                 <div className="text-center flex flex-col gap-4">
-                    <h1 className="text-[64px] font-normal text-white-50 leading-[75px] tracking-tight">
+                    <h1 className="text-[40px] md:text-[64px] font-normal text-white-50 leading-tight md:leading-[75px] tracking-tight">
                         Find Your <span className="font-bold">Perfect</span> Domain
                     </h1>
-                    <p className="text-[20px] text-white-700 leading-[30px]">
+                    <p className="text-[18px] md:text-[20px] text-white-700 leading-normal md:leading-[30px]">
                         Secure it now before someone else does.
                     </p>
                 </div>

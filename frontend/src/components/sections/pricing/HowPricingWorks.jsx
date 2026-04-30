@@ -20,11 +20,11 @@ const HowPricingWorks = () => {
     ];
 
     return (
-        <section className="w-full py-[120px] px-[200px]">
-            <div className="max-w-[1520px] mx-auto w-full flex flex-col gap-[60px]">
+        <section className="w-full py-[120px]">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0 w-full flex flex-col gap-[60px]">
                 {/* Header */}
                 <div className="flex flex-col items-center text-center gap-[10px]">
-                    <h2 className="text-[48px] leading-[60px] tracking-tight text-black-400">
+                    <h2 className="text-[32px] md:text-[48px] leading-tight md:leading-[60px] tracking-tight text-black-400">
                         How Our <span className="font-bold text-black-900">Pricing</span> Works
                     </h2>
                     <p className="text-[16px] leading-[26px] text-black-400 max-w-[648px]">
@@ -33,7 +33,7 @@ const HowPricingWorks = () => {
                 </div>
 
                 {/* Cards Grid */}
-                <div className="flex gap-[16px] items-stretch w-full">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-[16px] items-stretch w-full">
                     {models.map((model, index) => (
                         <div 
                             key={index} 
@@ -62,7 +62,7 @@ const HowPricingWorks = () => {
                 </div>
 
                 {/* Footer Italic Text */}
-                <p className="text-[34px] leading-[43px] text-black-400 text-center italic mt-[20px]">
+                <p className="text-[24px] md:text-[34px] leading-tight md:leading-[43px] text-black-400 text-center italic mt-[20px]">
                     We structure pricing based on project scope, scalability requirements, and support needs, not just deliverables. Whether you're launching a business website or building enterprise-grade systems, each plan aligns with real operational outcomes.
                 </p>
             </div>

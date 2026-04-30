@@ -3,7 +3,7 @@ import React from 'react'
 const Careers = () => {
   return (
     <section className="py-24 bg-black-900 text-white-50 overflow-hidden">
-      <div className="max-w-[1520px] mx-auto px-6 md:px-0">
+      <div className="max-w-[1520px] mx-auto px-6 xl:px-0">
         <div className="flex flex-col items-center text-center space-y-10">
           {/* Icon/Badge */}
           <div className="w-[60px] h-[60px] bg-white-50 rounded-[10px] flex items-center justify-center border-2 border-white/40 shadow-lg">

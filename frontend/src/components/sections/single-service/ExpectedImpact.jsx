@@ -30,9 +30,9 @@ const ExpectedImpact = () => {
   ]
 
   return (
-    <section className="w-full py-[120px] relative overflow-hidden">
+    <section className="w-full py-10 lg:py-[120px] relative overflow-hidden">
       {/* Background Flare */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-[440px] pointer-events-none opacity-50">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1520px] h-[440px] pointer-events-none opacity-50">
         <img 
           src="/singleservice/webdev/flare.svg" 
           alt="" 
@@ -40,14 +40,14 @@ const ExpectedImpact = () => {
         />
       </div>
 
-      <div className="mx-auto w-full max-w-[1920px] px-[200px] relative z-10">
+      <div className="mx-auto w-full max-w-[1520px] px-6 xl:px-0 relative z-10">
         {/* Header Row */}
-        <div className="mb-[60px] flex items-start justify-between w-full">
+        <div className="mb-[60px] flex flex-col-reverse lg:flex-row items-start lg:items-end justify-between w-full gap-6">
           <p className="max-w-[413px] text-[16px] leading-[26px] text-black-400">
             This service is relevant when reliability, scalability, and long-term usability matter more than quick releases.
           </p>
-          <h2 className="text-[48px] leading-[1.1] tracking-tight text-black-400 text-right max-w-[623px]">
-            When Your <span className="font-bold text-black-900">Product</span> Needs to <br />
+          <h2 className="text-[32px] md:text-[48px] leading-[1.1] tracking-tight text-black-400 lg:text-right max-w-[623px]">
+            When Your <span className="font-bold text-black-900">Product</span> Needs to <br className="hidden md:block" />
             Work Beyond the <span className="font-bold text-black-900">Demo</span>
           </h2>
         </div>
@@ -57,21 +57,21 @@ const ExpectedImpact = () => {
           {impacts.map((impact, index) => (
             <div 
               key={impact.id} 
-              className={`flex items-center gap-[24px] py-[40px] border-b border-white-600 group cursor-default ${index === impacts.length - 1 ? 'border-none' : ''}`}
+              className={`flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-[24px] py-6 md:py-[40px] border-b border-white-600 group cursor-default ${index === impacts.length - 1 ? 'border-none' : ''}`}
             >
               {/* Number and Title Container */}
               <div className="flex items-center gap-[24px] flex-1">
-                <span className="text-[36px] font-medium text-black-900 leading-none w-[60px] group-hover:text-orange-600 transition-colors duration-300">
+                <span className="text-[28px] md:text-[36px] font-medium text-black-900 leading-none w-auto md:w-[60px] group-hover:text-orange-600 transition-colors duration-300">
                   {impact.id}
                 </span>
-                <h3 className="text-[24px] font-medium text-black-900 leading-tight group-hover:translate-x-2 transition-transform duration-300">
+                <h3 className="text-[20px] md:text-[24px] font-medium text-black-900 leading-tight group-hover:translate-x-2 transition-transform duration-300">
                   {impact.title}
                 </h3>
               </div>
 
               {/* Description */}
-              <div className="w-[535px] shrink-0 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0">
-                <p className="text-[16px] leading-[21px] text-black-400 font-bold">
+              <div className="w-full lg:w-[535px] shrink-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 lg:translate-x-4 lg:group-hover:translate-x-0">
+                <p className="text-[14px] md:text-[16px] leading-[1.4] text-black-400 font-bold">
                   {impact.description}
                 </p>
               </div>

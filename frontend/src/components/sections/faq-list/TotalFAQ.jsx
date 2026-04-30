@@ -240,10 +240,10 @@ const ListFAQ = () => {
 
   return (
     <section className="bg-white-300">
-      <div className="max-w-[1520px] mx-auto px-6 md:px-0 flex gap-[60px] relative">
+      <div className="max-w-[1520px] mx-auto px-6 xl:px-0 flex flex-col md:flex-row gap-[40px] lg:gap-[60px] relative">
         
         {/* Sidebar */}
-        <div className="w-[300px] shrink-0">
+        <div className="hidden md:block w-[240px] lg:w-[300px] shrink-0">
           <div className="sticky top-[100px] border-l border-black-100 flex flex-col items-start">
             {FAQ_DATA.map((cat) => (
               <button
@@ -264,14 +264,14 @@ const ListFAQ = () => {
         </div>
 
         {/* Content */}
-        <div className="flex-1 flex flex-col gap-[80px]">
+        <div className="flex-1 flex flex-col gap-[60px] lg:gap-[80px]">
           {FAQ_DATA.map((cat) => (
             <div 
               key={cat.id} 
               ref={el => sectionRefs.current[cat.id] = el}
               className="flex flex-col gap-[24px]"
             >
-              <h2 className={`text-[48px] font-medium leading-tight transition-colors duration-300 ${activeCategory === cat.id ? 'text-black-900' : 'text-black-400'}`}>
+              <h2 className={`text-[32px] md:text-[48px] font-medium leading-tight transition-colors duration-300 ${activeCategory === cat.id ? 'text-black-900' : 'text-black-400'}`}>
                 {cat.title}
               </h2>
               <div className="flex flex-col">
@@ -286,10 +286,10 @@ const ListFAQ = () => {
                         onClick={() => toggleItem(cat.id, idx)}
                         className="w-full flex items-center justify-between py-[20px] text-left group"
                       >
-                        <span className="text-[24px] font-semibold italic text-black-900 leading-normal transition-colors group-hover:text-orange-600">
+                        <span className="text-[18px] md:text-[24px] font-semibold italic text-black-900 leading-normal transition-colors group-hover:text-orange-600">
                           {item.q}
                         </span>
-                        <div className={`w-[16px] h-[16px] flex items-center justify-center transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}>
+                        <div className={`w-[16px] h-[16px] flex items-center justify-center transition-transform duration-300 shrink-0 ml-4 ${isOpen ? 'rotate-45' : ''}`}>
                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 3.33334V12.6667M3.33334 8H12.6667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                           </svg>
@@ -298,7 +298,7 @@ const ListFAQ = () => {
                       <div 
                         className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[500px] pb-[20px] opacity-100' : 'max-h-0 opacity-0'}`}
                       >
-                        <p className="text-[18px] leading-[28px] text-black-400 max-w-[900px]">
+                        <p className="text-[16px] md:text-[18px] leading-[28px] text-black-400 max-w-[900px]">
                           {item.a}
                         </p>
                       </div>

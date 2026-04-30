@@ -4,7 +4,7 @@ import Button from '../../ui/Button';
 const CTA = () => {
     return (
         <section className="py-[120px]">
-            <div className="max-w-[1520px] mx-auto px-6 md:px-0">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0">
                 {/* CTA Card Container with Background Asset */}
                 <div className="relative w-full h-[680px] bg-[url('/homepage/CTABanner.png')] bg-cover bg-center border-2 border-white-50 rounded-[2px] overflow-hidden flex flex-col items-center justify-start pt-[100px]">
                     

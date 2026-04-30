@@ -26,7 +26,7 @@ const Differentiate = () => {
 
   return (
     <section className="py-24 bg-white-50 overflow-hidden">
-      <div className="max-w-[1520px] mx-auto px-6 md:px-0">
+      <div className="max-w-[1520px] mx-auto px-6 xl:px-0">
         <div className="text-center space-y-4 mb-20">
           <h2 className="text-[40px] md:text-[48px] font-normal text-black-400">
             What Makes Us <span className="font-bold text-black-900">Different</span>

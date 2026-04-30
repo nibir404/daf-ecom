@@ -62,24 +62,24 @@ const SearchResults = () => {
 
     return (
         <section className="relative w-full bg-black-900 pt-[20px] pb-[120px] px-6 flex justify-center min-h-[600px] overflow-hidden">
-            <div className="relative z-10 max-w-[1520px] w-full flex flex-col gap-[60px]">
+            <div className="relative z-10 max-w-[1520px] w-full flex flex-col gap-[40px] md:gap-[60px]">
                 {isNoSearch ? (
-                    <div className="flex flex-col items-center justify-center py-[100px] gap-6 text-center">
-                        <div className="w-[120px] h-[120px] bg-black-700 rounded-full flex items-center justify-center border-2 border-black-400 mb-4 shadow-[0px_0px_20px_0px_rgba(115,171,255,0.1)]">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-white-700">
+                    <div className="flex flex-col items-center justify-center py-[60px] md:py-[100px] gap-6 text-center">
+                        <div className="size-[80px] md:size-[120px] bg-black-700 rounded-full flex items-center justify-center border-2 border-black-400 mb-4 shadow-[0px_0px_20px_0px_rgba(115,171,255,0.1)]">
+                            <svg width="32" height="32" md:width="48" md:height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-white-700">
                                 <circle cx="11" cy="11" r="8"></circle>
                                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                             </svg>
                         </div>
-                        <h2 className="text-[32px] font-bold text-white-50">Search for your next domain</h2>
-                        <p className="text-[18px] text-white-700 max-w-[600px]">
+                        <h2 className="text-[24px] md:text-[32px] font-bold text-white-50">Search for your next domain</h2>
+                        <p className="text-[16px] md:text-[18px] text-white-700 max-w-[600px]">
                             Enter a domain name in the search bar above to see availability, 
                             exclusive pricing, and premium extensions.
                         </p>
                         <div className="mt-4">
                             <Button 
                                 variant="white"
-                                className="!px-8 !py-[16px]"
+                                className="!px-6 md:!px-8 !py-[12px] md:!py-[16px]"
                                 onClick={() => {
                                     const input = document.querySelector('input');
                                     if (input) input.focus();
@@ -90,64 +90,64 @@ const SearchResults = () => {
                         </div>
                     </div>
                 ) : !isValidSearch ? (
-                    <div className="flex flex-col items-center justify-center py-[100px] gap-6 text-center">
-                        <div className="w-[120px] h-[120px] bg-black-700 rounded-full flex items-center justify-center border-2 border-red-500/30 mb-4 shadow-[0px_0px_20px_0px_rgba(239,68,68,0.1)]">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="red" strokeWidth="1.5" className="opacity-60">
+                    <div className="flex flex-col items-center justify-center py-[60px] md:py-[100px] gap-6 text-center">
+                        <div className="size-[80px] md:size-[120px] bg-black-700 rounded-full flex items-center justify-center border-2 border-red-500/30 mb-4 shadow-[0px_0px_20px_0px_rgba(239,68,68,0.1)]">
+                            <svg width="32" height="32" md:width="48" md:height="48" viewBox="0 0 24 24" fill="none" stroke="red" strokeWidth="1.5" className="opacity-60">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <line x1="15" y1="9" x2="9" y2="15"></line>
                                 <line x1="9" y1="9" x2="15" y2="15"></line>
                             </svg>
                         </div>
-                        <h2 className="text-[32px] font-bold text-white-50">No results for "{query}"</h2>
-                        <p className="text-[18px] text-white-700 max-w-[600px]">
+                        <h2 className="text-[24px] md:text-[32px] font-bold text-white-50">No results for "{query}"</h2>
+                        <p className="text-[16px] md:text-[18px] text-white-700 max-w-[600px]">
                             We couldn't find any domains matching this extension. 
                             Please try searching for a domain name or use a standard extension like .com, .net, or .org.
                         </p>
                     </div>
                 ) : (
                     <>
-                        <div className="flex items-center justify-between w-full">
-                            <h2 className="text-[48px] font-normal text-white-700">
+                        <div className="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-4">
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-white-700">
                                 Search <span className="text-white-700">Results</span>
                             </h2>
-                            <p className="text-[24px] text-white-700">
+                            <p className="text-[18px] md:text-[24px] text-white-700">
                                 <span className="font-bold italic text-white leading-[30px]" style={{ fontVariationSettings: "'YAXS' 430" }}>{allMockDomains.length}</span> Domains are available
                             </p>
                         </div>
 
-                        <div className="w-full border-2 border-black-400 rounded-[2px] overflow-hidden bg-black-700">
-                            <table className="w-full border-collapse">
+                        <div className="w-full border-2 border-black-400 rounded-[2px] overflow-hidden bg-black-700 overflow-x-auto">
+                            <table className="w-full border-collapse min-w-[600px]">
                                 <thead>
                                     <tr className="bg-black-500 border-b border-black-400">
-                                        <th className="py-10 px-10 text-left text-[20px] font-bold text-white border-r border-black-400 w-[1150px]">Domain Name</th>
-                                        <th className="py-10 px-10 text-left text-[20px] font-bold text-white">Price</th>
+                                        <th className="py-6 md:py-10 px-6 md:px-10 text-left text-[18px] md:text-[20px] font-bold text-white border-r border-black-400">Domain Name</th>
+                                        <th className="py-6 md:py-10 px-6 md:px-10 text-left text-[18px] md:text-[20px] font-bold text-white">Price</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {results.map((domain, index) => (
-                                        <tr key={index} className="border-b border-black-400 h-[80px]">
-                                            <td className="px-10 border-r border-black-400">
-                                                <div className="flex items-center gap-4">
-                                                    <span className="text-[20px] font-semibold text-white-50">{domain.name}</span>
+                                        <tr key={index} className="border-b border-black-400 min-h-[80px]">
+                                            <td className="px-6 md:px-10 py-4 border-r border-black-400">
+                                                <div className="flex flex-wrap items-center gap-4">
+                                                    <span className="text-[16px] md:text-[20px] font-semibold text-white-50">{domain.name}</span>
                                                     {domain.tag && (
-                                                        <span className={`px-4 py-[6px] rounded-[2px] border text-[14px] font-normal whitespace-nowrap ${domain.tagColor}`}>
+                                                        <span className={`px-3 md:px-4 py-[4px] md:py-[6px] rounded-[2px] border text-[12px] md:text-[14px] font-normal whitespace-nowrap ${domain.tagColor}`}>
                                                             {domain.tag}
                                                         </span>
                                                     )}
                                                 </div>
                                             </td>
-                                            <td className="px-10">
-                                                <div className="flex items-center justify-between w-full">
+                                            <td className="px-6 md:px-10 py-4">
+                                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full gap-4">
                                                     <div className="flex flex-col gap-1">
-                                                        <span className="text-[20px] font-semibold text-white leading-none">{domain.price}</span>
-                                                        <span className="text-[14px] text-white-700 leading-none">{domain.retail}</span>
+                                                        <span className="text-[18px] md:text-[20px] font-semibold text-white leading-none">{domain.price}</span>
+                                                        <span className="text-[12px] md:text-[14px] text-white-700 leading-none">{domain.retail}</span>
                                                     </div>
                                                     <Button 
                                                         variant="primary"
                                                         onClick={() => {/* Buy logic */}}
-                                                        className="bg-teal-900 !px-6 !py-[14px] !shadow-[inset_0px_0px_4px_0px_rgba(255,255,255,0.65)] hover:bg-teal-800"
+                                                        className="bg-teal-900 !px-4 md:!px-6 !py-[10px] md:!py-[14px] !shadow-[inset_0px_0px_4px_0px_rgba(255,255,255,0.65)] hover:bg-teal-800 w-full sm:w-auto"
                                                         icon={
-                                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                                            <svg width="18" height="18" md:width="20" md:height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                                                                 <circle cx="9" cy="21" r="1"></circle>
                                                                 <circle cx="20" cy="21" r="1"></circle>
                                                                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>

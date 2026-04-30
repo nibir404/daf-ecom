@@ -14,17 +14,17 @@ const HeroAbout = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black-900/40 via-transparent to-black-900" />
       </div>
 
-      <div className="max-w-[1520px] mx-auto px-6 md:px-0 relative z-10 flex flex-col justify-start pt-[80px] min-h-[820px]">
+      <div className="max-w-[1520px] mx-auto px-6 xl:px-0 relative z-10 flex flex-col justify-start pt-[50px] min-h-[600px] md:min-h-[820px]">
         {/* Main Content Group */}
         <div className="max-w-[1000px]">
-          <h1 className="text-[48px] md:text-[64px] font-normal text-white-50 leading-[75px] mb-6">
-            Over Two Decades of <span className="font-bold">Experience</span>,<br />
+          <h1 className="text-[32px] md:text-[48px] lg:text-[64px] font-normal text-white-50 leading-[1.2] mb-6">
+            Over Two Decades of <span className="font-bold">Experience</span>,<br className="hidden md:block" />
             <span className="font-bold">Evolving</span> for The Future
-            <span className="inline-block align-middle ml-4">
+            <span className="block md:inline-block align-middle mt-4 md:mt-0 md:ml-4">
                <img 
                  src="/aboutpage/HeroTitleImg.png" 
                  alt="accent" 
-                 className="h-[45px] w-[269px] object-cover rounded-[2px] opacity-80" 
+                 className="h-[30px] md:h-[45px] w-[180px] md:w-[269px] object-cover rounded-[2px] opacity-80" 
                />
             </span>
           </h1>
@@ -36,8 +36,8 @@ const HeroAbout = () => {
         </div>
 
         {/* Bottom Right Supporting Text */}
-        <div className="absolute bottom-10 right-0 max-w-[614px] text-right">
-          <p className="text-[20px] text-white-50 leading-[30px] font-normal">
+        <div className="mt-12 lg:mt-0 lg:absolute lg:bottom-10 lg:right-6 xl:right-0 max-w-[614px] lg:text-right">
+          <p className="text-[18px] md:text-[20px] text-white-50 leading-[1.5] font-normal">
             Today, with expanded capabilities across web platforms, commerce systems, and advanced digital solutions, 
             we continue to help organizations grow with confidence.
           </p>

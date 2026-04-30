@@ -163,6 +163,10 @@
     }
 }
 
+html, body {
+  overflow-x: clip;
+}
+
 body {
   background-color: var(--color-white-300);
   font-family: var(--font-sans);
@@ -206,5 +210,13 @@ body {
   .mask-fade-x {
     mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

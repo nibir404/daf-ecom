@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Button from '../ui/Button';
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
   const servicesList = [
     { 
       id: 'foundation', 
@@ -106,21 +113,33 @@ const Navbar = () => {
   ];
 
   const [activeService, setActiveService] = useState(servicesList[0]);
+  const [expandedMobileService, setExpandedMobileService] = useState(null);
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/50 backdrop-blur-[17px] border-b border-black-50/5">
-      <div className="max-w-[1520px] mx-auto flex justify-between items-center h-[80px] px-6 md:px-0 relative">
+    <nav className="sticky top-0 z-50 w-full h-[80px] bg-white/50 backdrop-blur-[17px] border-b border-black-50/5">
+      <div className="max-w-[1520px] mx-auto flex justify-between items-center h-[80px] px-6 xl:px-0 relative">
         <div className='brand-container flex items-center gap-[16px]'>
-          <Link to="/" className="w-[169px] shrink-0">
+          <Link to="/" className="w-[169px] sm:w-[169px] w-[130px] shrink-0 z-50 relative">
             <img src="/Logo Container.png" alt="daf-logo" className="w-full" />
           </Link>
-          <Link to="/start-here" className="flex items-center gap-[10px] px-[20px] py-[10px] h-[48px] text-[16px] font-bold text-black-400 hover:text-black-900 transition-colors">
+          <Link to="/start-here" className="hidden md:flex items-center gap-[10px] px-[20px] py-[10px] h-[48px] text-[16px] font-bold text-black-400 hover:text-black-900 transition-colors">
             Start here
             <img src="/arrow-right.svg" alt="icon" className="w-4 h-4" />
           </Link>
         </div>
 
-        <div className='primary-links flex h-full items-center'>
+        {/* Mobile Menu Button */}
+        <button 
+          className="lg:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 z-50 relative ml-auto"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          <span className={`w-6 h-[2px] bg-black-900 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`}></span>
+          <span className={`w-6 h-[2px] bg-black-900 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+          <span className={`w-6 h-[2px] bg-black-900 transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`}></span>
+        </button>
+
+        <div className='primary-links hidden lg:flex h-full items-center'>
           <Link to="/about" className="px-[20px] py-[10px] text-[16px] font-normal text-black-400 hover:text-black-900 transition-colors">
             About us
           </Link>
@@ -277,7 +296,7 @@ const Navbar = () => {
         </div>
 
 
-        <div className='secondary-links flex h-full items-center gap-[10px]'>
+        <div className='secondary-links hidden lg:flex h-full items-center gap-[10px]'>
           <div className="group/explore">
             <Link to="/services" className="flex items-center gap-[10px] px-[20px] py-[10px] h-[48px] text-[16px] font-bold text-black-400 hover:text-black-900 transition-colors group-hover/explore:text-black-900">
               Explore
@@ -409,6 +428,137 @@ const Navbar = () => {
             Contact us
             <img src="/arrow-right.svg" alt="arrow-icon" className="w-5 h-5 brightness-200" />
           </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`fixed top-0 left-0 w-full h-screen bg-white-50 z-[60] transition-transform duration-300 ease-in-out overflow-y-auto scrollbar-hide lg:hidden ${
+          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="sticky top-0 z-10 bg-white-50 flex justify-between items-center h-[80px] px-6">
+          <Link to="/" className="w-[130px] shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
+            <img src="/Logo Container.png" alt="daf-logo" className="w-full" />
+          </Link>
+          <button 
+            className="flex justify-center items-center w-10 h-10 border border-black-900 rounded-[2px] transition-colors hover:bg-black-900 hover:text-white-50"
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-label="Close mobile menu"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div className="flex flex-col p-6 gap-6 pt-4">
+          {/* Search Bar */}
+          <form 
+            onSubmit={(e) => {
+              e.preventDefault();
+              setIsMobileMenuOpen(false);
+            }}
+            className="flex items-center w-full h-[48px] border border-white-600 rounded-[2px] px-4 bg-white focus-within:border-black-900 transition-colors"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-black-400">
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M21 21L16.65 16.65" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <input 
+              type="text" 
+              name="search"
+              placeholder="Search..." 
+              className="w-full h-full bg-transparent outline-none pl-3 text-[16px] text-black-900 placeholder:text-black-200"
+            />
+          </form>
+
+          <Link to="/start-here" className="text-[20px] font-medium text-black-900 border-b border-white-600 pb-4 flex items-center justify-between">
+            Start here
+            <img src="/arrow-right.svg" alt="icon" className="w-4 h-4" />
+          </Link>
+          <Link to="/about" className="text-[20px] font-medium text-black-900 border-b border-white-600 pb-4">
+            About us
+          </Link>
+          <div className="flex flex-col gap-4 border-b border-white-600 pb-4">
+            <Link to="/services" className="text-[20px] font-medium text-black-900" onClick={() => setIsMobileMenuOpen(false)}>
+              Services
+            </Link>
+            <div className="flex flex-col pl-4 gap-4 mt-2">
+              {servicesList.map((service) => (
+                <div key={service.id} className="flex flex-col gap-2">
+                  <div 
+                    className="flex items-center justify-between cursor-pointer group"
+                    onClick={() => setExpandedMobileService(expandedMobileService === service.id ? null : service.id)}
+                  >
+                    <div className="flex items-center gap-2">
+                      <img src={service.icon} alt={service.name} className="w-5 h-5 opacity-70" /> 
+                      <span className={`text-[16px] transition-colors ${expandedMobileService === service.id ? 'text-black-900 font-medium' : 'text-black-400 group-hover:text-black-900'}`}>
+                        {service.name}
+                      </span>
+                    </div>
+                    <svg 
+                      width="16" height="16" viewBox="0 0 16 16" fill="none" 
+                      className={`text-black-400 transition-transform duration-200 ${expandedMobileService === service.id ? 'rotate-180' : ''}`}
+                    >
+                      <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  
+                  {/* Sub-services dropdown */}
+                  <div 
+                    className={`flex flex-col pl-7 gap-3 overflow-hidden transition-all duration-300 ${
+                      expandedMobileService === service.id ? 'max-h-[500px] mt-2 pb-2 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    {service.links.map((link, i) => (
+                      <Link 
+                        key={i}
+                        to={`/services/${link.toLowerCase().replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-')}`}
+                        className="text-[14px] text-black-400 hover:text-black-900 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {link}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <Link to="/pricing" className="text-[20px] font-medium text-black-900 border-b border-white-600 pb-4">
+            Pricing
+          </Link>
+          <div className="flex flex-col gap-4 border-b border-white-600 pb-4">
+            <span className="text-[20px] font-medium text-black-900">Resources</span>
+            <div className="flex flex-col pl-4 gap-4 mt-2">
+              <Link to="/blog" className="text-[16px] text-black-400 flex items-center gap-2">
+                <img src="/resources-menu/blog.svg" alt="Blog" className="w-5 h-5 opacity-70" /> Blog
+              </Link>
+              <Link to="/case-studies" className="text-[16px] text-black-400 flex items-center gap-2">
+                <img src="/resources-menu/case%20studies.svg" alt="Case Studies" className="w-5 h-5 opacity-70" /> Case Studies
+              </Link>
+              <Link to="/faq" className="text-[16px] text-black-400 flex items-center gap-2">
+                <img src="/resources-menu/faq.svg" alt="FAQ" className="w-5 h-5 opacity-70" /> FAQ
+              </Link>
+              <Link to="/privacy-policy" className="text-[16px] text-black-400 flex items-center gap-2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-70">
+                  <path d="M12 2L3 7V12C3 17.5 7 22 12 22C17 22 21 17.5 21 12V7L12 2Z" stroke="#0C0C0C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9 12L11 14L15 10" stroke="#0C0C0C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg> Privacy Policy
+              </Link>
+            </div>
+          </div>
+          
+          <div className="mt-4 flex flex-col gap-4 pb-10">
+            <Button variant="tertiary" className="w-full justify-center !text-black-900 border-black-900">
+              Book Strategy Call
+            </Button>
+            <button className='w-full justify-center bg-[#265f58] rounded-[2px] text-white-50 px-[24px] py-[14px] transition duration-300 ease-in-out hover:bg-[#1a433e] flex gap-[10px] items-center shadow-[inset_0px_0px_4px_0px_rgba(255,255,255,0.65)]'>
+              Contact us
+              <img src="/arrow-right.svg" alt="arrow-icon" className="w-5 h-5 brightness-200" />
+            </button>
+          </div>
         </div>
       </div>
     </nav>

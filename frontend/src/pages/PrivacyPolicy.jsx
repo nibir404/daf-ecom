@@ -58,7 +58,7 @@ const PrivacyPolicy = () => {
             <main className="flex flex-col bg-white-300 min-h-screen">
                 <PrivacyHero />
                 
-                <div className="max-w-[1920px] mx-auto py-[100px] px-6 lg:px-[200px] flex gap-[60px] relative">
+                <div className="max-w-[1520px] mx-auto py-[100px] px-6 xl:px-0 flex flex-col lg:flex-row gap-[60px] relative">
                     <PrivacySidebar 
                         activeSection={activeSection} 
                         scrollToSection={scrollToSection} 

@@ -4,11 +4,11 @@ import Button from '../../ui/Button';
 
 const FeaturedBlog = () => {
     return (
-        <section className="py-[100px] bg-white-300">
-            <div className="max-w-[1520px] mx-auto">
-                <Link to="/blog/featured" className="bg-white border border-white-500 rounded-[2px] overflow-hidden flex h-[500px] w-full shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+        <section className="pt-[50px] pb-[100px] bg-white-300">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0">
+                <Link to="/blog/featured" className="bg-white border border-white-500 rounded-[2px] overflow-hidden flex flex-col lg:flex-row min-h-[500px] w-full shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                     {/* Left: Image */}
-                    <div className="w-[747px] h-full p-[9px]">
+                    <div className="w-full lg:w-[747px] h-[300px] lg:h-full p-[9px]">
                         <img 
                             src="/blogpage/FeaturedBlog.png" 
                             alt="Featured Blog" 

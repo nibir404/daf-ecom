@@ -26,12 +26,12 @@ const OurTeam = () => {
 
   return (
     <section className="py-[120px]">
-      <div className="max-w-[1920px] mx-auto px-[200px]">
-        <div className="flex flex-col lg:flex-row gap-[60px] w-[1520px] items-start">
-          {/* Left Side: Sticky Title (624px width) */}
+      <div className="max-w-[1520px] mx-auto px-6 xl:px-0">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-[60px] items-start">
+          {/* Left Side: Sticky Title */}
           <div className="w-full lg:w-[624px] shrink-0 lg:sticky lg:top-[120px]">
             <div className="space-y-6">
-              <h2 className="text-[48px] font-normal leading-tight text-black-400">
+              <h2 className="text-[32px] md:text-[48px] font-normal leading-tight text-black-400">
                 The People Behind
                 Daffodil <span className="font-bold text-black-500">Web</span> and <span className="font-bold text-orange-600">Ecommerce</span>
               </h2>
@@ -41,11 +41,11 @@ const OurTeam = () => {
             </div>
           </div>
 
-          {/* Right Side: Team Grid (836px width to maintain 20px gap strictly) */}
-          <div className="w-[836px]">
-            <div className="grid grid-cols-2 gap-[20px]">
+          {/* Right Side: Team Grid */}
+          <div className="w-full lg:flex-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
               {team.map((member, index) => (
-                <div key={index} className="relative group overflow-hidden w-[408px] h-[514px] shrink-0">
+                <div key={index} className="relative group overflow-hidden w-full aspect-[408/514] shrink-0">
                   <div className="absolute inset-0 w-full h-full overflow-hidden">
                     <img 
                       src={member.photo} 
@@ -54,12 +54,12 @@ const OurTeam = () => {
                     />
                   </div>
                   
-                  {/* Name Card - Specific Positioning from Figma */}
-                  <div className="absolute bg-white-50 flex flex-col gap-[4px] items-start justify-center left-[10px] p-[20px] rounded-[2px] top-[408px] w-[388px] border border-black-100/5 shadow-sm group-hover:top-[398px] transition-all duration-500">
-                    <h3 className="font-bold text-[24px] text-black-500 whitespace-nowrap leading-tight">
+                  {/* Name Card */}
+                  <div className="absolute bg-white-50 flex flex-col gap-[4px] items-start justify-center left-[10px] right-[10px] p-[20px] rounded-[2px] bottom-[10px] lg:bottom-auto lg:top-[408px] border border-black-100/5 shadow-sm lg:group-hover:top-[398px] transition-all duration-500">
+                    <h3 className="font-bold text-[20px] md:text-[24px] text-black-500 whitespace-nowrap leading-tight">
                       {member.name}
                     </h3>
-                    <p className="text-[16px] text-black-400 w-full">
+                    <p className="text-[14px] md:text-[16px] text-black-400 w-full">
                       {member.role}
                     </p>
                   </div>

@@ -150,8 +150,8 @@ const IWant = () => {
   ];
 
   return (
-    <section className="w-full bg-white-50 pt-[120px] pb-0">
-      <div className="max-w-[1520px] mx-auto px-6 flex flex-col">
+    <section className="w-full bg-white-50 pt-[80px] md:pt-[120px] pb-0">
+      <div className="max-w-[1520px] mx-auto px-6 xl:px-0 flex flex-col">
         {categories.map((category, index) => (
           <div 
             key={category.id} 

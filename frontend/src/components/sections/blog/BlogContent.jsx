@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const BlogContent = () => {
     return (
-        <div className="flex flex-col gap-[40px] w-full max-w-[1000px]">
+        <div className="flex flex-col gap-6 md:gap-[40px] w-full max-w-[1000px]">
             {/* Back Button */}
             <Link 
                 to="/blog" 
@@ -18,11 +18,11 @@ const BlogContent = () => {
 
             {/* Header / Meta */}
             <div id="introduction" className="flex flex-col gap-4">
-                <h1 className="text-[64px] leading-[75px] text-black-400 font-normal">
+                <h1 className="text-[32px] md:text-[48px] lg:text-[64px] leading-[1.2] text-black-400 font-normal">
                     How AI is Transforming <span className="font-bold text-black-900">Business Operations</span> in 2026
                 </h1>
-                <div className="flex items-center justify-between w-full">
-                    <div className="flex items-center gap-1 text-[20px] text-black-900">
+                <div className="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-4">
+                    <div className="flex flex-wrap items-center gap-1 text-[16px] md:text-[20px] text-black-900">
                         <span className="font-bold">Author:</span>
                         <span>Engineering Team |</span>
                         <span className="font-bold ml-1">Published at</span>
@@ -46,7 +46,7 @@ const BlogContent = () => {
             </p>
 
             {/* Main Image - Background Section */}
-            <div id="background" className="w-full h-[500px] overflow-hidden rounded-[2px]">
+            <div id="background" className="w-full h-[300px] md:h-[500px] overflow-hidden rounded-[2px]">
                 <img 
                     src="/single-blog/snblog1.png" 
                     alt="Main Blog" 
@@ -65,15 +65,15 @@ const BlogContent = () => {
             </p>
 
             {/* Sub Images - Results */}
-            <div id="results" className="flex gap-[40px] w-full h-[422px]">
-                <div className="flex-1 rounded-[2px] overflow-hidden">
+            <div id="results" className="flex flex-col lg:flex-row gap-6 lg:gap-[40px] w-full h-auto lg:h-[422px]">
+                <div className="flex-1 min-h-[300px] rounded-[2px] overflow-hidden">
                     <img 
                         src="/single-blog/snblog2.png" 
                         alt="Process" 
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <div className="flex-1 rounded-[2px] overflow-hidden">
+                <div className="flex-1 min-h-[300px] rounded-[2px] overflow-hidden">
                     <img 
                         src="/single-blog/snblog3.png" 
                         alt="Analytics" 

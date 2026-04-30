@@ -30,7 +30,7 @@ const Credibility = ({
     return (
         <section className={`w-full flex flex-col items-center ${isDark ? 'bg-black-800' : 'bg-white'} ${className}`}>
             <div className={`w-full py-24 flex flex-col items-center justify-center relative overflow-hidden ${isDark ? 'border-b border-black-700' : ''}`}>
-                <div className="relative z-10 w-full max-w-[1520px] px-6 md:px-0 flex flex-col items-center gap-12">
+                <div className="relative z-10 w-full max-w-[1920px] px-6 lg:px-[200px] flex flex-col items-center gap-12">
                     
                     {/* Statement Text */}
                     <p className={`text-[20px] font-normal text-center leading-[28px] max-w-[1200px] ${isDark ? 'text-white-700' : 'text-black-500'}`}>
@@ -43,7 +43,7 @@ const Credibility = ({
                     
                     {/* Logos Container */}
                     <div className={`w-full max-w-[1200px] border-y ${isDark ? 'border-white-900/10' : 'border-white-500'} py-10`}>
-                        <div className="flex flex-wrap justify-between items-center gap-x-12 gap-y-8 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                        <div className="flex flex-wrap justify-center md:justify-between items-center gap-x-8 md:gap-x-12 gap-y-8 opacity-60 hover:opacity-100 transition-opacity duration-300">
                             {logos.map((logo, index) => (
                                 <img 
                                     key={index} 
@@ -57,7 +57,7 @@ const Credibility = ({
 
                     {/* Domain Search Bar - Conditional (Only for dark variant by default or if forced) */}
                     {showSearchBar && (
-                        <div className="w-full max-w-[1200px] bg-gold-50 border border-orange-600 rounded-[2px] flex items-center justify-between pl-5 pr-2 py-2 shadow-[0px_0px_2px_0px_rgba(0,0,0,0.2)] mt-4 hover:shadow-[0px_0px_15px_0px_#73abff,0px_0px_0px_2px_#df6c23] focus-within:shadow-[0px_0px_15px_0px_#73abff,0px_0px_0px_2px_#df6c23] transition-all duration-300 group cursor-text box-border">
+                        <div className="w-full max-w-[1200px] bg-gold-50 border border-orange-600 rounded-[2px] flex flex-col sm:flex-row items-stretch sm:items-center justify-between pl-5 pr-5 sm:pr-2 py-4 sm:py-2 shadow-[0px_0px_2px_0px_rgba(0,0,0,0.2)] mt-4 hover:shadow-[0px_0px_15px_0px_#73abff,0px_0px_0px_2px_#df6c23] focus-within:shadow-[0px_0px_15px_0px_#73abff,0px_0px_0px_2px_#df6c23] transition-all duration-300 group cursor-text box-border gap-4 sm:gap-0">
                             <div className="flex-1 relative flex items-center">
                                 <input 
                                     type="text"
@@ -73,7 +73,7 @@ const Credibility = ({
                             </div>
                             <button 
                                 onClick={handleSearch}
-                                className="bg-black-900 text-white-50 px-6 py-3.5 rounded-[2px] flex items-center gap-2.5 hover:bg-blue-600 transition-all duration-300 cursor-pointer shadow-[inset_0px_0px_4px_0px_rgba(255,255,255,0.65)] shrink-0"
+                                className="bg-black-900 text-white-50 px-6 py-3.5 rounded-[2px] flex items-center justify-center gap-2.5 hover:bg-blue-600 transition-all duration-300 cursor-pointer shadow-[inset_0px_0px_4px_0px_rgba(255,255,255,0.65)] shrink-0 w-full sm:w-auto"
                             >
                                 <span className="text-[16px] font-medium">Find your domain</span>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

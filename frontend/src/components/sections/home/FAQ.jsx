@@ -50,7 +50,7 @@ const FAQ = ({
 
     return (
         <section className={className}>
-            <div className="max-w-[1520px] mx-auto px-6 md:px-0">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0">
                 <div className="flex flex-col lg:flex-row gap-[60px] items-start">
                     
                     {/* Left Side: Header & Contact */}

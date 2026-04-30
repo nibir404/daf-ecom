@@ -3,7 +3,7 @@ import Button from '../../ui/Button';
 
 const CaseStudyHero = () => {
     return (
-        <section className="relative w-full overflow-hidden py-[120px]">
+        <section className="relative w-full overflow-hidden pt-[50px] pb-[120px]">
             {/* Background Flare Effect */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-[600px] pointer-events-none">
                 <img 
@@ -13,9 +13,9 @@ const CaseStudyHero = () => {
                 />
             </div>
 
-            <div className="max-w-[1100px] mx-auto text-center relative z-10 flex flex-col items-center gap-[40px]">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0 text-center relative z-10 flex flex-col items-center gap-[40px]">
                 <div className="flex flex-col gap-[16px]">
-                    <h1 className="text-[64px] leading-[75px] text-black-400 font-normal">
+                    <h1 className="text-[40px] md:text-[64px] leading-[1.2] text-black-400 font-normal">
                         Real <span className="font-bold text-black-900">Results</span> from Real <span className="font-bold text-black-900">Digital</span> Transformations
                     </h1>
                     <p className="text-[20px] leading-[30px] text-black-400 max-w-[900px] mx-auto">

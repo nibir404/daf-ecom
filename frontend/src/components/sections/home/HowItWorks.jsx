@@ -125,12 +125,12 @@ const HowItWorks = () => {
     const currentData = workflowData[activeTab];
 
     return (
-        <section ref={sectionRef} className="w-full py-[120px] bg-white-50 overflow-hidden">
-            <div className="max-w-[1520px] mx-auto px-6 md:px-0">
+        <section ref={sectionRef} className="w-full py-[60px] lg:py-[120px] bg-white-50 overflow-hidden">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0">
                 {/* Header & Tabs */}
-                <div className="flex flex-col md:flex-row items-end justify-between mb-[60px] gap-8">
+                <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-[40px] lg:mb-[60px] gap-8">
                     <div className="max-w-[524px]">
-                        <h2 className="text-[48px] leading-[1.2] text-black-400">
+                        <h2 className="text-[32px] md:text-[48px] leading-[1.2] text-black-400">
                             Two Ways to <span className="font-bold text-black-900">Start</span>
                         </h2>
                         <p className="text-[16px] leading-[26px] text-black-400 mt-[10px]">
@@ -168,9 +168,9 @@ const HowItWorks = () => {
                 </div>
 
                 {/* Workflow Content */}
-                <div className="flex flex-col md:flex-row gap-[60px] items-stretch">
+                <div className="flex flex-col lg:flex-row gap-[40px] lg:gap-[60px] items-stretch">
                     {/* Left: Steps List */}
-                    <div className="w-full md:w-[524px] relative py-2">
+                    <div className="w-full lg:w-[524px] relative py-2">
                         {/* Connecting Line (Grey Background) */}
                         <div className="absolute left-[24px] top-[25px] w-[2px] h-[calc(100%-80px)] bg-white-600" />
                         
@@ -210,13 +210,13 @@ const HowItWorks = () => {
                     </div>
 
                     {/* Right: Featured Card */}
-                    <div className="flex-1 bg-white-50 border border-white-600 rounded-[2px] relative overflow-hidden group/card min-h-[460px]">
+                    <div className="flex-1 bg-white-50 border border-white-600 rounded-[2px] relative overflow-hidden group/card min-h-[460px] flex flex-col justify-between">
                         {/* Background Flare / Glow */}
                         <div className={`absolute -left-[100px] -bottom-[100px] w-[400px] h-[400px] rounded-full ${currentData.theme.glow} blur-[120px] pointer-events-none opacity-40 group-hover/card:opacity-60 transition-opacity duration-700 z-0`} />
 
                         {/* Text Content */}
-                        <div className="absolute left-[40px] top-[40px] max-w-[450px] z-10">
-                            <h3 className="text-[36px] font-semibold italic leading-[1.2] text-black mb-[10px] tracking-tight">
+                        <div className="relative z-10 p-6 lg:p-[40px] max-w-[450px]">
+                            <h3 className="text-[24px] lg:text-[36px] font-semibold italic leading-[1.2] text-black mb-[10px] tracking-tight">
                                 {currentData.card.title}
                             </h3>
                             <p className="text-[16px] leading-[26px] text-black-400 font-normal">
@@ -225,18 +225,18 @@ const HowItWorks = () => {
                         </div>
 
                         {/* CTA Button */}
-                        <div className="absolute left-[40px] bottom-[40px] z-10">
+                        <div className="relative z-10 p-6 lg:p-[40px] pt-0">
                             <Button variant="primary">
                                 {currentData.card.cta}
                             </Button>
                         </div>
 
                         {/* Featured Image */}
-                        <div className="absolute right-0 top-0 bottom-0 w-[310px] pointer-events-none z-0">
+                        <div className="absolute right-0 top-0 bottom-0 w-full md:w-[310px] pointer-events-none z-0">
                             <img 
                                 src={currentData.card.image} 
                                 alt="preview" 
-                                className="w-full h-full object-cover object-left" 
+                                className="w-full h-full object-cover object-right lg:object-left opacity-10 lg:opacity-100" 
                             />
                         </div>
                     </div>

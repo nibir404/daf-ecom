@@ -41,13 +41,13 @@ const EngineeringSystems = () => {
   ]
 
   return (
-    <section className="w-full bg-black-900 py-[120px]">
-      <div className="mx-auto w-full max-w-[1920px] px-[200px]">
-        <div className="flex gap-[60px] items-center w-full">
+    <section className="w-full bg-black-900 py-10 lg:py-[120px]">
+      <div className="mx-auto w-full max-w-[1520px] px-6 xl:px-0">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-[60px] items-center w-full">
           {/* Left Content */}
-          <div className="flex flex-col gap-[16px] w-[500px]">
-            <h2 className="text-[48px] leading-[1.1] tracking-tight text-white-700">
-              <span className="font-bold text-white-50">Engineering</span> Systems, <br />
+          <div className="flex flex-col gap-[16px] w-full lg:w-[500px]">
+            <h2 className="text-[32px] md:text-[48px] leading-[1.1] tracking-tight text-white-700">
+              <span className="font-bold text-white-50">Engineering</span> Systems, <br className="hidden md:block" />
               Not Just <span className="font-bold text-white-50">Features</span>
             </h2>
             <p className="max-w-[440px] text-[16px] leading-[26px] text-white-700">
@@ -56,14 +56,17 @@ const EngineeringSystems = () => {
           </div>
 
           {/* Right Grid */}
-          <div className="flex-1 grid grid-cols-3">
+          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-white-50/10">
             {systems.map((system, index) => (
               <div 
                 key={index} 
-                className={`h-[250px] p-[24px] flex flex-col justify-between 
-                  ${index < 3 ? 'border-b' : ''} 
-                  ${index % 3 !== 2 ? 'border-r' : ''} 
-                  border-white-50/10`}
+                className={`h-auto min-h-[220px] lg:h-[250px] p-[24px] flex flex-col justify-between border-white-50/10
+                  ${index < systems.length - 1 ? 'border-b md:border-b' : ''} 
+                  ${(index + 1) % 2 !== 0 ? 'md:border-r' : ''}
+                  ${(index + 1) % 3 !== 0 ? 'lg:border-r' : 'lg:border-r-0'}
+                  lg:border-b-0
+                  ${index < 3 ? 'lg:border-b' : ''}
+                `}
               >
                 <div className={`px-[16px] py-[6px] rounded-[30px] border border-white-500/10 text-center text-[14px] font-medium ${system.badgeBg} ${system.badgeText}`}>
                   {system.title}

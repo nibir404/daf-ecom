@@ -94,8 +94,8 @@ const BlogCard = ({ post }) => {
             />
             
             {/* Content Area */}
-            <div className="absolute bottom-0 left-0 w-full p-8 pb-10">
-                <h3 className="text-white text-[24px] font-medium leading-[32px] mb-3 group-hover:text-orange-600 transition-colors duration-300">
+            <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 pb-10">
+                <h3 className="text-white text-[20px] md:text-[24px] font-medium leading-[1.2] mb-3 group-hover:text-orange-600 transition-colors duration-300">
                     {post.title}
                 </h3>
                 <p className="text-[#acacac] text-[14px] leading-[20px] line-clamp-2">
@@ -114,13 +114,13 @@ const AllBlog = () => {
         <section className="bg-white-50 min-h-screen">
             {/* Sticky Filter Bar */}
             <div className="sticky top-[80px] z-40 bg-white border-b border-white-500 shadow-sm">
-                <div className="max-w-[1520px] mx-auto h-[100px] flex items-center justify-between">
-                    <div className="flex gap-[10px] items-center">
+                <div className="max-w-[1520px] mx-auto h-auto min-h-[100px] flex flex-col lg:flex-row items-center justify-between px-6 xl:px-0 py-4 lg:py-0 gap-6">
+                    <div className="flex gap-[10px] items-center overflow-x-auto w-full lg:w-auto pb-2 lg:pb-0 scrollbar-hide">
                         {CATEGORIES.map(cat => (
                             <button
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
-                                className={`px-4 py-2 rounded-full border transition-all duration-300 text-[16px] whitespace-nowrap
+                                className={`px-4 py-2 rounded-full border transition-all duration-300 text-[14px] md:text-[16px] whitespace-nowrap
                                     ${activeCategory === cat 
                                         ? 'bg-blue-500 border-transparent text-white' 
                                         : 'bg-white border-white-600 text-[#333] hover:border-blue-500'}`}
@@ -130,10 +130,10 @@ const AllBlog = () => {
                         ))}
                     </div>
                     
-                    <div className="relative">
+                    <div className="relative w-full lg:w-auto">
                         <div 
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                            className="w-[450px] border-b border-black py-[10px] flex items-center justify-between cursor-pointer group/select"
+                            className="w-full lg:w-[450px] border-b border-black py-[10px] flex items-center justify-between cursor-pointer group/select"
                         >
                             <span className="text-[16px] text-[#333] font-medium">
                                 {activeCategory === 'All Blogs' ? 'Select Your Blog Category' : activeCategory}
@@ -166,30 +166,30 @@ const AllBlog = () => {
             </div>
 
             {/* Blogs Grid */}
-            <div className="max-w-[1520px] mx-auto py-[60px] flex flex-col gap-[60px]">
+            <div className="max-w-[1520px] mx-auto px-6 xl:px-0 py-[60px] flex flex-col gap-[40px] md:gap-[60px]">
                 {/* First Row: 3 Small Cards */}
-                <div className="flex gap-5">
+                <div className="flex flex-col md:flex-row gap-5">
                     {BLOG_POSTS.slice(0, 3).map(post => (
                         <BlogCard key={post.id} post={post} />
                     ))}
                 </div>
 
                 {/* Second Row: 2 Large Cards */}
-                <div className="flex gap-5">
+                <div className="flex flex-col md:flex-row gap-5">
                     {BLOG_POSTS.slice(3, 5).map(post => (
                         <BlogCard key={post.id} post={post} />
                     ))}
                 </div>
 
                 {/* Third Row: 2 Large Cards */}
-                <div className="flex gap-5">
+                <div className="flex flex-col md:flex-row gap-5">
                     {BLOG_POSTS.slice(5, 7).map(post => (
                         <BlogCard key={post.id} post={post} />
                     ))}
                 </div>
 
                 {/* Fourth Row: 2 Large Cards */}
-                <div className="flex gap-5">
+                <div className="flex flex-col md:flex-row gap-5">
                     {BLOG_POSTS.slice(7, 9).map(post => (
                         <BlogCard key={post.id} post={post} />
                     ))}
