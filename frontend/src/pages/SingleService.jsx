@@ -4,12 +4,12 @@ import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
 import ServiceHero from '../components/sections/single-service/ServiceHero'
 import Credibility from '../components/sections/home/Credibility'
+import ProductDemo from '../components/sections/single-service/ProductDemo'
 import WorkBeyondDemo from '../components/sections/single-service/WorkBeyondDemo'
 import HiddenCost from '../components/sections/single-service/HiddenCost'
 import EngineeringSystems from '../components/sections/single-service/EngineeringSystems'
 import EnablesBuild from '../components/sections/single-service/EnablesBuild'
 import StructureCollaboration from '../components/sections/single-service/StructureCollaboration'
-import ExpectedImpact from '../components/sections/single-service/ExpectedImpact'
 import FAQ from '../components/sections/home/FAQ'
 import CTA from '../components/sections/home/CTA'
 
@@ -63,18 +63,18 @@ const SingleService = () => {
   const currentService = serviceData[serviceId] || serviceData['web-development']
 
   return (
-    <div className="min-h-screen bg-white-300 font-sf-pro">
+    <div className="bg-white-300 font-sf-pro">
       <Navbar />
       
       <main>
         <ServiceHero data={currentService.hero} />
         <Credibility showSearchBar={false} />
-        <WorkBeyondDemo />
+        <ProductDemo />
         <HiddenCost />
         <EngineeringSystems />
         <EnablesBuild />
         <StructureCollaboration />
-        <ExpectedImpact />
+        <WorkBeyondDemo />
         <div className="h-[120px] w-full" />
         <FAQ 
           faqs={currentService.faqs}

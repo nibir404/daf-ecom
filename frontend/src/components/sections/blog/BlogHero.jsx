@@ -3,7 +3,7 @@ import Button from '../../ui/Button';
 
 const BlogHero = () => {
     return (
-        <section className="relative w-full h-[600px] bg-white-50 overflow-hidden flex flex-col items-center justify-start pt-[50px]">
+        <section className="relative w-full h-[600px] bg-white-50 overflow-hidden flex flex-col items-center justify-center">
             {/* Background Flare */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-[409px] pointer-events-none">
                 <img 

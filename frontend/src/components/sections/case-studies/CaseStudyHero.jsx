@@ -3,7 +3,7 @@ import Button from '../../ui/Button';
 
 const CaseStudyHero = () => {
     return (
-        <section className="relative w-full overflow-hidden pt-[50px] pb-[120px]">
+        <section className="relative w-full h-[600px] overflow-hidden flex flex-col items-center justify-center">
             {/* Background Flare Effect */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-[600px] pointer-events-none">
                 <img 

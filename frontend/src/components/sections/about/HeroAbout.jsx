@@ -9,6 +9,7 @@ const HeroAbout = () => {
           src="/aboutpage/Heroimg.png" 
           alt="about hero background" 
           className="w-full h-full object-cover opacity-60"
+          loading="lazy"
         />
         {/* Subtle Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black-900/40 via-transparent to-black-900" />
@@ -25,6 +26,7 @@ const HeroAbout = () => {
                  src="/aboutpage/HeroTitleImg.png" 
                  alt="accent" 
                  className="h-[30px] md:h-[45px] w-[180px] md:w-[269px] object-cover rounded-[2px] opacity-80" 
+                 loading="lazy"
                />
             </span>
           </h1>

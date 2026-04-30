@@ -3,7 +3,7 @@ import Button from '../../ui/Button';
 
 const PricingHero = () => {
     return (
-        <section className="relative w-full h-[600px] bg-white-50 flex flex-col items-center justify-start pt-[50px] overflow-hidden">
+        <section className="relative w-full h-[600px] bg-white-50 flex flex-col items-center justify-center overflow-hidden">
             {/* Background Flare */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-[600px] pointer-events-none">
                 <img 

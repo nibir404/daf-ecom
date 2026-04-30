@@ -9,11 +9,11 @@ const PrivacyHero = () => {
                 className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-white/20 backdrop-blur-[2px]" />
-            <div className="relative z-10 max-w-[1520px] mx-auto h-full flex flex-col justify-start pt-[50px] px-6 xl:px-0">
-                <h1 className="text-[64px] leading-[75px] text-black-400 font-normal">
+            <div className="relative z-10 max-w-[1520px] mx-auto h-full flex flex-col items-center justify-center text-center px-6 xl:px-0">
+                <h1 className="text-[40px] md:text-[64px] leading-tight text-black-400 font-normal">
                     Daffodil <span className="font-bold text-black-900">Web</span> & <span className="font-bold text-black-900">E-commerce</span> Services
                 </h1>
-                <p className="text-[20px] leading-[30px] text-black-400 mt-4">
+                <p className="text-[18px] md:text-[20px] leading-[30px] text-black-400 mt-4">
                     Last Updated: <span className="font-bold italic text-black-900">21 April, 2026</span>
                 </p>
             </div>

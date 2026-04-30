@@ -3,7 +3,7 @@ import Button from '../../ui/Button'
 
 const ServiceHero = ({ data }) => {
   return (
-    <section className="relative w-full overflow-hidden pt-[50px] pb-[40px] h-[900px] bg-no-repeat">
+    <section className="relative w-full overflow-hidden pt-[60px] pb-[40px] h-[900px] bg-no-repeat">
       {/* Background Flare - Bottom Positioned as per Figma */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] pointer-events-none z-0">
         <img 

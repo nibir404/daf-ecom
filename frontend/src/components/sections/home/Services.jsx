@@ -137,7 +137,7 @@ const Services = () => {
                                         {/* Icon Container */}
                                         <div className={`${service.iconBg} border-2 border-white/40 shadow-[0px_0px_24px_0px_rgba(0,0,0,0.15)] rounded-[10px] w-[60px] h-[60px] flex items-center justify-center p-[15px]`}>
                                             <div className="w-[30px] h-[30px]">
-                                                <img src={service.icon} alt={service.category} className="w-full h-full object-contain" />
+                                                <img src={service.icon} alt={service.category} className="w-full h-full object-contain" loading="lazy" />
                                             </div>
                                         </div>
 

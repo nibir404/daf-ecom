@@ -2,7 +2,7 @@ import React from 'react';
 
 const StartHero = () => {
   return (
-    <section className="relative w-full h-[600px] flex flex-col items-center justify-start pt-[50px] overflow-hidden bg-white-50">
+    <section className="relative w-full h-[600px] flex flex-col items-center justify-center overflow-hidden bg-white-50">
       {/* Background Flare */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1920px] h-auto pointer-events-none">
         <img 

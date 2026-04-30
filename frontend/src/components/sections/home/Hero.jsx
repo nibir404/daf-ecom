@@ -5,7 +5,7 @@ const Hero = () => {
         <section className="hero-section w-full min-h-[100vh] lg:h-[850px] lg:min-h-0 bg-[center_top] bg-[url('/homepage/home-hero.png')] bg-cover bg-no-repeat flex justify-center items-start overflow-hidden pt-[50px]">
             <div className="hero-content flex flex-col items-center w-full max-w-[1220px] px-6 text-center">
                 <div className="flex items-center gap-2.5 bg-gold-50 px-4 py-2.5 rounded-full mb-6 lg:mb-10">
-                    <img src="/homepage/growth.svg" alt="growth" className="w-4 h-4" />
+                    <img src="/homepage/growth.svg" alt="growth" className="w-4 h-4" loading="lazy" />
                     <span className="text-sm text-gold-800 font-normal leading-none">Optimize your business growth</span>
                 </div>
 
@@ -22,7 +22,7 @@ const Hero = () => {
                     <span className="text-black-300 font-medium">or</span>
                     <button className="bg-transparent font-semibold underline underline-offset-2 text-black-900 py-3 transition duration-300 ease-in-out hover:text-blue-600 flex gap-2 items-center justify-center w-full sm:w-auto">
                         Book Strategy Call
-                        <img src="/homepage/call-02.svg" alt="call-icon" />
+                        <img src="/homepage/call-02.svg" alt="call-icon" loading="lazy" />
                     </button>
                 </div>
             </div>

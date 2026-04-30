@@ -32,7 +32,18 @@ Daffodil is a high-fidelity, premium digital commerce platform designed to provi
 
 - **Requirement**: Dedicated onboarding flows for business owners.
 - **SearchDomain**: Interactive domain search interface with clean, data-driven results.
-- **Service Detail**: Modular "Single Service" pages that provide deep-dives into specific offerings.
+- **Service Detail**: Modular "Single Service" pages featuring a progressive discovery flow:
+  - **Hero**: 900px high-fidelity entry point with atmospheric background flares.
+  - **Credibility**: Client social proof and industry-standard trust markers.
+  - **ProductDemo**: Contextual business scenarios (Figma Node 235:1363) demonstrating service value.
+  - **HiddenCost & Technical Deep-dives**: Engineering systems and modular collaboration breakdowns.
+  - **WorkBeyondDemo**: A final, 1920px architectural "impact flare" demonstrating long-term scalability.
+  - **FAQ**: Dedicated service-specific support sections.
+
+### 2.5 Informational Hubs (Standardized Heros)
+
+- **Requirement**: Consistent, centered hero sections for secondary pages (Start Here, Pricing, Blog, Case Studies, Privacy).
+- **Visuals**: Fixed height (600px/500px), perfectly centered content (Horizontal & Vertical), and standardized backdrop blur overlays to ensure high readability and brand consistency.
 
 ## 3. Technical Constraints & Design Tokens
 
@@ -43,8 +54,10 @@ Daffodil is a high-fidelity, premium digital commerce platform designed to provi
 - **Typography**: SF Pro (Modern Sans-Serif) with tight tracking and high-contrast weights.
 - **Colors**: Sleek monochrome base with vivid primary accents (Orange-600, Teal-500) for CTAs.
 
-### 3.2 Performance Targets
+### 3.2 Performance & Asset Optimization
 
+- **Image Strategy**: Native `loading="lazy"` on all off-screen assets to ensure high FCP/LCP scores.
+- **Automated Optimization**: Build-time compression using `vite-plugin-image-optimizer` (PNG, JPG, SVG, WebP) to reduce bundle size while maintaining high visual fidelity.
 - **Lighthouse Score**: Target 90+ for Performance and Accessibility.
 - **Rendering**: Static site generation / Optimized client-side bundles via Vite.
 - **Accessibility**: ARIA labels for all interactive elements, focus-trap for modals, and contrast-compliant color palettes.
