@@ -8,7 +8,7 @@ import SearchDomain from './pages/SearchDomain'
 import SingleService from './pages/SingleService'
 import BlogPage from './pages/Blog'
 import SingleBlog from './pages/SingleBlog'
-import FAQPage from './pages/FAQ List'
+import FAQPage from './pages/FAQList'
 import SmoothScroll from './components/layout/SmoothScroll'
 
 function App() {
