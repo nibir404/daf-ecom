@@ -1,0 +1,37 @@
+import React from 'react';
+import Button from '../../ui/Button';
+
+const CaseStudyHero = () => {
+    return (
+        <section className="relative w-full overflow-hidden py-[120px]">
+            {/* Background Flare Effect */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-[600px] pointer-events-none">
+                <img 
+                    src="/case-study/casestudyhero.png" 
+                    alt="" 
+                    className="w-full h-full object-cover"
+                />
+            </div>
+
+            <div className="max-w-[1100px] mx-auto text-center relative z-10 flex flex-col items-center gap-[40px]">
+                <div className="flex flex-col gap-[16px]">
+                    <h1 className="text-[64px] leading-[75px] text-black-400 font-normal">
+                        Real <span className="font-bold text-black-900">Results</span> from Real <span className="font-bold text-black-900">Digital</span> Transformations
+                    </h1>
+                    <p className="text-[20px] leading-[30px] text-black-400 max-w-[900px] mx-auto">
+                        Explore how we help businesses scale with custom software, ERP systems, web platforms, and AI-driven solutions—delivering measurable impact across industries.
+                    </p>
+                </div>
+
+                <Button 
+                    variant="primary"
+                    onClick={() => document.getElementById('case-studies-list')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                    View Case Studies
+                </Button>
+            </div>
+        </section>
+    );
+};
+
+export default CaseStudyHero;

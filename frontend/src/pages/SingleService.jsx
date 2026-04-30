@@ -9,6 +9,7 @@ import HiddenCost from '../components/sections/single-service/HiddenCost'
 import EngineeringSystems from '../components/sections/single-service/EngineeringSystems'
 import EnablesBuild from '../components/sections/single-service/EnablesBuild'
 import StructureCollaboration from '../components/sections/single-service/StructureCollaboration'
+import ExpectedImpact from '../components/sections/single-service/ExpectedImpact'
 import FAQ from '../components/sections/home/FAQ'
 import CTA from '../components/sections/home/CTA'
 
@@ -73,6 +74,7 @@ const SingleService = () => {
         <EngineeringSystems />
         <EnablesBuild />
         <StructureCollaboration />
+        <ExpectedImpact />
         <div className="h-[120px] w-full" />
         <FAQ 
           faqs={currentService.faqs}

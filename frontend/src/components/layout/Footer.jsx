@@ -14,7 +14,12 @@ const Footer = () => {
         },
         {
             title: "Resources",
-            links: ["Blog", "Guides", "Case Studies", "FAQs"]
+            links: [
+                { name: "Blog", path: "/blog" },
+                { name: "Guides", path: "#" },
+                { name: "Case Studies", path: "/case-studies" },
+                { name: "FAQs", path: "/faq" }
+            ]
         },
         {
             title: "Support",
@@ -32,7 +37,12 @@ const Footer = () => {
         },
         {
             title: "Legal",
-            links: ["Privacy Policy", "Terms of Service", "Security Policy", "Compliance"]
+            links: [
+                { name: "Privacy Policy", path: "/privacy-policy" },
+                { name: "Terms of Service", path: "#" },
+                { name: "Security Policy", path: "#" },
+                { name: "Compliance", path: "#" }
+            ]
         }
     ];
 
@@ -60,15 +70,21 @@ const Footer = () => {
                             <div key={idx} className="flex flex-col gap-[20px] min-w-0">
                                 <h4 className="text-[24px] text-white font-normal leading-normal whitespace-nowrap">{group.title}</h4>
                                 <div className="flex flex-col text-[14px] text-white/80 leading-relaxed">
-                                    {group.links.map((link, lIdx) => (
-                                        <Link 
-                                            key={lIdx} 
-                                            to={group.title === "Services" ? "/services" : group.title === "Resources" ? "/resources" : "#"} 
-                                            className="hover:text-white transition-colors py-[2px] block"
-                                        >
-                                            {link}
-                                        </Link>
-                                    ))}
+                                    {group.links.map((link, lIdx) => {
+                                        const isObject = typeof link === 'object';
+                                        const path = isObject ? link.path : (group.title === "Services" ? "/services" : "#");
+                                        const label = isObject ? link.name : link;
+
+                                        return (
+                                            <Link 
+                                                key={lIdx} 
+                                                to={path} 
+                                                className="hover:text-white transition-colors py-[2px] block whitespace-nowrap"
+                                            >
+                                                {label}
+                                            </Link>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         ))}

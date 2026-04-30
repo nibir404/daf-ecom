@@ -254,11 +254,21 @@ const Navbar = () => {
                   <span className="text-[20px] font-medium text-black-900 whitespace-nowrap">Case Studies</span>
                 </Link>
 
-                <Link to="/faq" className="flex items-center gap-[20px] pt-[20px] hover:opacity-70 transition-opacity">
+                <Link to="/faq" className="flex items-center gap-[20px] py-[20px] border-b border-white-600 hover:opacity-70 transition-opacity">
                   <div className="w-[30px] h-[30px] flex-shrink-0 flex items-center justify-center">
                     <img src="/resources-menu/faq.svg" alt="FAQ" className="w-full h-full object-contain" />
                   </div>
                   <span className="text-[20px] font-medium text-black-900">FAQ</span>
+                </Link>
+
+                <Link to="/privacy-policy" className="flex items-center gap-[20px] pt-[20px] hover:opacity-70 transition-opacity">
+                  <div className="w-[30px] h-[30px] flex-shrink-0 flex items-center justify-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L3 7V12C3 17.5 7 22 12 22C17 22 21 17.5 21 12V7L12 2Z" stroke="#0C0C0C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M9 12L11 14L15 10" stroke="#0C0C0C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <span className="text-[20px] font-medium text-black-900">Privacy</span>
                 </Link>
               </div>
             </div>

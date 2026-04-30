@@ -9,6 +9,9 @@ import SingleService from './pages/SingleService'
 import BlogPage from './pages/Blog'
 import SingleBlog from './pages/SingleBlog'
 import FAQPage from './pages/FAQList'
+import CaseStudies from './pages/CaseStudies'
+import SingleCaseStudy from './pages/SingleCaseStudy'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 import SmoothScroll from './components/layout/SmoothScroll'
 
 function App() {
@@ -27,6 +30,9 @@ function App() {
           <Route path="/search-domain" element={<SearchDomain />} />
           <Route path="/services/:serviceId" element={<SingleService />} />
           <Route path="/faq" element={<FAQPage />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/case-studies/:id" element={<SingleCaseStudy />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </SmoothScroll>
     </Router>
